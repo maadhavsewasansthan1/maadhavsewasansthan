@@ -1,10 +1,13 @@
 /* =====================================================
    Maadhav Sewa Sansthan — Decap CMS Mobile Stylesheet
-   public/admin/custom.css
-   ===================================================== */
+   public/admin/custom.css  (v2 — exact Emotion targets)
 
-/* ─── Reset & base ─────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; }
+   Decap CMS 3.1.2 uses Emotion CSS-in-JS. Each styled
+   component gets a generated class like "css-xxxxx" but
+   also embeds its label string, so [class*="Label"] works.
+   Exact Emotion target IDs are used as the most-specific
+   fallback: e.g. [class*="e1d2l9mo22"] = ToolbarContainer.
+   ===================================================== */
 
 /* ─── Variables ─────────────────────────────────────── */
 :root {
@@ -15,27 +18,60 @@
   --mss-ink:      #241B14;
   --mss-ink-soft: #5E4E3F;
   --mss-border:   #E2D2B3;
-  --safe-bottom:  env(safe-area-inset-bottom, 16px);
-  --safe-top:     env(safe-area-inset-top, 0px);
 }
 
 /* ─── GLOBAL: prevent iOS zoom on inputs ───────────── */
-input, textarea, select, button {
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="number"],
+input[type="search"],
+input[type="date"],
+input[type="datetime-local"],
+textarea,
+select {
   font-size: 16px !important;
 }
 
-/* ─── GLOBAL: full-width inputs, tall tap targets ──── */
-[class*="ControlPane"] input,
-[class*="ControlPane"] textarea,
-[class*="ControlPane"] select,
-[class*="StyledTextInput"],
-[class*="StyledTextArea"],
-[class*="Textarea"],
-.nc-controlPane-widget input,
-.nc-controlPane-widget textarea,
-div[class^="styled__FormInput"],
-div[class^="styled__Input"] input,
-div[class^="styled__Input"] textarea {
+/* ─── GLOBAL: no horizontal overflow ────────────────── */
+html, body, #nc-root {
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
+/* ─── GLOBAL: accessible focus ──────────────────────── */
+*:focus-visible {
+  outline: 3px solid var(--mss-marigold) !important;
+  outline-offset: 2px !important;
+}
+
+/* =====================================================
+   FIELD LABELS (FieldLabel)
+   ===================================================== */
+[class*="e1xtv0oy0"] {   /* FieldLabel */
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: var(--mss-indigo) !important;
+  margin-bottom: 6px !important;
+}
+
+/* =====================================================
+   CONTROL HINT (ControlHint)
+   ===================================================== */
+[class*="ec1nk3l0"] {    /* ControlHint */
+  font-size: 13px !important;
+  color: var(--mss-ink-soft) !important;
+  margin-top: 4px !important;
+  line-height: 1.4 !important;
+}
+
+/* =====================================================
+   INPUTS — full width, 48px min-height
+   ===================================================== */
+[class*="e11hw0lx4"] input,     /* ControlPaneContainer inputs */
+[class*="e1nx103k1"] input,     /* ControlPaneContainer (editor) */
+[class*="e11hw0lx4"] textarea,
+[class*="e1nx103k1"] textarea {
   width: 100% !important;
   min-height: 48px !important;
   padding: 10px 14px !important;
@@ -43,393 +79,56 @@ div[class^="styled__Input"] textarea {
   border-radius: 8px !important;
   font-size: 16px !important;
   line-height: 1.5 !important;
+  box-sizing: border-box !important;
 }
 
-/* ─── GLOBAL: keep focus outlines for accessibility ── */
-*:focus-visible {
-  outline: 3px solid var(--mss-marigold) !important;
-  outline-offset: 2px !important;
-}
-
-/* =====================================================
-   DESKTOP SIDEBAR → MOBILE TOP CHIPS
-   ===================================================== */
-@media (max-width: 639px) {
-  /* Hide native sidebar nav, we'll expose it differently */
-  nav[class*="CollectionsSidebar"],
-  aside[class*="SidebarContainer"],
-  [class*="AppSidebar"],
-  [class*="SidebarNav"] {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: auto !important;
-    width: 100% !important;
-    height: auto !important;
-    z-index: 100 !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: 8px !important;
-    padding: 10px 12px !important;
-    padding-top: calc(10px + var(--safe-top)) !important;
-    background: var(--mss-indigo) !important;
-    border-bottom: 2px solid var(--mss-marigold) !important;
-    scrollbar-width: none;
-  }
-  nav[class*="CollectionsSidebar"]::-webkit-scrollbar,
-  aside[class*="SidebarContainer"]::-webkit-scrollbar { display: none; }
-
-  /* Collection items → chips */
-  nav[class*="CollectionsSidebar"] a,
-  nav[class*="CollectionsSidebar"] li,
-  [class*="SidebarNav"] li,
-  [class*="SidebarNav"] a {
-    display: inline-block !important;
-    white-space: nowrap !important;
-    padding: 8px 16px !important;
-    min-height: 40px !important;
-    background: rgba(255,255,255,0.12) !important;
-    color: #fff !important;
-    border-radius: 20px !important;
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    text-decoration: none !important;
-    border: 1.5px solid rgba(255,255,255,0.2) !important;
-    flex-shrink: 0 !important;
-  }
-
-  nav[class*="CollectionsSidebar"] a[class*="active"],
-  [class*="SidebarNav"] a[class*="active"],
-  [class*="SidebarNav"] li[class*="active"] a {
-    background: var(--mss-marigold) !important;
-    color: var(--mss-indigo) !important;
-    border-color: var(--mss-marigold) !important;
-  }
-
-  /* Push main content below the chip bar */
-  [class*="AppBody"],
-  [class*="MainView"],
-  main[class*="Editor"],
-  [class*="Collection"] {
-    padding-top: 70px !important;
-  }
-}
-
-/* =====================================================
-   LIST VIEW — CARDS INSTEAD OF TABLE ON MOBILE
-   ===================================================== */
-@media (max-width: 639px) {
-  /* Hide table headers */
-  [class*="SortableTableHeaderRow"],
-  [class*="TableHeaderRow"],
-  thead {
-    display: none !important;
-  }
-
-  /* Turn each row into a card */
-  [class*="EntryListingGrid"],
-  [class*="ListingCardGrid"] {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 12px !important;
-    padding: 12px !important;
-  }
-
-  [class*="EntryCard"],
-  [class*="ListingCard"],
-  [class*="Collection__EntryCard"] {
-    display: block !important;
-    background: var(--mss-surface) !important;
-    border: 1.5px solid var(--mss-border) !important;
-    border-radius: 12px !important;
-    padding: 16px !important;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06) !important;
-    text-decoration: none !important;
-    color: var(--mss-ink) !important;
-  }
-
-  /* Show title larger on card */
-  [class*="EntryCard"] [class*="CardHeading"],
-  [class*="ListingCard"] h2,
-  [class*="EntryCard"] h2 {
-    font-size: 17px !important;
-    font-weight: 700 !important;
-    color: var(--mss-indigo) !important;
-    margin-bottom: 4px !important;
-  }
-}
-
-/* =====================================================
-   EDITOR FORM — FULL WIDTH, READABLE ON PHONE
-   ===================================================== */
-@media (max-width: 639px) {
-  /* Remove side-by-side layout */
-  [class*="EditorContainer"],
-  [class*="EditorToggle"],
-  [class*="EditorContentToggle"] {
-    flex-direction: column !important;
-  }
-
-  /* Preview pane hidden on mobile to maximize writing space */
-  [class*="PreviewPane"],
-  [class*="EditorPreviewSplitPane"] {
-    display: none !important;
-  }
-
-  /* Control pane full width */
-  [class*="ControlPane"],
-  [class*="EditorControlPane"] {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 12px 16px 140px !important; /* 140px bottom padding for sticky bar */
-    overflow-x: hidden !important;
-  }
-
-  /* Every form field full width */
-  [class*="ControlWrapper"],
-  [class*="Widget"] {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  /* Markdown editor full width */
-  [class*="SimpleMDE"],
-  .CodeMirror,
-  [class*="EditorWrapper"] {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-  }
-}
-
-/* =====================================================
-   I18N LANGUAGE SWITCHER — LARGE SEGMENTED BUTTONS
-   ===================================================== */
-/* Target the locale switcher tabs */
-[class*="LocaleToggle"],
-[class*="I18nToggle"],
-[class*="LocaleSwitcher"],
-[role="tablist"][aria-label*="locale"],
-[role="tablist"][aria-label*="language"] {
-  display: flex !important;
-  gap: 0 !important;
-  margin: 12px 16px 20px !important;
-  border-radius: 10px !important;
-  overflow: hidden !important;
-  border: 2px solid var(--mss-indigo) !important;
-  background: var(--mss-indigo) !important;
-}
-
-[class*="LocaleToggle"] button,
-[class*="I18nToggle"] button,
-[class*="LocaleSwitcher"] button,
-[role="tablist"][aria-label*="locale"] [role="tab"],
-[role="tablist"][aria-label*="language"] [role="tab"] {
-  flex: 1 !important;
-  min-height: 48px !important;
-  font-size: 16px !important;
-  font-weight: 700 !important;
-  border: none !important;
-  background: var(--mss-indigo) !important;
-  color: rgba(255,255,255,0.65) !important;
-  letter-spacing: 0.5px !important;
-  transition: background 0.15s, color 0.15s !important;
-  cursor: pointer !important;
-}
-
-[class*="LocaleToggle"] button[class*="active"],
-[class*="LocaleToggle"] button[aria-selected="true"],
-[class*="I18nToggle"] button[class*="active"],
-[role="tab"][aria-selected="true"] {
-  background: var(--mss-marigold) !important;
-  color: var(--mss-indigo) !important;
-}
-
-/* =====================================================
-   STICKY PUBLISH / SAVE BAR AT BOTTOM
-   ===================================================== */
-/* Target the top header bar that holds the Publish button */
-[class*="ToolbarContainer"],
-[class*="EditorToolbar"],
-header[class*="Editor"],
-[class*="AppHeaderContent"] {
-  position: static !important; /* desktop: leave as-is */
-}
-
-@media (max-width: 639px) {
-  /* Move the editor top bar to the bottom */
-  [class*="ToolbarContainer"],
-  [class*="EditorToolbar"],
-  header[class*="Editor"] {
-    position: fixed !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    top: auto !important;
-    z-index: 200 !important;
-    padding: 10px 16px !important;
-    padding-bottom: calc(10px + var(--safe-bottom)) !important;
-    background: var(--mss-indigo) !important;
-    border-top: 2px solid var(--mss-marigold) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    gap: 10px !important;
-    box-shadow: 0 -4px 16px rgba(0,0,0,0.18) !important;
-  }
-
-  /* Publish / Save buttons in the sticky bar */
-  [class*="ToolbarContainer"] button,
-  [class*="EditorToolbar"] button,
-  header[class*="Editor"] button {
-    min-height: 44px !important;
-    padding: 0 20px !important;
-    border-radius: 8px !important;
-    font-size: 15px !important;
-    font-weight: 700 !important;
-  }
-
-  /* Primary publish button — marigold */
-  [class*="PublishButton"],
-  button[class*="publish"],
-  [class*="ToolbarContainer"] button:last-child {
-    background: var(--mss-marigold) !important;
-    color: var(--mss-indigo) !important;
-    flex: 1 !important;
-  }
-}
-
-/* =====================================================
-   IMAGE UPLOAD BUTTONS — LARGE & CAMERA-FRIENDLY
-   ===================================================== */
-[class*="ImageWidget"] button,
-[class*="ImageControl"] button,
-[class*="ImageWidgetButton"],
-button[class*="chooseImage"],
-button[class*="uploadImage"] {
-  min-height: 56px !important;
-  min-width: 56px !important;
-  font-size: 16px !important;
-  border-radius: 10px !important;
-  padding: 12px 20px !important;
-  background: var(--mss-indigo) !important;
-  color: #fff !important;
-  font-weight: 600 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 8px !important;
-  width: 100% !important;
-  cursor: pointer !important;
-  border: 2px dashed var(--mss-marigold) !important;
-}
-
-@media (max-width: 639px) {
-  /* Allow camera on file input inside the media library */
-  [class*="MediaLibrary"] input[type="file"],
-  [class*="ImageWidget"] input[type="file"] {
-    /* accept="image/*" and capture="environment" are set via CSS trick hint */
-    display: block !important;
-    width: 100% !important;
-    min-height: 48px !important;
-    font-size: 16px !important;
-  }
-
-  [class*="MediaLibrary"] {
-    width: 100% !important;
-    max-width: 100% !important;
-    border-radius: 16px !important;
-    padding: 16px !important;
-  }
-}
-
-/* =====================================================
-   NO HORIZONTAL SCROLL
-   ===================================================== */
-html, body {
-  max-width: 100% !important;
-  overflow-x: hidden !important;
-}
-
-[class*="Editor"],
-[class*="Collection"],
-[class*="App"] {
-  max-width: 100% !important;
-  overflow-x: hidden !important;
-}
-
-/* =====================================================
-   FIELD HINTS — SUBTLE & READABLE
-   ===================================================== */
-[class*="FieldHint"],
-[class*="HintText"],
-p[class*="hint"] {
-  font-size: 13px !important;
-  color: var(--mss-ink-soft) !important;
-  margin-top: 4px !important;
-  line-height: 1.4 !important;
-}
-
-/* Hindi-review hint — slightly orange to draw attention */
-[class*="FieldHint"]:not(:empty)[class*="hi"],
-p.hi-hint {
-  color: #B5522E !important;
-  font-weight: 600 !important;
-}
-
-/* =====================================================
-   FIELD LABELS — BIGGER & BOLDER
-   ===================================================== */
-[class*="FieldLabel"],
-label[class*="Label"] {
-  font-size: 15px !important;
-  font-weight: 700 !important;
-  color: var(--mss-indigo) !important;
-  margin-bottom: 6px !important;
-  display: block !important;
-}
-
-/* =====================================================
-   SELECT DROPDOWNS — TALL, NO ZOOM
-   ===================================================== */
+/* ─── SELECT — full width, no fixed width ────────────── */
 select,
-[class*="Select__control"],
-[class*="react-select__control"] {
+[class*="e11hw0lx4"] select,
+[class*="e1nx103k1"] select {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
   min-height: 48px !important;
   font-size: 16px !important;
-  width: 100% !important;
   border: 1.5px solid var(--mss-border) !important;
   border-radius: 8px !important;
   padding: 8px 12px !important;
   background: #fff !important;
   color: var(--mss-ink) !important;
   cursor: pointer !important;
+  box-sizing: border-box !important;
+}
+
+/* ─── React-Select (category, status dropdowns) ─────── */
+[class*="react-select__control"],
+[class*="Select__control"] {
+  min-height: 48px !important;
+  font-size: 16px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  border: 1.5px solid var(--mss-border) !important;
+  border-radius: 8px !important;
+  box-sizing: border-box !important;
 }
 
 /* =====================================================
-   TOAST / CONFIRMATION MESSAGE
+   TOAST / NOTIFICATION
+   (ToastContainer from react-toastify)
    ===================================================== */
-[class*="Toast"],
-[class*="Notification"],
-[class*="Alert"] {
+.Toastify__toast {
   font-size: 15px !important;
   min-height: 48px !important;
   border-radius: 10px !important;
-  padding: 12px 20px !important;
 }
 
 /* =====================================================
-   HELPER: Post-publish confirmation banner 
-   (injected via JS in index.html after save)
+   PUBLISH CONFIRMATION BANNER (custom)
    ===================================================== */
 #mss-publish-confirm {
   display: none;
   position: fixed;
-  bottom: calc(70px + var(--safe-bottom));
   left: 16px;
   right: 16px;
   background: #1F5F63;
@@ -438,22 +137,348 @@ select,
   border-radius: 10px;
   font-size: 15px;
   font-weight: 600;
-  z-index: 999;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  z-index: 9999;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
   text-align: center;
   animation: mss-slideup 0.3s ease-out;
+  /* desktop: near bottom of viewport */
+  bottom: 80px;
+}
+@media (max-width: 639px) {
+  #mss-publish-confirm {
+    bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+  }
 }
 @keyframes mss-slideup {
-  from { transform: translateY(20px); opacity: 0; }
+  from { transform: translateY(16px); opacity: 0; }
   to   { transform: translateY(0);    opacity: 1; }
 }
 
 /* =====================================================
-   DESKTOP TWEAKS — keep it clean on larger screens
+   IMAGE UPLOAD BUTTONS (FileWidgetButton)
+   ===================================================== */
+[class*="e1hax4ql1"] {   /* FileWidgetButton */
+  min-height: 52px !important;
+  font-size: 16px !important;
+  border-radius: 10px !important;
+  padding: 12px 20px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+}
+
+/* =====================================================
+   MOBILE-ONLY RULES  (≤ 639px)
+   ===================================================== */
+@media (max-width: 639px) {
+
+  /* ── 1. SIDEBAR → horizontal chips at the very top ── */
+  /*
+     SidebarContainer is an <aside> element.
+     We pin it to top:0 and make it a horizontal chip row.
+     NOTE: use padding-top only if safe-area is non-zero
+     (we use max() to avoid adding padding on most Android).
+  */
+  [class*="e1t18l343"],   /* SidebarContainer */
+  [class*="e1t18l340"],   /* SidebarContainer alt */
+  [class*="SidebarContainer"] {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 52px !important;
+    z-index: 300 !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 8px 12px !important;
+    /* Only add top padding when safe-area-inset-top > 0 */
+    padding-top: max(8px, env(safe-area-inset-top, 0px)) !important;
+    background: var(--mss-indigo) !important;
+    border-bottom: 2px solid var(--mss-marigold) !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+  [class*="e1t18l343"]::-webkit-scrollbar,
+  [class*="SidebarContainer"]::-webkit-scrollbar { display: none !important; }
+
+  /* Collection nav links → chips */
+  [class*="e1t18l343"] a,
+  [class*="SidebarContainer"] a,
+  [class*="e1t18l343"] span[class*="sidebar-active"],
+  [class*="SidebarContainer"] span[class*="sidebar-active"] {
+    display: inline-block !important;
+    white-space: nowrap !important;
+    padding: 7px 15px !important;
+    min-height: 36px !important;
+    background: rgba(255,255,255,0.12) !important;
+    color: #fff !important;
+    border-radius: 20px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border: 1.5px solid rgba(255,255,255,0.2) !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Active chip */
+  [class*="SidebarContainer"] a.sidebar-active,
+  [class*="SidebarContainer"] [class*="sidebar-active"] {
+    background: var(--mss-marigold) !important;
+    color: var(--mss-indigo) !important;
+    border-color: var(--mss-marigold) !important;
+  }
+
+  /* Search bar inside sidebar — hide on mobile to save space */
+  [class*="e6w847r7"],    /* SearchContainer */
+  [class*="SearchContainer"] {
+    display: none !important;
+  }
+
+  /* ── 2. Push all main content below the sidebar bar ─ */
+  /* The AppMainContainer holds everything */
+  [class*="eh2m33j2"],    /* AppMainContainer */
+  [class*="AppMainContainer"] {
+    padding-top: 52px !important;
+  }
+
+  /* Collection top container — also needs offset */
+  [class*="ei8nkzc4"],    /* CollectionTopContainer */
+  [class*="CollectionTopContainer"] {
+    margin-top: 0 !important;
+  }
+
+  /* ── 3. TOOLBAR → sticky bottom bar ─────────────────
+     ToolbarContainer sits at the top of the editor.
+     On mobile we move it to the bottom.
+     We use two known Emotion targets for ToolbarContainer.
+  */
+  [class*="e1d2l9mo22"],  /* ToolbarContainer (editor toolbar) */
+  [class*="e11cox783"],   /* ToolbarContainer (alt) */
+  [class*="ToolbarContainer"] {
+    position: fixed !important;
+    bottom: 0 !important;
+    top: auto !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 400 !important;
+    padding: 8px 12px !important;
+    padding-bottom: max(8px, env(safe-area-inset-bottom, 0px)) !important;
+    background: var(--mss-indigo) !important;
+    border-top: 2px solid var(--mss-marigold) !important;
+    border-bottom: none !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px !important;
+    min-height: 56px !important;
+    box-shadow: 0 -4px 16px rgba(0,0,0,0.20) !important;
+  }
+
+  /* Buttons inside the toolbar */
+  [class*="e1d2l9mo22"] button,
+  [class*="e11cox783"] button,
+  [class*="ToolbarContainer"] button {
+    min-height: 40px !important;
+    padding: 0 16px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: rgba(255,255,255,0.85) !important;
+  }
+
+  /* Publish button — marigold highlight */
+  [class*="e1d2l9mo5"],   /* PublishButton */
+  [class*="PublishButton"] {
+    background: var(--mss-marigold) !important;
+    color: var(--mss-indigo) !important;
+    flex: 1 !important;
+    min-height: 40px !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+  }
+
+  /* ToolbarSectionMeta (holds "UNSAVED CHANGES") — keep it inline */
+  [class*="e1d2l9mo17"],  /* ToolbarSectionMeta */
+  [class*="ToolbarSectionMeta"] {
+    flex-shrink: 1 !important;
+    font-size: 11px !important;
+    color: rgba(255,255,255,0.6) !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 100px !important;
+    border-left: none !important;
+    padding: 0 4px !important;
+  }
+
+  /* ToolbarSectionMain — flex row of back + actions */
+  [class*="e1d2l9mo21"],  /* ToolbarSectionMain */
+  [class*="ToolbarSectionMain"] {
+    display: flex !important;
+    flex: 1 !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 6px !important;
+    padding: 0 !important;
+  }
+
+  /* Back arrow link (ToolbarSectionBackLink) */
+  [class*="e1d2l9mo18"],  /* ToolbarSectionBackLink */
+  [class*="ToolbarSectionBackLink"] {
+    color: rgba(255,255,255,0.75) !important;
+    font-size: 13px !important;
+    padding: 0 8px !important;
+    min-height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    border-right: none !important;
+  }
+
+  /* ── 4. EDITOR PANE — full width, bottom padding for bar */
+  [class*="e1nx103k4"],   /* EditorContainer */
+  [class*="EditorContainer"] {
+    flex-direction: column !important;
+  }
+
+  /* Preview pane — hidden on phone */
+  [class*="e1nx103k2"],   /* PreviewPaneContainer */
+  [class*="PreviewPaneContainer"],
+  [class*="e1nx103k6"],   /* StyledSplitPane */
+  [class*="StyledSplitPane"] .Pane2 {
+    display: none !important;
+  }
+
+  /* Control pane — full width + bottom padding so publish bar doesn't cover content */
+  [class*="e1nx103k1"],   /* ControlPaneContainer */
+  [class*="ControlPaneContainer"],
+  [class*="e11hw0lx4"],   /* ControlPaneContainer (i18n) */
+  [class*="EditorControlPane"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-bottom: 80px !important;
+    overflow-x: hidden !important;
+  }
+
+  /* ── 5. I18N LOCALE BUTTONS (LocaleButtonWrapper / LocaleButton) */
+  [class*="e11hw0lx2"],   /* LocaleButtonWrapper */
+  [class*="LocaleButtonWrapper"] {
+    display: flex !important;
+    gap: 0 !important;
+    margin: 12px 16px 16px !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    border: 2px solid var(--mss-indigo) !important;
+    background: var(--mss-indigo) !important;
+  }
+
+  [class*="e11hw0lx3"],   /* LocaleButton */
+  [class*="LocaleButton"] {
+    flex: 1 !important;
+    min-height: 48px !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    border: none !important;
+    background: var(--mss-indigo) !important;
+    color: rgba(255,255,255,0.65) !important;
+    cursor: pointer !important;
+  }
+
+  [class*="e11hw0lx3"][class*="active"],
+  [class*="LocaleButton"][class*="active"],
+  [class*="LocaleButton"][aria-selected="true"],
+  [class*="LocaleButton"].active {
+    background: var(--mss-marigold) !important;
+    color: var(--mss-indigo) !important;
+  }
+
+  /* ── 6. COLLECTION LIST — card view ─────────────────── */
+  /* ListCard (table row style) */
+  [class*="effeus48"],    /* ListCard */
+  [class*="ListCard"] {
+    display: flex !important;
+    flex-direction: column !important;
+    background: var(--mss-surface) !important;
+    border: 1.5px solid var(--mss-border) !important;
+    border-radius: 12px !important;
+    padding: 14px 16px !important;
+    margin-bottom: 10px !important;
+    text-decoration: none !important;
+    color: var(--mss-ink) !important;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05) !important;
+  }
+
+  /* ListCardTitle inside each card */
+  [class*="effeus43"],    /* ListCardTitle */
+  [class*="ListCardTitle"] {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: var(--mss-indigo) !important;
+    margin-bottom: 4px !important;
+  }
+
+  /* CardBody inside each card */
+  [class*="effeus41"],    /* CardBody */
+  [class*="CardBody"] {
+    font-size: 13px !important;
+    color: var(--mss-ink-soft) !important;
+  }
+
+  /* CardGridContainer → column on mobile */
+  [class*="e1l5oka22"],   /* CardGridContainer */
+  [class*="CardGridContainer"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    padding: 12px !important;
+  }
+
+  /* ── 7. IMAGE UPLOAD — large, centered ─────────────── */
+  [class*="e1hax4ql1"],   /* FileWidgetButton */
+  [class*="FileWidgetButton"] {
+    width: 100% !important;
+    min-height: 56px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    border-radius: 10px !important;
+    padding: 12px 20px !important;
+    cursor: pointer !important;
+  }
+
+  /* ── 8. MEDIA LIBRARY — full width on phone ─────────── */
+  [class*="e4d0svf0"],    /* StyledModal */
+  [class*="StyledModal"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 16px 16px 0 0 !important;
+    padding: 16px !important;
+  }
+
+  /* ── 9. NO HORIZONTAL SCROLL ─────────────────────────── */
+  [class*="Editor"],
+  [class*="Collection"],
+  [class*="App"] {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+}
+
+/* =====================================================
+   DESKTOP — keep padding sane
    ===================================================== */
 @media (min-width: 640px) {
-  [class*="ControlPane"],
-  [class*="EditorControlPane"] {
-    padding-bottom: 40px;
+  [class*="e1nx103k1"],
+  [class*="ControlPaneContainer"] {
+    padding-bottom: 40px !important;
   }
 }

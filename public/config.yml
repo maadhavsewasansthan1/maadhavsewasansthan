@@ -31,7 +31,7 @@ collections:
     create: true
     format: "json"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    summary: "{{title}} — {{status}} — {{date}}"
+    summary: "{{title}} — {{status}}"
     sortable_fields: ["date", "title"]
     view_groups:
       - label: "Status"
@@ -52,14 +52,13 @@ collections:
         pattern: [".{0,160}", "Maximum 160 characters"]
         hint: "EN: Shown on event cards and social share previews."
 
-      - label: "Date"
+      - label: "Date (YYYY-MM-DD)"
         name: "date"
-        widget: "datetime"
-        date_format: "YYYY-MM-DD"
-        time_format: false
-        picker_utc: false
+        widget: "string"
         required: true
         i18n: duplicate
+        hint: "Format: YYYY-MM-DD (e.g. 2026-11-16)"
+        pattern: ["^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "Must be in YYYY-MM-DD format"]
 
       - label: "Status"
         name: "status"
@@ -124,7 +123,7 @@ collections:
     create: true
     format: "json"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    summary: "{{title}} — {{category}} — {{date}}"
+    summary: "{{title}} — {{category}}"
     sortable_fields: ["date", "title", "category"]
     i18n: true
     fields:
@@ -142,14 +141,13 @@ collections:
         pattern: [".{0,160}", "Maximum 160 characters"]
         hint: "EN: Shown on activity cards and social share previews."
 
-      - label: "Date"
+      - label: "Date (YYYY-MM-DD)"
         name: "date"
-        widget: "datetime"
-        date_format: "YYYY-MM-DD"
-        time_format: false
-        picker_utc: false
+        widget: "string"
         required: false
         i18n: duplicate
+        hint: "Format: YYYY-MM-DD (e.g. 2026-11-16)"
+        pattern: ["^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "Must be in YYYY-MM-DD format"]
 
       - label: "Category"
         name: "category"
@@ -199,7 +197,7 @@ collections:
     create: true
     format: "json"
     slug: "{{slug}}"
-    summary: "{{title}} — {{type}} — {{date}}"
+    summary: "{{title}} — {{type}}"
     sortable_fields: ["date", "title", "type"]
     i18n: true
     fields:
@@ -254,12 +252,11 @@ collections:
 
       - label: "Date (YYYY-MM-DD)"
         name: "date"
-        widget: "datetime"
-        date_format: "YYYY-MM-DD"
-        time_format: false
-        picker_utc: false
+        widget: "string"
         required: false
         i18n: duplicate
+        hint: "Format: YYYY-MM-DD (e.g. 2026-11-16)"
+        pattern: ["^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "Must be in YYYY-MM-DD format"]
 
   # ───────────────────────────────────────────────
   # FOUNDER (file collection)

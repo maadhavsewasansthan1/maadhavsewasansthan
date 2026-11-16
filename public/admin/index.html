@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="robots" content="noindex" />
     <title>Content Manager — Maadhav Sewa Sansthan</title>
     <link rel="icon" type="image/png" href="/images/logo.png" />
@@ -28,7 +28,7 @@
 
     <script>
     (function () {
-      /* ── 1. Init with dynamic base_url (same origin = our /api/auth) ── */
+      /* ── 1. Init with dynamic base_url ── */
       var initCMS = window.init || (window.CMS && window.CMS.init);
       if (typeof initCMS === "function") {
         initCMS({
@@ -60,7 +60,7 @@
         var statusColor = status === "past" ? "#5E4E3F" : "#1F5F63";
 
         var html = [
-          '<div style="font-family:sans-serif;max-width:360px;border:1.5px solid #E2D2B3;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08)">',
+          '<div style="font-family:sans-serif;max-width:360px;border:1.5px solid #E2D2B3;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);background:#FFFDF8;">',
           img ? '<img src="' + img + '" style="width:100%;height:180px;object-fit:cover" />' : '<div style="width:100%;height:120px;background:#EFE3CC;display:flex;align-items:center;justify-content:center;color:#5E4E3F;font-size:13px">No image yet</div>',
           '<div style="padding:14px">',
           '<div style="display:flex;gap:8px;margin-bottom:8px">',
@@ -92,7 +92,6 @@
         setTimeout(function () { banner.style.display = "none"; }, 5000);
       }
 
-      // Listen for Decap save events (workflow and direct publish)
       window.addEventListener("message", function (e) {
         if (e.data && typeof e.data === "object") {
           var t = e.data.type || "";
@@ -102,7 +101,6 @@
         }
       });
 
-      // Also watch DOM for Decap's own toast/notification elements
       var observer = new MutationObserver(function (mutations) {
         mutations.forEach(function (m) {
           m.addedNodes.forEach(function (node) {
@@ -118,8 +116,40 @@
         observer.observe(document.body, { childList: true, subtree: true });
       });
 
+      /* ── 4. Empty state and auto-fill defaults for new entries ── */
+      function checkPageDecorations() {
+        // Empty state check for empty lists
+        var emptyContainers = document.querySelectorAll('[class*="e1d0i3na0"], [class*="NoEntriesMessage"]');
+        emptyContainers.forEach(function (el) {
+          if (!el.getAttribute("data-mss-customized")) {
+            el.innerHTML = '<div style="text-align:center;padding:32px 16px;color:#5E4E3F;">' +
+              '<p style="font-size:16px;font-weight:600;margin-bottom:8px;">No entries yet.</p>' +
+              '<p style="font-size:14px;color:#8C7B68;">Tap <strong>New</strong> above to add one.</p>' +
+              '</div>';
+            el.setAttribute("data-mss-customized", "true");
+          }
+        });
+
+        // Pre-fill date with today's date if empty on new entry
+        var dateInputs = document.querySelectorAll('input[name="date"], input[id*="date"]');
+        var today = new Date().toISOString().split("T")[0];
+        dateInputs.forEach(function (input) {
+          if (!input.value && !input.getAttribute("data-mss-prefilled")) {
+            // Only autofill if in new entry view
+            var isNew = window.location.hash.includes("/new");
+            if (isNew) {
+              input.value = today;
+              input.dispatchEvent(new Event("input", { bubbles: true }));
+              input.dispatchEvent(new Event("change", { bubbles: true }));
+              input.setAttribute("data-mss-prefilled", "true");
+            }
+          }
+        });
+      }
+
+      setInterval(checkPageDecorations, 1000);
+
     })();
     </script>
-
   </body>
 </html>
