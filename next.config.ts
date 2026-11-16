@@ -21,11 +21,12 @@ const nextConfig: NextConfig = {
       },
     },
   },
-  async rewrites() {
+  async redirects() {
     return [
       {
         source: "/admin",
         destination: "/admin/index.html",
+        permanent: false,
       },
     ];
   },
