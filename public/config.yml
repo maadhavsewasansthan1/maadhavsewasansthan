@@ -16,45 +16,182 @@ i18n:
     - hi
   default_locale: en
 
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
 collections:
+  # ───────────────────────────────────────────────
+  # EVENTS
+  # ───────────────────────────────────────────────
   - name: "events"
     label: "Events & Programmes"
     label_singular: "Event"
     folder: "content/data/events"
     create: true
     format: "json"
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{status}} — {{date}}"
+    sortable_fields: ["date", "title"]
+    view_groups:
+      - label: "Status"
+        field: status
     i18n: true
     fields:
-      - { label: "Identifier", name: "id", widget: "string", i18n: duplicate }
-      - { label: "Title", name: "title", widget: "string", i18n: true, hint: "Please review Hindi before publishing" }
-      - { label: "Date (ISO format YYYY-MM-DD)", name: "date", widget: "date", required: false, format: "YYYY-MM-DD", i18n: duplicate }
-      - { label: "Status", name: "status", widget: "select", options: ["upcoming", "past"], default: "upcoming", i18n: duplicate }
-      - { label: "Category", name: "category", widget: "string", i18n: true, hint: "Please review Hindi before publishing" }
-      - { label: "Location", name: "location", widget: "string", i18n: true, hint: "Please review Hindi before publishing" }
-      - { label: "Description", name: "description", widget: "markdown", i18n: true, hint: "Please review Hindi before publishing" }
-      - { label: "Cover Image", name: "image", widget: "image", required: false, i18n: duplicate }
-      - { label: "Registration / Details Link", name: "link", widget: "string", required: false, i18n: duplicate }
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        required: true
+        i18n: true
 
+      - label: "Short Summary (for cards, max 160 chars)"
+        name: "summary"
+        widget: "text"
+        required: true
+        i18n: true
+        pattern: [".{0,160}", "Maximum 160 characters"]
+        hint: "EN: Shown on event cards and social share previews."
+
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        picker_utc: false
+        required: true
+        i18n: duplicate
+
+      - label: "Status"
+        name: "status"
+        widget: "select"
+        options:
+          - { label: "Upcoming", value: "upcoming" }
+          - { label: "Past Event", value: "past" }
+        default: "upcoming"
+        required: true
+        i18n: duplicate
+
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Health", value: "Health" }
+          - { label: "Education", value: "Education" }
+          - { label: "Livelihood", value: "Livelihood" }
+          - { label: "Women's Empowerment", value: "Womens Empowerment" }
+          - { label: "Care for Elders", value: "Care for Elders" }
+          - { label: "Animal Welfare", value: "Animal Welfare" }
+          - { label: "Support for Needy Families", value: "Support for Needy Families" }
+          - { label: "Environment", value: "Environment" }
+        required: true
+        i18n: duplicate
+
+      - label: "Location"
+        name: "location"
+        widget: "string"
+        required: false
+        i18n: true
+
+      - label: "Description"
+        name: "description"
+        widget: "markdown"
+        required: true
+        i18n: true
+
+      - label: "Cover Image"
+        name: "image"
+        widget: "image"
+        required: false
+        i18n: duplicate
+        hint: "Landscape, at least 1200 px wide, under 500 KB. Accepted formats: JPG, PNG, WebP."
+        media_library:
+          config:
+            multiple: false
+
+      - label: "Registration / Details Link"
+        name: "link"
+        widget: "string"
+        required: false
+        i18n: duplicate
+
+  # ───────────────────────────────────────────────
+  # ACTIVITIES
+  # ───────────────────────────────────────────────
   - name: "activities"
     label: "Activities & Stories"
     label_singular: "Activity"
     folder: "content/data/activities"
     create: true
     format: "json"
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{category}} — {{date}}"
+    sortable_fields: ["date", "title", "category"]
     i18n: true
     fields:
-      - { label: "Identifier", name: "id", widget: "string", i18n: duplicate }
-      - { label: "Title", name: "title", widget: "string", i18n: true, hint: "Please review Hindi before publishing" }
-      - { label: "Date (YYYY-MM-DD)", name: "date", widget: "date", format: "YYYY-MM-DD", required: false, i18n: duplicate }
-      - { label: "Category", name: "category", widget: "select", options: ["Health", "Education", "Livelihood", "Environment", "Social Welfare"], i18n: duplicate }
-      - { label: "Category Label", name: "categoryI18n", widget: "string", required: false, i18n: true, hint: "Please review Hindi before publishing" }
-      - { label: "Summary", name: "summary", widget: "text", i18n: true, hint: "Please review Hindi before publishing" }
-      - { label: "Body / Full Story", name: "body", widget: "markdown", i18n: true, hint: "Please review Hindi before publishing" }
-      - { label: "Location", name: "location", widget: "string", required: false, i18n: true, hint: "Please review Hindi before publishing" }
-      - { label: "Photos", name: "photos", widget: "list", i18n: true, field: { label: "Photo", name: "photo", widget: "image" } }
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        required: true
+        i18n: true
 
+      - label: "Short Summary (for cards, max 160 chars)"
+        name: "summary"
+        widget: "text"
+        required: true
+        i18n: true
+        pattern: [".{0,160}", "Maximum 160 characters"]
+        hint: "EN: Shown on activity cards and social share previews."
+
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        picker_utc: false
+        required: false
+        i18n: duplicate
+
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Health", value: "Health" }
+          - { label: "Education", value: "Education" }
+          - { label: "Livelihood", value: "Livelihood" }
+          - { label: "Women's Empowerment", value: "Womens Empowerment" }
+          - { label: "Care for Elders", value: "Care for Elders" }
+          - { label: "Animal Welfare", value: "Animal Welfare" }
+          - { label: "Support for Needy Families", value: "Support for Needy Families" }
+          - { label: "Environment", value: "Environment" }
+        required: true
+        i18n: duplicate
+
+      - label: "Body / Full Story"
+        name: "body"
+        widget: "markdown"
+        required: false
+        i18n: true
+
+      - label: "Location"
+        name: "location"
+        widget: "string"
+        required: false
+        i18n: true
+
+      - label: "Photos"
+        name: "photos"
+        widget: "list"
+        required: false
+        i18n: true
+        hint: "Landscape, at least 1200 px wide, under 500 KB each. JPG, PNG, or WebP."
+        field:
+          label: "Photo"
+          name: "photo"
+          widget: "image"
+
+  # ───────────────────────────────────────────────
+  # GALLERY
+  # ───────────────────────────────────────────────
   - name: "gallery"
     label: "Gallery Archive"
     label_singular: "Gallery Item"
@@ -62,18 +199,71 @@ collections:
     create: true
     format: "json"
     slug: "{{slug}}"
+    summary: "{{title}} — {{type}} — {{date}}"
+    sortable_fields: ["date", "title", "type"]
     i18n: true
     fields:
-      - { label: "Identifier", name: "id", widget: "string", i18n: duplicate }
-      - { label: "Title", name: "title", widget: "string", i18n: true, hint: "Please review Hindi before publishing" }
-      - { label: "Type", name: "type", widget: "select", options: ["photo", "video"], default: "photo", i18n: duplicate }
-      - { label: "Image / Thumbnail", name: "image", widget: "image", i18n: duplicate }
-      - { label: "Video Link (YouTube/Facebook URL)", name: "videoUrl", widget: "string", required: false, i18n: duplicate }
-      - { label: "Caption", name: "caption", widget: "text", i18n: true, hint: "Please review Hindi before publishing" }
-      - { label: "Category", name: "category", widget: "select", options: ["Health", "Education", "Environment", "Community"], i18n: duplicate }
-      - { label: "Category Label", name: "categoryI18n", widget: "string", required: false, i18n: true, hint: "Please review Hindi before publishing" }
-      - { label: "Date", name: "date", widget: "string", required: false, i18n: duplicate }
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        required: true
+        i18n: true
 
+      - label: "Type"
+        name: "type"
+        widget: "select"
+        options:
+          - { label: "Photo", value: "photo" }
+          - { label: "Video", value: "video" }
+        default: "photo"
+        required: true
+        i18n: duplicate
+
+      - label: "Image / Thumbnail"
+        name: "image"
+        widget: "image"
+        required: false
+        i18n: duplicate
+        hint: "Square or landscape, at least 800 px wide, under 400 KB. JPG, PNG, or WebP."
+        media_library:
+          config:
+            multiple: false
+
+      - label: "Video Link (YouTube or Facebook URL)"
+        name: "videoUrl"
+        widget: "string"
+        required: false
+        i18n: duplicate
+
+      - label: "Caption"
+        name: "caption"
+        widget: "text"
+        required: false
+        i18n: true
+
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Health", value: "Health" }
+          - { label: "Education", value: "Education" }
+          - { label: "Environment", value: "Environment" }
+          - { label: "Community", value: "Community" }
+        required: true
+        i18n: duplicate
+
+      - label: "Date (YYYY-MM-DD)"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        picker_utc: false
+        required: false
+        i18n: duplicate
+
+  # ───────────────────────────────────────────────
+  # FOUNDER (file collection)
+  # ───────────────────────────────────────────────
   - name: "founder"
     label: "Founder Profile"
     files:
@@ -83,14 +273,56 @@ collections:
         format: "json"
         i18n: true
         fields:
-          - { label: "Name", name: "name", widget: "string", i18n: true, hint: "Please review Hindi before publishing" }
-          - { label: "Role", name: "role", widget: "string", i18n: true, hint: "Please review Hindi before publishing" }
-          - { label: "Photo", name: "photo", widget: "image", i18n: duplicate }
-          - { label: "Photo Alt Text", name: "photoAlt", widget: "string", i18n: true, hint: "Please review Hindi before publishing" }
-          - { label: "Bio Paragraphs", name: "bio", widget: "list", i18n: true, hint: "Please review Hindi before publishing", field: { label: "Paragraph", name: "paragraph", widget: "text" } }
-          - { label: "Quote", name: "quote", widget: "text", required: false, i18n: true, hint: "Please review Hindi before publishing" }
-          - { label: "Years of Service", name: "yearsOfService", widget: "string", required: false, i18n: duplicate }
+          - label: "Name"
+            name: "name"
+            widget: "string"
+            required: true
+            i18n: true
 
+          - label: "Role"
+            name: "role"
+            widget: "string"
+            required: true
+            i18n: true
+
+          - label: "Photo"
+            name: "photo"
+            widget: "image"
+            required: false
+            i18n: duplicate
+            hint: "Portrait, 4:5 ratio recommended. At least 600 px wide, under 400 KB. JPG or PNG."
+
+          - label: "Photo Alt Text"
+            name: "photoAlt"
+            widget: "string"
+            required: false
+            i18n: true
+
+          - label: "Bio Paragraphs"
+            name: "bio"
+            widget: "list"
+            required: false
+            i18n: true
+            field:
+              label: "Paragraph"
+              name: "paragraph"
+              widget: "text"
+
+          - label: "Quote"
+            name: "quote"
+            widget: "text"
+            required: false
+            i18n: true
+
+          - label: "Years of Service"
+            name: "yearsOfService"
+            widget: "string"
+            required: false
+            i18n: duplicate
+
+  # ───────────────────────────────────────────────
+  # FOCUS AREAS (file collection)
+  # ───────────────────────────────────────────────
   - name: "focus_areas"
     label: "Focus Areas"
     files:
@@ -103,19 +335,34 @@ collections:
             name: "focus_areas"
             widget: "list"
             fields:
-              - { label: "Identifier", name: "id", widget: "string" }
-              - { label: "Order", name: "order", widget: "number", value_type: "int" }
-              - { label: "Icon Key", name: "icon", widget: "select", options: ["GraduationCap", "HeartPulse", "Sprout", "Users", "Leaf", "HandHeart"] }
-              - { label: "Title", name: "title", widget: "object", fields: [
-                  { label: "English", name: "en", widget: "string" },
-                  { label: "Hindi", name: "hi", widget: "string", hint: "Please review Hindi before publishing" }
-                ]}
-              - { label: "Description", name: "description", widget: "object", fields: [
-                  { label: "English", name: "en", widget: "text" },
-                  { label: "Hindi", name: "hi", widget: "text", hint: "Please review Hindi before publishing" }
-                ]}
-              - { label: "Accent Color", name: "color", widget: "string", default: "#1F2A5C" }
+              - label: "Order"
+                name: "order"
+                widget: "number"
+                value_type: "int"
+              - label: "Icon Key"
+                name: "icon"
+                widget: "select"
+                options: ["GraduationCap", "HeartPulse", "Sprout", "Users", "Leaf", "HandHeart"]
+              - label: "Title"
+                name: "title"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Hindi (कृपया प्रकाशित करने से पहले जाँचें)", name: "hi", widget: "string", hint: "Please review Hindi before publishing" }
+              - label: "Description"
+                name: "description"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "text" }
+                  - { label: "Hindi (कृपया प्रकाशित करने से पहले जाँचें)", name: "hi", widget: "text", hint: "Please review Hindi before publishing" }
+              - label: "Accent Color"
+                name: "color"
+                widget: "string"
+                default: "#1F2A5C"
 
+  # ───────────────────────────────────────────────
+  # SITE SETTINGS (file collection)
+  # ───────────────────────────────────────────────
   - name: "site_settings"
     label: "Site Settings & Details"
     files:
@@ -125,37 +372,49 @@ collections:
         format: "json"
         fields:
           - { label: "Organization Name (English)", name: "name", widget: "string" }
-          - { label: "Organization Name (Hindi)", name: "nameHindi", widget: "string" }
+          - { label: "Organization Name (Hindi)", name: "nameHindi", widget: "string", hint: "Please review Hindi before publishing" }
           - { label: "Email", name: "email", widget: "string" }
-          - { label: "Phone", name: "phone", widget: "object", fields: [
-              { label: "English", name: "en", widget: "string" },
-              { label: "Hindi", name: "hi", widget: "string", hint: "Please review Hindi before publishing" }
-            ]}
-          - { label: "Address", name: "address", widget: "object", fields: [
-              { label: "English", name: "en", widget: "string" },
-              { label: "Hindi", name: "hi", widget: "string", hint: "Please review Hindi before publishing" }
-            ]}
+          - label: "Phone"
+            name: "phone"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "string" }
+              - { label: "Hindi (कृपया जाँचें)", name: "hi", widget: "string", hint: "Please review Hindi before publishing" }
+          - label: "Address"
+            name: "address"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "string" }
+              - { label: "Hindi (कृपया जाँचें)", name: "hi", widget: "string", hint: "Please review Hindi before publishing" }
           - { label: "Facebook URL", name: "facebook_url", widget: "string" }
-          - { label: "Donation Note", name: "donation_note", widget: "object", fields: [
-              { label: "English", name: "en", widget: "text" },
-              { label: "Hindi", name: "hi", widget: "text", hint: "Please review Hindi before publishing" }
-            ]}
+          - label: "Donation Note"
+            name: "donation_note"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "text" }
+              - { label: "Hindi (कृपया जाँचें)", name: "hi", widget: "text", hint: "Please review Hindi before publishing" }
           - label: "Impact Figures"
             name: "impact_figures"
             widget: "list"
             fields:
-              - { label: "Identifier", name: "id", widget: "string" }
               - { label: "Figure / Value", name: "value", widget: "string" }
-              - { label: "Label", name: "label", widget: "object", fields: [
-                  { label: "English", name: "en", widget: "string" },
-                  { label: "Hindi", name: "hi", widget: "string", hint: "Please review Hindi before publishing" }
-                ]}
-              - { label: "Description", name: "description", widget: "object", fields: [
-                  { label: "English", name: "en", widget: "text" },
-                  { label: "Hindi", name: "hi", widget: "text", hint: "Please review Hindi before publishing" }
-                ]}
-              - { label: "Verified (Controls whether figure or placeholder note is displayed)", name: "verified", widget: "boolean", default: false }
-              - { label: "Placeholder Note", name: "note", widget: "object", required: false, fields: [
-                  { label: "English", name: "en", widget: "string" },
-                  { label: "Hindi", name: "hi", widget: "string", hint: "Please review Hindi before publishing" }
-                ]}
+              - label: "Label"
+                name: "label"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Hindi (कृपया जाँचें)", name: "hi", widget: "string", hint: "Please review Hindi before publishing" }
+              - label: "Description"
+                name: "description"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "text" }
+                  - { label: "Hindi (कृपया जाँचें)", name: "hi", widget: "text", hint: "Please review Hindi before publishing" }
+              - { label: "Verified (Shows official number when ON)", name: "verified", widget: "boolean", default: false }
+              - label: "Placeholder Note"
+                name: "note"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Hindi (कृपया जाँचें)", name: "hi", widget: "string", hint: "Please review Hindi before publishing" }

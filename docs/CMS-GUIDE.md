@@ -1,107 +1,188 @@
-# Maadhav Sewa Sansthan — Website Content Management Guide
+# Maadhav Sewa Sansthan — CMS Guide (Mobile Edition)
 
-Welcome to the content administration guide for **Maadhav Sewa Sansthan**. This website uses **Decap CMS**, a Git-based content management tool. 
-
-Every change you publish is saved directly into the website's GitHub repository. There is no external database, which keeps the website safe, permanent, and fast.
+> **Phone-first guide.** All steps work on a smartphone browser. Use Chrome on Android or Safari on iPhone.
 
 ---
 
-## 1. How to Log In
+## Quick links
+| Task | Go to |
+|---|---|
+| Add a new event | [Section 3](#3-add-a-new-event) |
+| Add a photo or video | [Section 5](#5-upload-a-photo) |
+| Translate to Hindi | [Section 6](#6-translate-to-hindi) |
+| Publish | [Section 7](#7-publish) |
+| Fix a mistake | [Section 8](#8-edit-an-existing-entry) |
+| Contact support | [Section 10](#10-get-help) |
 
-1. Open your web browser and go to:
+---
+
+## 1. Sign in
+
+1. Open your browser and go to:
    ```
-   https://<your-website-domain>/admin
+   https://<your-website-domain>/admin/index.html
    ```
-2. You will see the login screen with a **"Login with GitHub"** button.
-3. Click **"Login with GitHub"**.
-   > *[Screenshot Placeholder: Decap CMS Login screen with GitHub button]*
-4. A popup window will appear asking you to authorize access to your GitHub account.
-   - Enter your GitHub username and password if prompted.
-   - Click **Authorize**.
-5. Once authorized, the popup will close automatically, and you will be taken to the Content Dashboard.
-   > **Note:** Only team members who have been invited and granted access to the repository on GitHub can log in and publish updates.
+2. Tap **Login with GitHub**.
+
+   > 📸 _[Screenshot placeholder: Decap CMS login screen — large "Login with GitHub" button in the centre]_
+
+3. A small pop-up window opens. Enter your GitHub username and password, then tap **Sign in**.
+4. Tap **Authorize** when GitHub asks for permission.
+5. The pop-up closes. The Content Manager dashboard opens.
+
+   > 📸 _[Screenshot placeholder: Dashboard showing six collection chips at the top — Events, Activities, Gallery, Founder, Focus Areas, Site Settings]_
+
+> **Can't log in?** Ask the website administrator to add your GitHub account as a collaborator on the repository.
 
 ---
 
-## 2. Navigating the Content Collections
+## 2. The dashboard
 
-On the left side of the dashboard, you will find our content collections:
+On your phone you will see:
 
-- **Events & Programmes**: Manage upcoming drives, health camps, volunteer initiatives, and concluded events.
-- **Activities & Stories**: Share on-ground news, field stories, and detailed photos of initiatives.
-- **Gallery Archive**: Add photos and videos of our grassroots work across Raebareli.
-- **Founder Profile**: Edit the founder's biography, role, quotes, and profile photo.
-- **Focus Areas**: Manage the core focus categories displayed across the website.
-- **Site Settings & Details**: Update official contact numbers, office address, donation guidance, and impact figures.
+- **A row of chips at the top** — tap one to open that section.
+- **A list of existing entries** — each one is a card showing the title, status, and date.
+- **A sticky bar at the bottom** — this holds the Save and Publish buttons while you edit.
 
 ---
 
-## 3. How to Add a New Event or Activity
+## 3. Add a new event
 
-1. Click on **Events & Programmes** (or **Activities & Stories**) from the left menu.
-2. Click the green **"New Event"** (or **"New Activity"**) button at the top right.
-   > *[Screenshot Placeholder: 'New Event' button in Decap CMS dashboard]*
-3. Fill in the details:
-   - **Identifier (ID):** A unique, lowercase label without spaces (e.g., `free-eye-camp-oct-2026`).
-   - **Title:** Enter the event name in both English and Hindi.
-   - **Date:** Select the scheduled date using the calendar picker (`YYYY-MM-DD`).
-   - **Status:** Choose `upcoming` for future programs or `past` for concluded initiatives. (The website also automatically checks the date to mark past events!).
-   - **Category:** Choose the appropriate sector (Health, Education, Livelihood, Environment, Social Welfare).
-   - **Location:** Enter the village, block, or district location (e.g., *Raebareli District, Uttar Pradesh*).
-   - **Description:** Provide a summary of the initiative. You can use standard formatting like bold or bullet points.
+1. Tap **Events & Programmes** in the top chip bar.
 
----
+   > 📸 _[Screenshot placeholder: Events chip highlighted in the top bar]_
 
-## 4. Filling English & Hindi Translations Together
+2. Tap the green **New Event** button (top right of the list).
 
-Our website offers a bilingual experience with an instant English / Hindi toggle. To make editing easy, both languages are placed directly in the same editing form:
+   > 📸 _[Screenshot placeholder: List of events with the "New Event" button at the top right]_
 
-1. Look for fields with **English** and **Hindi** sections.
-2. In the English section, type your English copy.
-3. In the Hindi section, type your Hindi translation.
-   > **Important Reminder:** Every Hindi field includes a notice: *"Please review Hindi before publishing"*. Please double-check spelling and phrasing in Devanagari script before saving.
-   > *[Screenshot Placeholder: Bilingual form view showing English and Hindi fields side-by-side]*
+3. Fill in each field:
 
----
+   | Field | What to enter |
+   |---|---|
+   | **Title** | Name of the event in English |
+   | **Short Summary** | One or two sentences (maximum 160 characters) |
+   | **Date** | Tap the calendar icon and pick the date |
+   | **Status** | Choose **Upcoming** or **Past Event** from the list |
+   | **Category** | Tap and choose the closest topic (e.g. Health, Education) |
+   | **Location** | Village, block, or district (e.g. Raebareli, UP) |
+   | **Description** | Full details — you can use bold and bullet points |
+   | **Cover Image** | Tap the upload area to pick from your camera roll |
 
-## 5. How to Upload Photos & Media
+   > 📸 _[Screenshot placeholder: Event edit form in mobile view — full-width fields, sticky publish bar at the bottom]_
 
-You can upload new photos directly from your computer or phone:
-
-1. Find the **Cover Image** or **Photos** field in the form.
-2. Click **"Choose an image"** or **"Upload"**.
-   > *[Screenshot Placeholder: Media Library dialog with 'Upload' button]*
-3. The Media Library will open. You can:
-   - Select an existing photo from the library, or
-   - Click **"Upload"** to choose a new photo file from your computer (`.jpg`, `.png`, or `.webp`).
-4. Once uploaded, click on the photo and choose **"Insert"**.
+4. The **date is pre-filled with today** and the **status defaults to Upcoming**.
 
 ---
 
-## 6. How to Save and Publish
+## 4. The EN / HI switcher
 
-1. Once you have completed all required fields, click the **"Publish"** button at the top right of the screen.
-2. Click **"Publish now"** in the dropdown to confirm.
-   > *[Screenshot Placeholder: Top bar showing 'Publish' and status indicators]*
-3. **What happens next?**
-   - Decap CMS creates a new update (commit) in our GitHub repository.
-   - Vercel detects this update and automatically builds the new version of the website.
-   - **Please wait 1 to 2 minutes** for the deployment to finish. After 1–2 minutes, refresh the live website to see your new changes!
+At the top of every edit form you will see two large buttons:
 
----
+```
+[ EN ]   [ HI ]
+```
 
-## 7. Managing Impact Figures & Verification
+- **EN** — English fields (required before publishing).
+- **HI** — Hindi fields (you can fill these later; they are optional).
 
-In **Site Settings & Details**:
-- Each impact metric has a **"Verified"** switch.
-- When **Verified** is turned **OFF (false)**, the public website displays the figure with our standard compliance note: *"Figures to be confirmed by the organisation alongside statutory filings"*.
-- When **Verified** is turned **ON (true)**, the official verified number will be prominently displayed to visitors.
+> 📸 _[Screenshot placeholder: Segmented EN / HI buttons at the top of the form]_
+
+Fields that say **"Please review Hindi before publishing"** mean the Hindi text needs a human check before it goes live.
 
 ---
 
-## 8. Need Help or Technical Support?
+## 5. Upload a photo
 
-If you encounter an error or cannot log in:
-- Ensure your GitHub account has collaborator permissions on the repository.
-- Make sure all required fields marked with an asterisk are filled.
-- Contact the website technical coordinator for assistance.
+1. Find the **Cover Image** field (or the **Photos** list in activities).
+2. Tap the dashed upload area or the **Choose image** button.
+
+   > 📸 _[Screenshot placeholder: Large dashed upload box with "Choose image" button]_
+
+3. Your phone's photo picker will open. Choose a photo from your camera roll, or take a new one.
+4. The image uploads and appears as a preview.
+
+**Photo guidelines:**
+- **Cover images for events and activities:** Landscape orientation, at least 1200 px wide, under 500 KB. JPG, PNG, or WebP.
+- **Gallery photos:** At least 800 px wide, under 400 KB.
+- **Founder photo:** Portrait (4:5 ratio), at least 600 px wide, under 400 KB.
+
+---
+
+## 6. Translate to Hindi
+
+1. After completing the English fields, tap the **HI** button at the top.
+2. The same form reloads with blank (or placeholder) Hindi fields.
+3. Type the Hindi text in Devanagari script.
+
+   > 📸 _[Screenshot placeholder: HI locale active — form showing Hindi fields with the "Please review Hindi" note in orange]_
+
+4. Fields with an orange hint say **"Please review Hindi before publishing"** — check spelling and grammar carefully.
+5. Tap **EN** to switch back and double-check the English at any time.
+
+> **Tip:** You can publish in English first and add Hindi later. The website shows whichever language the visitor selects.
+
+---
+
+## 7. Publish
+
+1. When you are ready, look at the **sticky bar at the bottom** of the screen.
+
+   > 📸 _[Screenshot placeholder: Sticky bottom bar with "Save" and "Publish" buttons visible while the form scrolls]_
+
+2. Tap **Publish** (the highlighted button).
+3. A banner appears at the bottom of the screen:
+
+   > **✅ Published! It will appear on the website in 1–2 minutes.**
+
+4. After 1–2 minutes, open the live website and go to the **Events** page. Your new event will be there.
+
+   > 📸 _[Screenshot placeholder: Live website Events page showing the new entry]_
+
+---
+
+## 8. Edit an existing entry
+
+1. Tap the collection chip (e.g. **Events & Programmes**).
+2. Tap the card for the entry you want to change.
+3. Make your edits in the form.
+4. Tap **Publish** in the sticky bottom bar.
+
+---
+
+## 9. Update impact figures and site settings
+
+1. Tap **Site Settings & Details**.
+2. Find the **Impact Figures** list.
+3. For each figure:
+   - Set the **Value** (e.g. `500+`).
+   - Fill the **Label** in English and Hindi.
+   - Turn the **Verified** switch **ON** when the number has been officially confirmed. The website will display it prominently only when it is verified.
+4. Tap **Publish**.
+
+---
+
+## 10. Get help
+
+| Problem | Solution |
+|---|---|
+| Cannot log in | Ask the admin to add your GitHub account as a collaborator |
+| "No control for widget" error | Contact the technical team — a field type may need updating |
+| Photo not uploading | Check file size (must be under 500 KB) and format (JPG, PNG, WebP) |
+| Changes not appearing after 5 minutes | Check the Vercel deployment log at [vercel.com](https://vercel.com) |
+| Hindi text looks wrong | Copy-paste from a Devanagari keyboard app (e.g. Google Indic Keyboard) |
+
+> Contact the website technical coordinator for any other issue.
+
+---
+
+## Appendix: Content checklist before publishing
+
+- [ ] English title filled
+- [ ] Short summary under 160 characters
+- [ ] Date set
+- [ ] Status correct (Upcoming or Past)
+- [ ] Category selected
+- [ ] Cover image uploaded (at least 1200 px wide)
+- [ ] Hindi translation reviewed (or marked as pending)
+- [ ] Description complete
