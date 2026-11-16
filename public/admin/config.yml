@@ -10,7 +10,7 @@ media_folder: "public/uploads"
 public_folder: "/uploads"
 
 i18n:
-  structure: multiple_fields
+  structure: single_file
   locales:
     - en
     - hi
@@ -53,7 +53,7 @@ collections:
       - { label: "Summary", name: "summary", widget: "text", i18n: true, hint: "Please review Hindi before publishing" }
       - { label: "Body / Full Story", name: "body", widget: "markdown", i18n: true, hint: "Please review Hindi before publishing" }
       - { label: "Location", name: "location", widget: "string", required: false, i18n: true, hint: "Please review Hindi before publishing" }
-      - { label: "Photos", name: "photos", widget: "list", i18n: duplicate, field: { label: "Photo", name: "photo", widget: "image" } }
+      - { label: "Photos", name: "photos", widget: "list", i18n: true, field: { label: "Photo", name: "photo", widget: "image" } }
 
   - name: "gallery"
     label: "Gallery Archive"
@@ -76,78 +76,86 @@ collections:
 
   - name: "founder"
     label: "Founder Profile"
-    file: "content/data/founder.json"
-    format: "json"
-    i18n: true
-    fields:
-      - { label: "Name", name: "name", widget: "string", i18n: true, hint: "Please review Hindi before publishing" }
-      - { label: "Role", name: "role", widget: "string", i18n: true, hint: "Please review Hindi before publishing" }
-      - { label: "Photo", name: "photo", widget: "image", i18n: duplicate }
-      - { label: "Photo Alt Text", name: "photoAlt", widget: "string", i18n: true, hint: "Please review Hindi before publishing" }
-      - { label: "Bio Paragraphs", name: "bio", widget: "list", i18n: true, hint: "Please review Hindi before publishing", field: { label: "Paragraph", name: "paragraph", widget: "text" } }
-      - { label: "Quote", name: "quote", widget: "text", required: false, i18n: true, hint: "Please review Hindi before publishing" }
-      - { label: "Years of Service", name: "yearsOfService", widget: "string", required: false, i18n: duplicate }
+    files:
+      - name: "founder"
+        label: "Founder Profile"
+        file: "content/data/founder.json"
+        format: "json"
+        i18n: true
+        fields:
+          - { label: "Name", name: "name", widget: "string", i18n: true, hint: "Please review Hindi before publishing" }
+          - { label: "Role", name: "role", widget: "string", i18n: true, hint: "Please review Hindi before publishing" }
+          - { label: "Photo", name: "photo", widget: "image", i18n: duplicate }
+          - { label: "Photo Alt Text", name: "photoAlt", widget: "string", i18n: true, hint: "Please review Hindi before publishing" }
+          - { label: "Bio Paragraphs", name: "bio", widget: "list", i18n: true, hint: "Please review Hindi before publishing", field: { label: "Paragraph", name: "paragraph", widget: "text" } }
+          - { label: "Quote", name: "quote", widget: "text", required: false, i18n: true, hint: "Please review Hindi before publishing" }
+          - { label: "Years of Service", name: "yearsOfService", widget: "string", required: false, i18n: duplicate }
 
   - name: "focus_areas"
     label: "Focus Areas"
-    file: "content/data/focus_areas.json"
-    format: "json"
-    fields:
-      - label: "Focus Areas List"
-        name: "focus_areas"
-        widget: "list"
+    files:
+      - name: "focus_areas"
+        label: "Focus Areas"
+        file: "content/data/focus_areas.json"
+        format: "json"
         fields:
-          - { label: "Identifier", name: "id", widget: "string" }
-          - { label: "Order", name: "order", widget: "number", value_type: "int" }
-          - { label: "Icon Key", name: "icon", widget: "select", options: ["GraduationCap", "HeartPulse", "Sprout", "Users", "Leaf", "HandHeart"] }
-          - { label: "Title", name: "title", widget: "object", fields: [
-              { label: "English", name: "en", widget: "string" },
-              { label: "Hindi", name: "hi", widget: "string", hint: "Please review Hindi before publishing" }
-            ]}
-          - { label: "Description", name: "description", widget: "object", fields: [
-              { label: "English", name: "en", widget: "text" },
-              { label: "Hindi", name: "hi", widget: "text", hint: "Please review Hindi before publishing" }
-            ]}
-          - { label: "Accent Color", name: "color", widget: "string", default: "#1F2A5C" }
+          - label: "Focus Areas List"
+            name: "focus_areas"
+            widget: "list"
+            fields:
+              - { label: "Identifier", name: "id", widget: "string" }
+              - { label: "Order", name: "order", widget: "number", value_type: "int" }
+              - { label: "Icon Key", name: "icon", widget: "select", options: ["GraduationCap", "HeartPulse", "Sprout", "Users", "Leaf", "HandHeart"] }
+              - { label: "Title", name: "title", widget: "object", fields: [
+                  { label: "English", name: "en", widget: "string" },
+                  { label: "Hindi", name: "hi", widget: "string", hint: "Please review Hindi before publishing" }
+                ]}
+              - { label: "Description", name: "description", widget: "object", fields: [
+                  { label: "English", name: "en", widget: "text" },
+                  { label: "Hindi", name: "hi", widget: "text", hint: "Please review Hindi before publishing" }
+                ]}
+              - { label: "Accent Color", name: "color", widget: "string", default: "#1F2A5C" }
 
   - name: "site_settings"
     label: "Site Settings & Details"
-    file: "content/data/site_settings.json"
-    format: "json"
-    fields:
-      - { label: "Organization Name (English)", name: "name", widget: "string" }
-      - { label: "Organization Name (Hindi)", name: "nameHindi", widget: "string" }
-      - { label: "Email", name: "email", widget: "string" }
-      - { label: "Phone", name: "phone", widget: "object", fields: [
-          { label: "English", name: "en", widget: "string" },
-          { label: "Hindi", name: "hi", widget: "string", hint: "Please review Hindi before publishing" }
-        ]}
-      - { label: "Address", name: "address", widget: "object", fields: [
-          { label: "English", name: "en", widget: "string" },
-          { label: "Hindi", name: "hi", widget: "string", hint: "Please review Hindi before publishing" }
-        ]}
-      - { label: "Facebook URL", name: "facebook_url", widget: "string" }
-      - { label: "Donation Note", name: "donation_note", widget: "object", fields: [
-          { label: "English", name: "en", widget: "text" },
-          { label: "Hindi", name: "hi", widget: "text", hint: "Please review Hindi before publishing" }
-        ]}
-      - label: "Impact Figures"
-        name: "impact_figures"
-        widget: "list"
+    files:
+      - name: "site_settings"
+        label: "Site Settings & Details"
+        file: "content/data/site_settings.json"
+        format: "json"
         fields:
-          - { label: "Identifier", name: "id", widget: "string" }
-          - { label: "Figure / Value", name: "value", widget: "string" }
-          - { label: "Label", name: "label", widget: "object", fields: [
+          - { label: "Organization Name (English)", name: "name", widget: "string" }
+          - { label: "Organization Name (Hindi)", name: "nameHindi", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "object", fields: [
               { label: "English", name: "en", widget: "string" },
               { label: "Hindi", name: "hi", widget: "string", hint: "Please review Hindi before publishing" }
             ]}
-          - { label: "Description", name: "description", widget: "object", fields: [
+          - { label: "Address", name: "address", widget: "object", fields: [
               { label: "English", name: "en", widget: "string" },
               { label: "Hindi", name: "hi", widget: "string", hint: "Please review Hindi before publishing" }
             ]}
-          - { label: "Verified (Controls whether figure or placeholder note is displayed)", name: "verified", widget: "boolean", default: false }
-          - { label: "Placeholder Note", name: "note", widget: "object", required: false, fields: [
-              { label: "English", name: "en", widget: "string" },
-              { label: "Hindi", name: "hi", widget: "string", hint: "Please review Hindi before publishing" }
+          - { label: "Facebook URL", name: "facebook_url", widget: "string" }
+          - { label: "Donation Note", name: "donation_note", widget: "object", fields: [
+              { label: "English", name: "en", widget: "text" },
+              { label: "Hindi", name: "hi", widget: "text", hint: "Please review Hindi before publishing" }
             ]}
-
+          - label: "Impact Figures"
+            name: "impact_figures"
+            widget: "list"
+            fields:
+              - { label: "Identifier", name: "id", widget: "string" }
+              - { label: "Figure / Value", name: "value", widget: "string" }
+              - { label: "Label", name: "label", widget: "object", fields: [
+                  { label: "English", name: "en", widget: "string" },
+                  { label: "Hindi", name: "hi", widget: "string", hint: "Please review Hindi before publishing" }
+                ]}
+              - { label: "Description", name: "description", widget: "object", fields: [
+                  { label: "English", name: "en", widget: "text" },
+                  { label: "Hindi", name: "hi", widget: "text", hint: "Please review Hindi before publishing" }
+                ]}
+              - { label: "Verified (Controls whether figure or placeholder note is displayed)", name: "verified", widget: "boolean", default: false }
+              - { label: "Placeholder Note", name: "note", widget: "object", required: false, fields: [
+                  { label: "English", name: "en", widget: "string" },
+                  { label: "Hindi", name: "hi", widget: "string", hint: "Please review Hindi before publishing" }
+                ]}
