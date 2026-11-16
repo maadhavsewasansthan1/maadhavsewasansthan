@@ -1,0 +1,42 @@
+{
+  "id": "rural-health-camp-2025",
+  "title": {
+    "en": "Community Preventive Health & Eye Camp",
+    "hi": "सामुदायिक स्वास्थ्य एवं निःशुल्क नेत्र परीक्षण शिविर"
+  },
+  "date": "2025-10-05",
+  "category": "Health",
+  "categoryI18n": {
+    "en": "Health",
+    "hi": "स्वास्थ्य"
+  },
+  "summary": {
+    "en": "Medical volunteers and doctors gathered in rural Raebareli to deliver general wellness checkups, eye tests, blood pressure screenings, and basic health consultations.",
+    "hi": "ग्रामीण रायबरेली में स्वयंसेवी चिकित्सकों द्वारा सामान्य स्वास्थ्य जांच, नेत्र परीक्षण, रक्तचाप जांच और प्राथमिक परामर्श प्रदान किया गया।"
+  },
+  "body": {
+    "en": "Access to primary medical consultations remains a challenge for village elders and daily wage workers who cannot afford day trips to district hospitals. In response, our health camp brought doctors directly to village centers, facilitating diagnosis, hygiene counseling, and referrals for advanced treatments.",
+    "hi": "दूरदराज के गांवों में बुजुर्गों और श्रमिकों के लिए जिला अस्पताल तक पहुंच पाना कठिन होता है। हमारे स्वास्थ्य शिविर ने चिकित्सकों को सीधे गांव तक पहुंचाया, जिससे कई परिवारों को समय पर स्वास्थ्य परामर्श प्राप्त हुआ।"
+  },
+  "location": {
+    "en": "Raebareli District, UP",
+    "hi": "रायबरेली जनपद, उत्तर प्रदेश"
+  },
+  "photos": [
+    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80"
+  ],
+  "highlights": [
+    {
+      "en": "Free doctor consultations and vital checks",
+      "hi": "निःशुल्क चिकित्सीय परामर्श व स्वास्थ्य परीक्षण"
+    },
+    {
+      "en": "Vision tests and spectacle prescription assistance",
+      "hi": "नेत्र जांच और चश्मा वितरण परामर्श"
+    },
+    {
+      "en": "Nutritional guidance for expectant mothers",
+      "hi": "मातृ पोषण व स्वास्थ्य संबंधी जागरूकता"
+    }
+  ]
+}

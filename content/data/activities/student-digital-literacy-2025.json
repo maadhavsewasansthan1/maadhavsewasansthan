@@ -1,0 +1,42 @@
+{
+  "id": "student-digital-literacy-2025",
+  "title": {
+    "en": "Village Student Digital Literacy Initiative",
+    "hi": "ग्रामीण छात्र डिजिटल साक्षरता कार्यशाला"
+  },
+  "date": "2025-08-20",
+  "category": "Education",
+  "categoryI18n": {
+    "en": "Education",
+    "hi": "शिक्षा"
+  },
+  "summary": {
+    "en": "Interactive workshops introducing rural students and young adults to foundational computer operations, internet safety, and educational applications.",
+    "hi": "ग्रामीण छात्र-छात्राओं के लिए मूलभूत कंप्यूटर संचालन, सुरक्षित इंटरनेट उपयोग और शैक्षणिक डिजिटल टूल्स पर व्यावहारिक कार्यशाला।"
+  },
+  "body": {
+    "en": "Bridging the digital gap is critical for rural youth aiming for higher education or skilled employment. This initiative introduced village school students to typing, internet navigation, and free online study resources through volunteer-led weekend batches.",
+    "hi": "डिजिटल विभाजन को कम करना ग्रामीण युवाओं के भविष्य के लिए आवश्यक है। इस पहल के माध्यम से विद्यार्थियों को कंप्यूटर और उपयोगी ऑनलाइन पाठ्य सामग्री से परिचित कराया गया।"
+  },
+  "location": {
+    "en": "Raebareli Rural Area, UP",
+    "hi": "ग्रामीण रायबरेली, उत्तर प्रदेश"
+  },
+  "photos": [
+    "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80"
+  ],
+  "highlights": [
+    {
+      "en": "Foundational computer usage training",
+      "hi": "कंप्यूटर संचालन का प्राथमिक व्यावहारिक अभ्यास"
+    },
+    {
+      "en": "Introduction to digital public services and e-learning",
+      "hi": "ऑनलाइन ई-लर्निंग सामग्री से परिचय"
+    },
+    {
+      "en": "Distribution of notebooks and writing materials",
+      "hi": "अभ्यास पुस्तिकाओं व लेखन सामग्री का वितरण"
+    }
+  ]
+}

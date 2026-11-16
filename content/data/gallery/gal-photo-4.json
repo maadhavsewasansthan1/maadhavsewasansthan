@@ -1,0 +1,26 @@
+{
+  "id": "gal-photo-4",
+  "type": "photo",
+  "title": {
+    "en": "Native Tree Plantation Drive",
+    "hi": "देशी वृक्षारोपण एवं पर्यावरण चेतना"
+  },
+  "category": "Environment",
+  "categoryI18n": {
+    "en": "Environment",
+    "hi": "पर्यावरण"
+  },
+  "caption": {
+    "en": "Volunteers planting native saplings along the roadside during monsoon greendrive.",
+    "hi": "सड़क के दोनों ओर नीम, पीपल और जामुन के पौधों का सामूहिक रोपण।"
+  },
+  "date": "2025-08-05",
+  "location": {
+    "en": "Raebareli, UP",
+    "hi": "रायबरेली, उत्तर प्रदेश"
+  },
+  "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=900&q=80",
+  "videoUrl": "",
+  "duration": "",
+  "alt": "Planting native trees in rural soil"
+}

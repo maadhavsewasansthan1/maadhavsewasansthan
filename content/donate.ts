@@ -1,0 +1,76 @@
+import { DonationContent } from "./types";
+
+export const donationContent: DonationContent = {
+  badge: {
+    en: "Support the Mission",
+    hi: "सेवा में सहयोग", // Pending client review
+  },
+  headline: {
+    en: "Support Our Grassroots Community Work",
+    hi: "माधव सेवा संस्थान को सहयोग दें", // Pending client review
+  },
+  headlineHindi: "माधव सेवा संस्थान को सहयोग दें",
+  subheadline: {
+    en: "Your voluntary contribution enables our field volunteers to expand rural tutoring circles, conduct free medical screenings, and aid vulnerable families across Raebareli.",
+    hi: "आपका स्वैच्छिक सहयोग रायबरेली के ग्रामीण क्षेत्रों में निःशुल्क स्वास्थ्य शिविरों, छात्र अध्ययन केंद्रों और असहाय परिवारों की सहायता को गति प्रदान करता है।", // Pending client review
+  },
+  // Neutral statement replacing unverified claims
+  neutralStatement: {
+    en: "Community contributions directly support local educational assistance, health screening camps, and community welfare initiatives across Raebareli district.",
+    hi: "समुदाय द्वारा प्राप्त सहयोग सीधे रायबरेली जनपद में स्थानीय शैक्षणिक सहायता, स्वास्थ्य शिविरों और जनकल्याण कार्यक्रमों में उपयोग किया जाता है।", // Pending client review
+  },
+  disclaimer: {
+    en: "To maintain the highest standards of financial integrity and regulatory compliance, official bank account and UPI transfer credentials are provided directly upon contacting the organisation. No payment details are displayed publicly online at this stage.",
+    hi: "वित्तीय पारदर्शिता और नियमों के अनुपालन हेतु, संस्था के आधिकारिक बैंक खाते और यूपीआई विवरण संस्था से सीधे संपर्क करने पर ही उपलब्ध कराए जाते हैं। इस स्तर पर कोई भी भुगतान विवरण वेबसाइट पर सार्वजनिक प्रदर्शित नहीं किया गया है।", // Pending client review
+  },
+  qrCodePath: "/images/qr-placeholder.png",
+  qrAlt: "Provisional UPI QR code placeholder for Maadhav Sewa Sansthan",
+  contactNote: {
+    en: "For verified contribution details, receipt requests, or to coordinate in-kind support (books, warm blankets, medical kits), please contact our coordination team directly.",
+    hi: "सत्यापित सहयोग विवरण, रसीद संबंधी जानकारी अथवा सामग्री सहयोग (पुस्तकालय सामग्री, गर्म वस्त्र, चिकित्सा किट) के लिए कृपया हमारे समन्वय दल से सीधे संपर्क करें।", // Pending client review
+  },
+  supportChannels: [
+    {
+      title: {
+        en: "Direct Bank Transfer Guidance",
+        hi: "बैंक खाता स्थानांतरण मार्गदर्शन", // Pending client review
+      },
+      description: {
+        en: "Official account number and IFSC details will be shared directly upon communication with our office.",
+        hi: "आधिकारिक बैंक खाता और आईएफएससी विवरण कार्यालय से संपर्क करने पर सीधे साझा किए जाएंगे।", // Pending client review
+      },
+      contactAction: {
+        en: "Request Bank Details",
+        hi: "बैंक विवरण का अनुरोध करें", // Pending client review
+      },
+    },
+    {
+      title: {
+        en: "UPI & Digital Payment Verification",
+        hi: "यूपीआई एवं डिजिटल भुगतान सत्यापन", // Pending client review
+      },
+      description: {
+        en: "Connect with our coordination desk to verify our official UPI handle before initiating a contribution.",
+        hi: "सहयोग प्रेषित करने से पूर्व हमारे समन्वय दल से आधिकारिक यूपीआई पते की पुष्टि अवश्य प्राप्त करें।", // Pending client review
+      },
+      contactAction: {
+        en: "Verify UPI Details",
+        hi: "यूपीआई विवरण सत्यापित करें", // Pending client review
+      },
+    },
+    {
+      title: {
+        en: "Material & In-Kind Contribution",
+        hi: "सामग्री एवं वस्तुगत सहयोग", // Pending client review
+      },
+      description: {
+        en: "Donate student books, stationery kits, warm winter blankets, or medical checkup consumables.",
+        hi: "छात्रों के लिए पुस्तकें, पाठ्य सामग्री, शीतकालीन गर्म वस्त्र या प्राथमिक चिकित्सा सामग्री का प्रत्यक्ष सहयोग।", // Pending client review
+      },
+      contactAction: {
+        en: "Coordinate In-Kind Giving",
+        hi: "सामग्री सहयोग समन्वय करें", // Pending client review
+      },
+    },
+  ],
+};

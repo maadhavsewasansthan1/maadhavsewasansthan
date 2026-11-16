@@ -1,0 +1,39 @@
+{
+  "id": "womens-skill-orientation-past",
+  "title": {
+    "en": "Rural Women Self-Help Group Workshop",
+    "hi": "ग्रामीण महिला स्वावलंबन एवं कौशल कार्यशाला"
+  },
+  "date": "2025-11-10",
+  "displayDate": {
+    "en": "Completed Session [Archived Field Record]",
+    "hi": "सत्र संपन्न [अभिलेखीय सेवा विवरण]"
+  },
+  "time": {
+    "en": "Completed",
+    "hi": "संपन्न"
+  },
+  "location": {
+    "en": "Raebareli, UP",
+    "hi": "रायबरेली, उत्तर प्रदेश"
+  },
+  "category": {
+    "en": "Livelihood",
+    "hi": "रोजगार"
+  },
+  "description": {
+    "en": "Introductory training on cooperative savings, tailoring fundamentals, and small-batch production for women seeking home-based enterprise.",
+    "hi": "गृह उद्योग और सिलाई-कढ़ाई के माध्यम से महिलाओं को आर्थिक रूप से आत्मनिर्भर बनाने हेतु कार्यशाला।"
+  },
+  "status": "past",
+  "organizer": {
+    "en": "Women Empowerment Cell",
+    "hi": "महिला प्रकोष्ठ"
+  },
+  "registrationNote": {
+    "en": "Concluded with participant certifications.",
+    "hi": "प्रमाणपत्र वितरण के साथ सफलतापूर्वक संपन्न।"
+  },
+  "image": "/images/event-placeholder.jpg",
+  "link": ""
+}

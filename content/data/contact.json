@@ -1,0 +1,75 @@
+{
+  "badge": {
+    "en": "Connect With Us",
+    "hi": "हमसे संपर्क करें"
+  },
+  "headline": {
+    "en": "Get in Touch with Our Team",
+    "hi": "माधव सेवा संस्थान से संपर्क करें"
+  },
+  "headlineHindi": "माधव सेवा संस्थान से संपर्क करें",
+  "description": {
+    "en": "We welcome questions, collaborative ideas, volunteer applications, and community feedback. Reach out to our team in Raebareli, Uttar Pradesh.",
+    "hi": "हम सेवा कार्य से संबंधित प्रश्नों, स्वयंसेवी सहभागिता, परामर्श और सुझावों का सहर्ष स्वागत करते हैं। रायबरेली, उत्तर प्रदेश स्थित हमारे दल से संपर्क करें।"
+  },
+  "address": {
+    "en": "Raebareli, Uttar Pradesh — 229001, India",
+    "hi": "रायबरेली, उत्तर प्रदेश — 229001, भारत"
+  },
+  "email": "contact@maadhavsewasnsthan.org",
+  "phone": {
+    "en": "[Official contact number to be updated]",
+    "hi": "[आधिकारिक संपर्क सूत्र शीघ्र अद्यतन किया जाएगा]"
+  },
+  "officeHours": {
+    "en": "Monday to Saturday: 10:00 AM – 05:00 PM (IST)",
+    "hi": "सोमवार से शनिवार: प्रातः 10:00 बजे से सायं 05:00 बजे तक"
+  },
+  "facebookUrl": "https://www.facebook.com/p/Maadhav-Sewa-Sansthan-100080156370355/",
+  "formNotice": {
+    "en": "Notice: The online contact form is currently in demonstration mode and is not yet connected to our backend server. Please contact us directly via email or our official Facebook page.",
+    "hi": "सूचना: ऑनलाइन संपर्क फॉर्म वर्तमान में प्रदर्शन स्वरूप है और अभी मुख्य सर्वर से नहीं जुड़ा है। कृपया सीधे ईमेल अथवा आधिकारिक फेसबुक पेज के माध्यम से संपर्क करें।"
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Where is Maadhav Sewa Sansthan based?",
+        "hi": "माधव सेवा संस्थान का मुख्य कार्यक्षेत्र कहाँ है?"
+      },
+      "answer": {
+        "en": "The organisation is head-quartered in Raebareli, Uttar Pradesh, and carries out community initiatives throughout the surrounding rural hamlets and villages.",
+        "hi": "संस्थान का मुख्यालय रायबरेली, उत्तर प्रदेश में स्थित है, और संस्था इसके आसपास के ग्रामीण अंचलों में स्वास्थ्य, शिक्षा और समाज सेवा के कार्यक्रम चलाती है।"
+      }
+    },
+    {
+      "question": {
+        "en": "How can I join as a volunteer?",
+        "hi": "मैं स्वयंसेवक के रूप में कैसे जुड़ सकता हूँ?"
+      },
+      "answer": {
+        "en": "You can express interest by writing to us via email or messaging our official Facebook page. We coordinate volunteer drives for health camps, student tutoring, and tree plantations.",
+        "hi": "आप हमें ईमेल लिखकर या हमारे आधिकारिक फेसबुक पेज पर संदेश भेजकर अपनी रुचि व्यक्त कर सकते हैं। हम स्वास्थ्य शिविरों, शिक्षण और वृक्षारोपण में स्वयंसेवकों का सहयोग लेते हैं।"
+      }
+    },
+    {
+      "question": {
+        "en": "Are in-kind donations accepted?",
+        "hi": "क्या सामग्री अथवा वस्तुगत सहयोग स्वीकार किया जाता है?"
+      },
+      "answer": {
+        "en": "Yes, we welcome educational kits, books, stationery, winter blankets, and medical diagnostic consumables. Please contact us in advance to align with current field requirements.",
+        "hi": "हाँ, हम विद्यार्थियों हेतु पुस्तकें, स्टेशनरी, शीतकालीन कंबल और प्राथमिक चिकित्सा सामग्री का स्वागत करते हैं। आवश्यकता के अनुरूप समन्वय हेतु पहले संपर्क करें।"
+      }
+    },
+    {
+      "question": {
+        "en": "How can other organizations partner with Maadhav Sewa Sansthan?",
+        "hi": "अन्य संस्थाएं अथवा चिकित्सक संस्थान के साथ कैसे सहयोग कर सकते हैं?"
+      },
+      "answer": {
+        "en": "We collaborate with medical practitioners, CSR programs, student associations, and civil society groups. Please email your proposal to our coordination desk.",
+        "hi": "हम चिकित्सकों, शैक्षणिक संस्थानों, कॉर्पोरेट सीएसआर और सामाजिक संस्थाओं के साथ मिलकर कार्य करते हैं। कृपया अपना प्रस्ताव हमारे ईमेल पर भेजें।"
+      }
+    }
+  ]
+}

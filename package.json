@@ -1,14 +1,19 @@
 {
   "name": "maadhav-sewa-sansthan",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
+    "predev": "node scripts/build-content.cjs",
     "dev": "next dev",
+    "prebuild": "node scripts/build-content.cjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "framer-motion": "^14.14.0",
+    "lucide-react": "^1.73.0",
     "next": "16.4.6",
     "react": "19.3.0",
     "react-dom": "19.3.0"

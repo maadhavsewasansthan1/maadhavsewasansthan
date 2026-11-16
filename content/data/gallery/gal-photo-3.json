@@ -1,0 +1,26 @@
+{
+  "id": "gal-photo-3",
+  "type": "photo",
+  "title": {
+    "en": "Women's Vocational Sewing Session",
+    "hi": "महिला सिलाई एवं हस्तशिल्प प्रशिक्षण"
+  },
+  "category": "Community",
+  "categoryI18n": {
+    "en": "Community",
+    "hi": "सामुदायिक"
+  },
+  "caption": {
+    "en": "Hands-on training session on garment finishing and tailoring patterns.",
+    "hi": "सिलाई मशीन पर व्यावहारिक अभ्यास और वस्त्र निर्माण की तकनीकें।"
+  },
+  "date": "2025-07-15",
+  "location": {
+    "en": "Raebareli, UP",
+    "hi": "रायबरेली, उत्तर प्रदेश"
+  },
+  "image": "https://images.unsplash.com/photo-1573164574511-73c773193279?w=900&q=80",
+  "videoUrl": "",
+  "duration": "",
+  "alt": "Women practicing tailoring techniques on sewing machines"
+}

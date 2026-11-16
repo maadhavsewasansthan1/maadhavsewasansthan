@@ -1,0 +1,39 @@
+{
+  "id": "swachh-bharat-drive-2026",
+  "title": {
+    "en": "Swachh Gaon Health & Cleanliness Drive",
+    "hi": "स्वच्छ ग्राम स्वास्थ्य एवं स्वच्छता अभियान"
+  },
+  "date": "",
+  "displayDate": {
+    "en": "[Upcoming Schedule — Date to be announced]",
+    "hi": "[आगामी कार्यक्रम — तिथि शीघ्र घोषित की जाएगी]"
+  },
+  "time": {
+    "en": "Morning 08:00 AM – 12:00 PM",
+    "hi": "प्रातः 08:00 बजे से दोपहर 12:00 बजे तक"
+  },
+  "location": {
+    "en": "Raebareli District, Uttar Pradesh",
+    "hi": "रायबरेली जनपद, उत्तर प्रदेश"
+  },
+  "category": {
+    "en": "Environment",
+    "hi": "पर्यावरण"
+  },
+  "description": {
+    "en": "A multi-village cleanliness and drainage maintenance campaign engaging youth volunteers, school students, and village elders.",
+    "hi": "ग्रामीण युवाओं, विद्यार्थियों और ग्रामवासियों के सहयोग से स्वच्छता, जल निकासी और जन-स्वास्थ्य जागरूकता अभियान।"
+  },
+  "status": "upcoming",
+  "organizer": {
+    "en": "Maadhav Sewa Sansthan Environment Wing",
+    "hi": "माधव सेवा संस्थान पर्यावरण प्रभाग"
+  },
+  "registrationNote": {
+    "en": "Open for community volunteers and local participants.",
+    "hi": "स्थानीय नागरिकों व स्वयंसेवकों के लिए खुला आमंत्रण।"
+  },
+  "image": "/images/event-placeholder.jpg",
+  "link": ""
+}

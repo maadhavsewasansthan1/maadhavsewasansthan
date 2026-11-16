@@ -1,0 +1,26 @@
+{
+  "id": "gal-photo-1",
+  "type": "photo",
+  "title": {
+    "en": "Village Health Consultation",
+    "hi": "ग्रामीण प्राथमिक स्वास्थ्य परामर्श"
+  },
+  "category": "Health",
+  "categoryI18n": {
+    "en": "Health",
+    "hi": "स्वास्थ्य"
+  },
+  "caption": {
+    "en": "Volunteer physicians providing primary health consultations and vital screenings.",
+    "hi": "चिकित्सकों द्वारा ग्रामीणों का स्वास्थ्य परीक्षण एवं प्राथमिक उपचार परामर्श।"
+  },
+  "date": "2025-10-05",
+  "location": {
+    "en": "Raebareli, UP",
+    "hi": "रायबरेली, उत्तर प्रदेश"
+  },
+  "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=900&q=80",
+  "videoUrl": "",
+  "duration": "",
+  "alt": "Doctor consulting with rural patient during medical camp"
+}

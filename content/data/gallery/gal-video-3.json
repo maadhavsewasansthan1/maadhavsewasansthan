@@ -1,0 +1,26 @@
+{
+  "id": "gal-video-3",
+  "type": "video",
+  "title": {
+    "en": "Harit Raebareli: Greening Our Villages",
+    "hi": "हरित रायबरेली: ग्राम संरक्षण प्रयास"
+  },
+  "category": "Environment",
+  "categoryI18n": {
+    "en": "Environment",
+    "hi": "पर्यावरण"
+  },
+  "caption": {
+    "en": "Short documentary tracing tree survival rates and water conservation awareness.",
+    "hi": "ग्रामीण क्षेत्रों में पर्यावरण व जल संरक्षण के प्रति चेतना वृत्तचित्र।"
+  },
+  "date": "2025-09-01",
+  "location": {
+    "en": "Raebareli, UP",
+    "hi": "रायबरेली, उत्तर प्रदेश"
+  },
+  "image": "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=900&q=80",
+  "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  "duration": "02:30",
+  "alt": "Green village landscape thumbnail"
+}

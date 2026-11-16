@@ -1,0 +1,42 @@
+{
+  "id": "tree-plantation-cleanliness-2025",
+  "title": {
+    "en": "Winter Warmth & Blanket Distribution Drive",
+    "hi": "शीतकालीन राहत: कंबल एवं आवश्यक सामग्री वितरण"
+  },
+  "date": "2025-12-15",
+  "category": "Social Welfare",
+  "categoryI18n": {
+    "en": "Social Welfare",
+    "hi": "समाज कल्याण"
+  },
+  "summary": {
+    "en": "Seasonal distribution of warm blankets, woolens, and nutritional dry rations to impoverished senior citizens and vulnerable families during severe winter spells.",
+    "hi": "कड़ाके की ठंड में असहाय वृद्धजनों, दिव्यांगों और अत्यंत निर्धन परिवारों को गर्म कंबल और आवश्यक राहत सामग्री का वितरण।"
+  },
+  "body": {
+    "en": "Winter in rural Uttar Pradesh can be harsh for older persons and destitute families living in makeshift homes. Our volunteers conducted door-to-door surveys to identify those in greatest need and delivered warm blankets directly to their doorsteps.",
+    "hi": "उत्तर भारत की शीत ऋतु में बुजुर्गों और कमजोर परिवारों के लिए राहत पहुंचाना सेवा का प्रमुख दायित्व है। कार्यकर्ताओं ने घर-घर जाकर जरूरतमंदों को चिन्हित कर कंबल पहुंचाए।"
+  },
+  "location": {
+    "en": "Raebareli District, UP",
+    "hi": "रायबरेली जनपद, उत्तर प्रदेश"
+  },
+  "photos": [
+    "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=800&q=80"
+  ],
+  "highlights": [
+    {
+      "en": "Doorstep delivery to isolated elderly residents",
+      "hi": "दूरस्थ गांवों में वृद्धजनों तक सीधी राहत"
+    },
+    {
+      "en": "Heavy thermal blankets and woolen apparel",
+      "hi": "उत्कृष्ट गुणवत्ता वाले गर्म कंबल और वस्त्र"
+    },
+    {
+      "en": "Emergency nutritional packages provided",
+      "hi": "आवश्यक पोषण और खाद्य सामग्री सहायता"
+    }
+  ]
+}

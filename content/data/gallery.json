@@ -1,0 +1,210 @@
+[
+  {
+    "id": "gal-photo-1",
+    "type": "photo",
+    "title": {
+      "en": "Village Health Consultation",
+      "hi": "ग्रामीण प्राथमिक स्वास्थ्य परामर्श"
+    },
+    "category": "Health",
+    "categoryI18n": {
+      "en": "Health",
+      "hi": "स्वास्थ्य"
+    },
+    "caption": {
+      "en": "Volunteer physicians providing primary health consultations and vital screenings.",
+      "hi": "चिकित्सकों द्वारा ग्रामीणों का स्वास्थ्य परीक्षण एवं प्राथमिक उपचार परामर्श।"
+    },
+    "date": "2025-10-05",
+    "location": {
+      "en": "Raebareli, UP",
+      "hi": "रायबरेली, उत्तर प्रदेश"
+    },
+    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=900&q=80",
+    "videoUrl": "",
+    "duration": "",
+    "alt": "Doctor consulting with rural patient during medical camp"
+  },
+  {
+    "id": "gal-photo-2",
+    "type": "photo",
+    "title": {
+      "en": "Interactive Student Learning Circle",
+      "hi": "ग्रामीण छात्र अध्ययन गोष्ठी"
+    },
+    "category": "Education",
+    "categoryI18n": {
+      "en": "Education",
+      "hi": "शिक्षा"
+    },
+    "caption": {
+      "en": "Children gathered for weekend digital literacy and English tutoring in a village hall.",
+      "hi": "ग्रामीण प्राथमिक शाला परिसर में बच्चों के लिए अध्ययन एवं मार्गदर्शन सत्र।"
+    },
+    "date": "2025-08-20",
+    "location": {
+      "en": "Raebareli, UP",
+      "hi": "रायबरेली, उत्तर प्रदेश"
+    },
+    "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=900&q=80",
+    "videoUrl": "",
+    "duration": "",
+    "alt": "Village children engaging enthusiastically with learning materials"
+  },
+  {
+    "id": "gal-photo-3",
+    "type": "photo",
+    "title": {
+      "en": "Women's Vocational Sewing Session",
+      "hi": "महिला सिलाई एवं हस्तशिल्प प्रशिक्षण"
+    },
+    "category": "Community",
+    "categoryI18n": {
+      "en": "Community",
+      "hi": "सामुदायिक"
+    },
+    "caption": {
+      "en": "Hands-on training session on garment finishing and tailoring patterns.",
+      "hi": "सिलाई मशीन पर व्यावहारिक अभ्यास और वस्त्र निर्माण की तकनीकें।"
+    },
+    "date": "2025-07-15",
+    "location": {
+      "en": "Raebareli, UP",
+      "hi": "रायबरेली, उत्तर प्रदेश"
+    },
+    "image": "https://images.unsplash.com/photo-1573164574511-73c773193279?w=900&q=80",
+    "videoUrl": "",
+    "duration": "",
+    "alt": "Women practicing tailoring techniques on sewing machines"
+  },
+  {
+    "id": "gal-photo-4",
+    "type": "photo",
+    "title": {
+      "en": "Native Tree Plantation Drive",
+      "hi": "देशी वृक्षारोपण एवं पर्यावरण चेतना"
+    },
+    "category": "Environment",
+    "categoryI18n": {
+      "en": "Environment",
+      "hi": "पर्यावरण"
+    },
+    "caption": {
+      "en": "Volunteers planting native saplings along the roadside during monsoon greendrive.",
+      "hi": "सड़क के दोनों ओर नीम, पीपल और जामुन के पौधों का सामूहिक रोपण।"
+    },
+    "date": "2025-08-05",
+    "location": {
+      "en": "Raebareli, UP",
+      "hi": "रायबरेली, उत्तर प्रदेश"
+    },
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=900&q=80",
+    "videoUrl": "",
+    "duration": "",
+    "alt": "Planting native trees in rural soil"
+  },
+  {
+    "id": "gal-photo-5",
+    "type": "photo",
+    "title": {
+      "en": "Winter Relief Warmth Distribution",
+      "hi": "शीतकालीन कंबल एवं सहायता सामग्री वितरण"
+    },
+    "category": "Community",
+    "categoryI18n": {
+      "en": "Community",
+      "hi": "सामुदायिक"
+    },
+    "caption": {
+      "en": "Delivering blankets and food packets to older residents in remote hamlets.",
+      "hi": "अत्यधिक ठंड में बुजुर्गों और असहाय परिवारों को गर्म कंबल और राहत सामग्री।"
+    },
+    "date": "2025-12-20",
+    "location": {
+      "en": "Raebareli, UP",
+      "hi": "रायबरेली, उत्तर प्रदेश"
+    },
+    "image": "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=900&q=80",
+    "videoUrl": "",
+    "duration": "",
+    "alt": "Community relief supplies and voluntary aid"
+  },
+  {
+    "id": "gal-video-1",
+    "type": "video",
+    "title": {
+      "en": "Community Glimpses: Annual Health Outreach",
+      "hi": "वार्षिक स्वास्थ्य सेवा अभियान के दृश्य"
+    },
+    "category": "Health",
+    "categoryI18n": {
+      "en": "Health",
+      "hi": "स्वास्थ्य"
+    },
+    "caption": {
+      "en": "Video highlights from our rural health and vision screening camp in Raebareli.",
+      "hi": "ग्रामीण नेत्र जांच एवं स्वास्थ्य परीक्षण शिविर की वीडियो झलकियाँ।"
+    },
+    "date": "2025-10-10",
+    "location": {
+      "en": "Raebareli, UP",
+      "hi": "रायबरेली, उत्तर प्रदेश"
+    },
+    "image": "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=900&q=80",
+    "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "duration": "03:45",
+    "alt": "Health camp overview video thumbnail"
+  },
+  {
+    "id": "gal-video-2",
+    "type": "video",
+    "title": {
+      "en": "Voices from the Village: Self-Reliance Stories",
+      "hi": "ग्रामीण स्वरोजगार: स्वावलंबन की प्रेरणा"
+    },
+    "category": "Community",
+    "categoryI18n": {
+      "en": "Community",
+      "hi": "सामुदायिक"
+    },
+    "caption": {
+      "en": "Interviews with women entrepreneurs who established home-based businesses.",
+      "hi": "प्रशिक्षण प्राप्त कर आत्मनिर्भर बनने वाली महिलाओं के अनुभव एवं विचार।"
+    },
+    "date": "2025-07-20",
+    "location": {
+      "en": "Raebareli, UP",
+      "hi": "रायबरेली, उत्तर प्रदेश"
+    },
+    "image": "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=900&q=80",
+    "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "duration": "04:12",
+    "alt": "Women cooperative documentary thumbnail"
+  },
+  {
+    "id": "gal-video-3",
+    "type": "video",
+    "title": {
+      "en": "Harit Raebareli: Greening Our Villages",
+      "hi": "हरित रायबरेली: ग्राम संरक्षण प्रयास"
+    },
+    "category": "Environment",
+    "categoryI18n": {
+      "en": "Environment",
+      "hi": "पर्यावरण"
+    },
+    "caption": {
+      "en": "Short documentary tracing tree survival rates and water conservation awareness.",
+      "hi": "ग्रामीण क्षेत्रों में पर्यावरण व जल संरक्षण के प्रति चेतना वृत्तचित्र।"
+    },
+    "date": "2025-09-01",
+    "location": {
+      "en": "Raebareli, UP",
+      "hi": "रायबरेली, उत्तर प्रदेश"
+    },
+    "image": "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=900&q=80",
+    "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "duration": "02:30",
+    "alt": "Green village landscape thumbnail"
+  }
+]

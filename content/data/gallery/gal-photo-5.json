@@ -1,0 +1,26 @@
+{
+  "id": "gal-photo-5",
+  "type": "photo",
+  "title": {
+    "en": "Winter Relief Warmth Distribution",
+    "hi": "शीतकालीन कंबल एवं सहायता सामग्री वितरण"
+  },
+  "category": "Community",
+  "categoryI18n": {
+    "en": "Community",
+    "hi": "सामुदायिक"
+  },
+  "caption": {
+    "en": "Delivering blankets and food packets to older residents in remote hamlets.",
+    "hi": "अत्यधिक ठंड में बुजुर्गों और असहाय परिवारों को गर्म कंबल और राहत सामग्री।"
+  },
+  "date": "2025-12-20",
+  "location": {
+    "en": "Raebareli, UP",
+    "hi": "रायबरेली, उत्तर प्रदेश"
+  },
+  "image": "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=900&q=80",
+  "videoUrl": "",
+  "duration": "",
+  "alt": "Community relief supplies and voluntary aid"
+}

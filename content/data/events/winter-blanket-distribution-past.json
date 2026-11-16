@@ -1,0 +1,39 @@
+{
+  "id": "winter-blanket-distribution-past",
+  "title": {
+    "en": "Winter Senior Citizen Warmth Relief Drive",
+    "hi": "शीतकालीन वरिष्ठ नागरिक कंबल वितरण अभियान"
+  },
+  "date": "2025-12-20",
+  "displayDate": {
+    "en": "Winter Season [Archived Field Record]",
+    "hi": "शीत ऋतु [अभिलेखीय सेवा विवरण]"
+  },
+  "time": {
+    "en": "Completed",
+    "hi": "संपन्न"
+  },
+  "location": {
+    "en": "Rural Hamlets across Raebareli",
+    "hi": "रायबरेली जनपद के ग्रामीण अंचल"
+  },
+  "category": {
+    "en": "Social Welfare",
+    "hi": "समाज कल्याण"
+  },
+  "description": {
+    "en": "Door-to-door distribution of heavy winter blankets and dry rations for destitute elderly persons unable to travel to distribution centers.",
+    "hi": "अत्यधिक ठंड में असहाय वृद्धजनों तक घर-घर जाकर गर्म कंबल और आवश्यक पोषण सामग्री की आपूर्ति।"
+  },
+  "status": "past",
+  "organizer": {
+    "en": "Emergency Relief Wing",
+    "hi": "राहत सेवा दल"
+  },
+  "registrationNote": {
+    "en": "Distribution completed across target villages.",
+    "hi": "लक्षित गांवों में वितरण कार्य पूर्ण हुआ।"
+  },
+  "image": "/images/event-placeholder.jpg",
+  "link": ""
+}

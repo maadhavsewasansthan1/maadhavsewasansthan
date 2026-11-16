@@ -1,0 +1,39 @@
+{
+  "id": "scholarship-distribution-past",
+  "title": {
+    "en": "Student Merit & Need Support Assembly",
+    "hi": "ग्रामीण छात्र प्रोत्साहन एवं शिक्षण सामग्री वितरण"
+  },
+  "date": "2025-09-15",
+  "displayDate": {
+    "en": "Academic Term Completed [Archived Field Record]",
+    "hi": "सत्र संपन्न [अभिलेखीय सेवा विवरण]"
+  },
+  "time": {
+    "en": "Completed",
+    "hi": "संपन्न"
+  },
+  "location": {
+    "en": "Raebareli, UP",
+    "hi": "रायबरेली, उत्तर प्रदेश"
+  },
+  "category": {
+    "en": "Education",
+    "hi": "शिक्षा"
+  },
+  "description": {
+    "en": "An assembly recognizing hardworking village students facing economic hardship, providing notebooks, stationery kits, and education grants.",
+    "hi": "मेधावी व जरूरतमंद ग्रामीण छात्र-छात्राओं को अभ्यास पुस्तिकाएं, पाठ्य सामग्री और अध्ययन प्रोत्साहन सहयोग।"
+  },
+  "status": "past",
+  "organizer": {
+    "en": "Education Advisory Committee",
+    "hi": "शिक्षा समिति"
+  },
+  "registrationNote": {
+    "en": "Event successfully completed.",
+    "hi": "कार्यक्रम सफलतापूर्वक संपन्न हुआ।"
+  },
+  "image": "/images/event-placeholder.jpg",
+  "link": ""
+}

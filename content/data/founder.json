@@ -1,0 +1,25 @@
+{
+  "name": {
+    "en": "Priyanka Awasthi",
+    "hi": "प्रियंका अवस्थी"
+  },
+  "role": {
+    "en": "Founder",
+    "hi": "संस्थापक"
+  },
+  "photo": "/images/founder.jpg",
+  "photoAlt": {
+    "en": "Priyanka Awasthi, Founder of Maadhav Sewa Sansthan",
+    "hi": "प्रियंका अवस्थी, संस्थापक, माधव सेवा संस्थान"
+  },
+  "bio": {
+    "en": [],
+    "hi": []
+  },
+  "quote": {
+    "en": "",
+    "hi": ""
+  },
+  "yearsOfService": "",
+  "socialLinks": []
+}

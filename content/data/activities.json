@@ -1,0 +1,170 @@
+[
+  {
+    "id": "rural-health-camp-2025",
+    "title": {
+      "en": "Community Preventive Health & Eye Camp",
+      "hi": "सामुदायिक स्वास्थ्य एवं निःशुल्क नेत्र परीक्षण शिविर"
+    },
+    "date": "2025-10-05",
+    "category": "Health",
+    "categoryI18n": {
+      "en": "Health",
+      "hi": "स्वास्थ्य"
+    },
+    "summary": {
+      "en": "Medical volunteers and doctors gathered in rural Raebareli to deliver general wellness checkups, eye tests, blood pressure screenings, and basic health consultations.",
+      "hi": "ग्रामीण रायबरेली में स्वयंसेवी चिकित्सकों द्वारा सामान्य स्वास्थ्य जांच, नेत्र परीक्षण, रक्तचाप जांच और प्राथमिक परामर्श प्रदान किया गया।"
+    },
+    "body": {
+      "en": "Access to primary medical consultations remains a challenge for village elders and daily wage workers who cannot afford day trips to district hospitals. In response, our health camp brought doctors directly to village centers, facilitating diagnosis, hygiene counseling, and referrals for advanced treatments.",
+      "hi": "दूरदराज के गांवों में बुजुर्गों और श्रमिकों के लिए जिला अस्पताल तक पहुंच पाना कठिन होता है। हमारे स्वास्थ्य शिविर ने चिकित्सकों को सीधे गांव तक पहुंचाया, जिससे कई परिवारों को समय पर स्वास्थ्य परामर्श प्राप्त हुआ।"
+    },
+    "location": {
+      "en": "Raebareli District, UP",
+      "hi": "रायबरेली जनपद, उत्तर प्रदेश"
+    },
+    "photos": [
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80"
+    ],
+    "highlights": [
+      {
+        "en": "Free doctor consultations and vital checks",
+        "hi": "निःशुल्क चिकित्सीय परामर्श व स्वास्थ्य परीक्षण"
+      },
+      {
+        "en": "Vision tests and spectacle prescription assistance",
+        "hi": "नेत्र जांच और चश्मा वितरण परामर्श"
+      },
+      {
+        "en": "Nutritional guidance for expectant mothers",
+        "hi": "मातृ पोषण व स्वास्थ्य संबंधी जागरूकता"
+      }
+    ]
+  },
+  {
+    "id": "student-digital-literacy-2025",
+    "title": {
+      "en": "Village Student Digital Literacy Initiative",
+      "hi": "ग्रामीण छात्र डिजिटल साक्षरता कार्यशाला"
+    },
+    "date": "2025-08-20",
+    "category": "Education",
+    "categoryI18n": {
+      "en": "Education",
+      "hi": "शिक्षा"
+    },
+    "summary": {
+      "en": "Interactive workshops introducing rural students and young adults to foundational computer operations, internet safety, and educational applications.",
+      "hi": "ग्रामीण छात्र-छात्राओं के लिए मूलभूत कंप्यूटर संचालन, सुरक्षित इंटरनेट उपयोग और शैक्षणिक डिजिटल टूल्स पर व्यावहारिक कार्यशाला।"
+    },
+    "body": {
+      "en": "Bridging the digital gap is critical for rural youth aiming for higher education or skilled employment. This initiative introduced village school students to typing, internet navigation, and free online study resources through volunteer-led weekend batches.",
+      "hi": "डिजिटल विभाजन को कम करना ग्रामीण युवाओं के भविष्य के लिए आवश्यक है। इस पहल के माध्यम से विद्यार्थियों को कंप्यूटर और उपयोगी ऑनलाइन पाठ्य सामग्री से परिचित कराया गया।"
+    },
+    "location": {
+      "en": "Raebareli Rural Area, UP",
+      "hi": "ग्रामीण रायबरेली, उत्तर प्रदेश"
+    },
+    "photos": [
+      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80"
+    ],
+    "highlights": [
+      {
+        "en": "Foundational computer usage training",
+        "hi": "कंप्यूटर संचालन का प्राथमिक व्यावहारिक अभ्यास"
+      },
+      {
+        "en": "Introduction to digital public services and e-learning",
+        "hi": "ऑनलाइन ई-लर्निंग सामग्री से परिचय"
+      },
+      {
+        "en": "Distribution of notebooks and writing materials",
+        "hi": "अभ्यास पुस्तिकाओं व लेखन सामग्री का वितरण"
+      }
+    ]
+  },
+  {
+    "id": "tree-plantation-cleanliness-2025",
+    "title": {
+      "en": "Winter Warmth & Blanket Distribution Drive",
+      "hi": "शीतकालीन राहत: कंबल एवं आवश्यक सामग्री वितरण"
+    },
+    "date": "2025-12-15",
+    "category": "Social Welfare",
+    "categoryI18n": {
+      "en": "Social Welfare",
+      "hi": "समाज कल्याण"
+    },
+    "summary": {
+      "en": "Seasonal distribution of warm blankets, woolens, and nutritional dry rations to impoverished senior citizens and vulnerable families during severe winter spells.",
+      "hi": "कड़ाके की ठंड में असहाय वृद्धजनों, दिव्यांगों और अत्यंत निर्धन परिवारों को गर्म कंबल और आवश्यक राहत सामग्री का वितरण।"
+    },
+    "body": {
+      "en": "Winter in rural Uttar Pradesh can be harsh for older persons and destitute families living in makeshift homes. Our volunteers conducted door-to-door surveys to identify those in greatest need and delivered warm blankets directly to their doorsteps.",
+      "hi": "उत्तर भारत की शीत ऋतु में बुजुर्गों और कमजोर परिवारों के लिए राहत पहुंचाना सेवा का प्रमुख दायित्व है। कार्यकर्ताओं ने घर-घर जाकर जरूरतमंदों को चिन्हित कर कंबल पहुंचाए।"
+    },
+    "location": {
+      "en": "Raebareli District, UP",
+      "hi": "रायबरेली जनपद, उत्तर प्रदेश"
+    },
+    "photos": [
+      "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=800&q=80"
+    ],
+    "highlights": [
+      {
+        "en": "Doorstep delivery to isolated elderly residents",
+        "hi": "दूरस्थ गांवों में वृद्धजनों तक सीधी राहत"
+      },
+      {
+        "en": "Heavy thermal blankets and woolen apparel",
+        "hi": "उत्कृष्ट गुणवत्ता वाले गर्म कंबल और वस्त्र"
+      },
+      {
+        "en": "Emergency nutritional packages provided",
+        "hi": "आवश्यक पोषण और खाद्य सामग्री सहायता"
+      }
+    ]
+  },
+  {
+    "id": "women-vocational-craft-2025",
+    "title": {
+      "en": "Women's Vocational Sewing & Craft Training",
+      "hi": "महिला स्वावलंबन: सिलाई एवं हस्तशिल्प प्रशिक्षण"
+    },
+    "date": "2025-07-12",
+    "category": "Livelihood",
+    "categoryI18n": {
+      "en": "Livelihood",
+      "hi": "रोजगार"
+    },
+    "summary": {
+      "en": "Practical vocational sewing, tailoring, and micro-business management workshops designed to help rural women generate household supplementary income.",
+      "hi": "ग्रामीण महिलाओं को सिलाई-कढ़ाई और लघु व्यवसाय प्रबंधन का प्रशिक्षण देकर आत्मनिर्भर बनाने की दिशा में व्यावहारिक पहल।"
+    },
+    "body": {
+      "en": "Equipping women with market-relevant skills empowers them to earn with dignity without migrating away from their homes. Over consecutive weeks, participants learned stitching patterns, garment finishing, and basic accounting to help them sell locally.",
+      "hi": "महिलाओं को व्यावहारिक कौशल से सशक्त करने से उनका आर्थिक और सामाजिक आत्मविश्वास बढ़ता है। प्रशिक्षण में वस्त्र निर्माण और स्थानीय स्तर पर बिक्री के तौर-तरीकों का अभ्यास कराया गया।"
+    },
+    "location": {
+      "en": "Raebareli, UP",
+      "hi": "रायबरेली, उत्तर प्रदेश"
+    },
+    "photos": [
+      "https://images.unsplash.com/photo-1573164574511-73c773193279?w=800&q=80"
+    ],
+    "highlights": [
+      {
+        "en": "Hands-on machine sewing practice",
+        "hi": "सिलाई मशीन पर व्यावहारिक अभ्यास"
+      },
+      {
+        "en": "Basics of pricing, fabric selection, and small retail",
+        "hi": "कपड़ा चयन और मूल्य निर्धारण की समझ"
+      },
+      {
+        "en": "Creation of mutual-support women's producer groups",
+        "hi": "पारस्परिक सहायता महिला समूहों का निर्माण"
+      }
+    ]
+  }
+]

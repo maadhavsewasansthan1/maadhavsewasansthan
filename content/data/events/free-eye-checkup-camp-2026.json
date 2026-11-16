@@ -1,0 +1,39 @@
+{
+  "id": "free-eye-checkup-camp-2026",
+  "title": {
+    "en": "Rural Eye Screening & Spectacle Camp",
+    "hi": "ग्रामीण निःशुल्क नेत्र परीक्षण व परामर्श शिविर"
+  },
+  "date": "",
+  "displayDate": {
+    "en": "[Upcoming Schedule — Date to be announced]",
+    "hi": "[आगामी कार्यक्रम — तिथि शीघ्र घोषित की जाएगी]"
+  },
+  "time": {
+    "en": "09:30 AM – 03:30 PM",
+    "hi": "प्रातः 09:30 से अपराह्न 03:30 बजे तक"
+  },
+  "location": {
+    "en": "Raebareli, Uttar Pradesh",
+    "hi": "रायबरेली, उत्तर प्रदेश"
+  },
+  "category": {
+    "en": "Health",
+    "hi": "स्वास्थ्य"
+  },
+  "description": {
+    "en": "Comprehensive vision examinations and cataract assessments conducted in partnership with qualified optometrists and ophthalmology volunteers.",
+    "hi": "विशेषज्ञ नेत्र चिकित्सकों के मार्गदर्शन में निःशुल्क दृष्टि परीक्षण, मोतियाबिंद जांच और चश्मा परामर्श।"
+  },
+  "status": "upcoming",
+  "organizer": {
+    "en": "Health Outreach Cell",
+    "hi": "स्वास्थ्य सेवा प्रकोष्ठ"
+  },
+  "registrationNote": {
+    "en": "Free tokens distributed at venue on the day of camp.",
+    "hi": "शिविर के दिन शिविर स्थल पर निःशुल्क टोकन वितरित किए जाएंगे।"
+  },
+  "image": "/images/event-placeholder.jpg",
+  "link": ""
+}

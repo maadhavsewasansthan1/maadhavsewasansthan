@@ -1,0 +1,26 @@
+{
+  "id": "gal-photo-2",
+  "type": "photo",
+  "title": {
+    "en": "Interactive Student Learning Circle",
+    "hi": "ग्रामीण छात्र अध्ययन गोष्ठी"
+  },
+  "category": "Education",
+  "categoryI18n": {
+    "en": "Education",
+    "hi": "शिक्षा"
+  },
+  "caption": {
+    "en": "Children gathered for weekend digital literacy and English tutoring in a village hall.",
+    "hi": "ग्रामीण प्राथमिक शाला परिसर में बच्चों के लिए अध्ययन एवं मार्गदर्शन सत्र।"
+  },
+  "date": "2025-08-20",
+  "location": {
+    "en": "Raebareli, UP",
+    "hi": "रायबरेली, उत्तर प्रदेश"
+  },
+  "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=900&q=80",
+  "videoUrl": "",
+  "duration": "",
+  "alt": "Village children engaging enthusiastically with learning materials"
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "women",
+    "title": {
+      "en": "Women's Empowerment",
+      "hi": "महिला सशक्तीकरण"
+    },
+    "description": {
+      "en": "Vocational training, self-help groups, and skill development programmes for women in Raebareli.",
+      "hi": "रायबरेली की महिलाओं के लिए व्यावसायिक प्रशिक्षण, स्वयं सहायता समूह और कौशल विकास कार्यक्रम।"
+    },
+    "accent": "lotus",
+    "href": "/our-work"
+  },
+  {
+    "id": "elders",
+    "title": {
+      "en": "Care for Elders",
+      "hi": "वृद्धजन सेवा"
+    },
+    "description": {
+      "en": "Health camps, companionship, and family support for elderly members of the community.",
+      "hi": "समुदाय के वरिष्ठ सदस्यों के लिए स्वास्थ्य शिविर, साहचर्य और पारिवारिक सहायता।"
+    },
+    "accent": "madder",
+    "href": "/our-work"
+  },
+  {
+    "id": "animals",
+    "title": {
+      "en": "Animal Welfare",
+      "hi": "पशु कल्याण"
+    },
+    "description": {
+      "en": "Rescue, feeding, and care for stray and injured animals across Raebareli.",
+      "hi": "रायबरेली भर में आवारा और घायल पशुओं का बचाव, भोजन और देखभाल।"
+    },
+    "accent": "sage",
+    "href": "/our-work"
+  },
+  {
+    "id": "needy",
+    "title": {
+      "en": "Support for Needy Families",
+      "hi": "ज़रूरतमंद परिवारों की सहायता"
+    },
+    "description": {
+      "en": "Food, clothing, scholarships, and medical support for families facing hardship in rural UP.",
+      "hi": "ग्रामीण UP में कठिनाई का सामना कर रहे परिवारों के लिए भोजन, वस्त्र, छात्रवृत्ति और चिकित्सा सहायता।"
+    },
+    "accent": "marigold",
+    "href": "/our-work"
+  }
+]
