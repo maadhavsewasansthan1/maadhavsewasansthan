@@ -1,0 +1,17 @@
+{
+  "en": {
+    "status": "upcoming",
+    "title": "helo",
+    "summary": "helo helo",
+    "category": "Education",
+    "description": "jjjj",
+    "image": "/uploads/logo.png",
+    "date": "2026-11-16"
+  },
+  "hi": {
+    "status": "upcoming",
+    "category": "Education",
+    "image": "/uploads/logo.png",
+    "date": "2026-11-16"
+  }
+}
