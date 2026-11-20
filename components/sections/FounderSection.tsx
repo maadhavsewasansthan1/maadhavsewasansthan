@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useCallback } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { motion, useReducedMotion } from "framer-motion";
 import { Quote } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -18,6 +19,24 @@ export function FounderSection({ id = "founder", className = "" }: FounderSectio
   const { t, locale } = useLanguage();
   const prefersReducedMotion = useReducedMotion();
   const [imgError, setImgError] = useState(false);
+  const router = useRouter();
+
+  /* ── Hidden CMS shortcut: triple-tap the founder photo ── */
+  const tapCount = useRef(0);
+  const tapTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handlePhotoTap = useCallback(() => {
+    tapCount.current += 1;
+    if (tapTimer.current) clearTimeout(tapTimer.current);
+    if (tapCount.current >= 3) {
+      tapCount.current = 0;
+      router.push("/admin/index.html");
+      return;
+    }
+    tapTimer.current = setTimeout(() => {
+      tapCount.current = 0;
+    }, 800); // reset if 800 ms pass between taps
+  }, [router]);
 
   // Resolved localized values
   const name = t(founderContent.name);
@@ -87,6 +106,9 @@ export function FounderSection({ id = "founder", className = "" }: FounderSectio
                 }
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 1.0, ease: "easeOut" }}
+                /* Hidden CMS shortcut: tap 3 times to open the admin */
+                onClick={handlePhotoTap}
+                style={{ cursor: "default", WebkitTapHighlightColor: "transparent" }}
               >
                 {showPhoto ? (
                   <Image
