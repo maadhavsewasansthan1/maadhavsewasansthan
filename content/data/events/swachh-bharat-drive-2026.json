@@ -4,7 +4,7 @@
     "en": "Swachh Gaon Health & Cleanliness Drive",
     "hi": "स्वच्छ ग्राम स्वास्थ्य एवं स्वच्छता अभियान"
   },
-  "date": "",
+  "date": "2026-11-20",
   "displayDate": {
     "en": "[Upcoming Schedule — Date to be announced]",
     "hi": "[आगामी कार्यक्रम — तिथि शीघ्र घोषित की जाएगी]"
@@ -35,5 +35,6 @@
     "hi": "स्थानीय नागरिकों व स्वयंसेवकों के लिए खुला आमंत्रण।"
   },
   "image": "/images/event-placeholder.jpg",
-  "link": ""
+  "link": "",
+  "summary": "A multi-village cleanliness and drainage maintenance campaign engaging youth volunteers, school students, and village elders."
 }

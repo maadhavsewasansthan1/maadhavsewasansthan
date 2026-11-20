@@ -31,8 +31,9 @@ collections:
     create: true
     format: "json"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    summary: "{{title}} — {{status}}"
-    sortable_fields: ["date", "title"]
+    identifier_field: "title"
+    summary: "{{title.en}} — {{status}}"
+    sortable_fields: ["date", "title.en"]
     view_groups:
       - label: "Status"
         field: status
@@ -123,8 +124,9 @@ collections:
     create: true
     format: "json"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    summary: "{{title}} — {{category}}"
-    sortable_fields: ["date", "title", "category"]
+    identifier_field: "title"
+    summary: "{{title.en}} — {{category}}"
+    sortable_fields: ["date", "title.en", "category"]
     i18n: true
     fields:
       - label: "Title"
@@ -197,8 +199,9 @@ collections:
     create: true
     format: "json"
     slug: "{{slug}}"
-    summary: "{{title}} — {{type}}"
-    sortable_fields: ["date", "title", "type"]
+    identifier_field: "title"
+    summary: "{{title.en}} — {{type}}"
+    sortable_fields: ["date", "title.en", "type"]
     i18n: true
     fields:
       - label: "Title"

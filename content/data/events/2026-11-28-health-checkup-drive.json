@@ -1,0 +1,24 @@
+{
+  "id": "health-checkup-drive-nov-2026",
+  "title": {
+    "en": "Free General Health Screening & Medicine Drive",
+    "hi": "निःशुल्क सामान्य स्वास्थ्य परीक्षण एवं दवा वितरण शिविर"
+  },
+  "summary": {
+    "en": "On-ground medical camp providing free consultations, diagnostic tests, and essential medicines to local families.",
+    "hi": "स्थानीय परिवारों के लिए निःशुल्क परामर्श, नैदानिक जांच और आवश्यक दवाओं का ऑन-ग्राउंड शिविर।"
+  },
+  "date": "2026-11-28",
+  "status": "upcoming",
+  "category": "Health",
+  "location": {
+    "en": "Raebareli, Uttar Pradesh",
+    "hi": "रायबरेली, उत्तर प्रदेश"
+  },
+  "description": {
+    "en": "Community health outreach drive organized by Maadhav Sewa Sansthan volunteers with visiting medical specialists.",
+    "hi": "माधव सेवा संस्थान के कार्यकर्ताओं द्वारा विशेषज्ञ चिकित्सकों के सहयोग से आयोजित स्वास्थ्य सेवा अभियान।"
+  },
+  "image": "/images/event-placeholder.jpg",
+  "link": ""
+}

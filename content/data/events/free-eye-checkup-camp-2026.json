@@ -4,7 +4,7 @@
     "en": "Rural Eye Screening & Spectacle Camp",
     "hi": "ग्रामीण निःशुल्क नेत्र परीक्षण व परामर्श शिविर"
   },
-  "date": "",
+  "date": "2026-11-20",
   "displayDate": {
     "en": "[Upcoming Schedule — Date to be announced]",
     "hi": "[आगामी कार्यक्रम — तिथि शीघ्र घोषित की जाएगी]"
@@ -35,5 +35,6 @@
     "hi": "शिविर के दिन शिविर स्थल पर निःशुल्क टोकन वितरित किए जाएंगे।"
   },
   "image": "/images/event-placeholder.jpg",
-  "link": ""
+  "link": "",
+  "summary": "Comprehensive vision examinations and cataract assessments conducted in partnership with qualified optometrists and ophthalmology volunteers."
 }

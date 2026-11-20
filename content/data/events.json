@@ -1,11 +1,54 @@
 [
   {
+    "id": "health-checkup-drive-nov-2026",
+    "title": {
+      "en": "Free General Health Screening & Medicine Drive",
+      "hi": "निःशुल्क सामान्य स्वास्थ्य परीक्षण एवं दवा वितरण शिविर"
+    },
+    "summary": {
+      "en": "On-ground medical camp providing free consultations, diagnostic tests, and essential medicines to local families.",
+      "hi": "स्थानीय परिवारों के लिए निःशुल्क परामर्श, नैदानिक जांच और आवश्यक दवाओं का ऑन-ग्राउंड शिविर।"
+    },
+    "date": "2026-11-28",
+    "status": "upcoming",
+    "category": "Health",
+    "location": {
+      "en": "Raebareli, Uttar Pradesh",
+      "hi": "रायबरेली, उत्तर प्रदेश"
+    },
+    "description": {
+      "en": "Community health outreach drive organized by Maadhav Sewa Sansthan volunteers with visiting medical specialists.",
+      "hi": "माधव सेवा संस्थान के कार्यकर्ताओं द्वारा विशेषज्ञ चिकित्सकों के सहयोग से आयोजित स्वास्थ्य सेवा अभियान।"
+    },
+    "image": "/images/event-placeholder.jpg",
+    "link": ""
+  },
+  {
+    "id": "2026-11-20-helo",
+    "status": "upcoming",
+    "title": {
+      "en": "helo",
+      "hi": "helo"
+    },
+    "summary": {
+      "en": "helo helo",
+      "hi": "helo helo"
+    },
+    "category": "Education",
+    "description": {
+      "en": "jjjj",
+      "hi": "jjjj"
+    },
+    "image": "/uploads/logo.png",
+    "date": "2026-11-20"
+  },
+  {
     "id": "free-eye-checkup-camp-2026",
     "title": {
       "en": "Rural Eye Screening & Spectacle Camp",
       "hi": "ग्रामीण निःशुल्क नेत्र परीक्षण व परामर्श शिविर"
     },
-    "date": "",
+    "date": "2026-11-20",
     "displayDate": {
       "en": "[Upcoming Schedule — Date to be announced]",
       "hi": "[आगामी कार्यक्रम — तिथि शीघ्र घोषित की जाएगी]"
@@ -36,7 +79,8 @@
       "hi": "शिविर के दिन शिविर स्थल पर निःशुल्क टोकन वितरित किए जाएंगे।"
     },
     "image": "/images/event-placeholder.jpg",
-    "link": ""
+    "link": "",
+    "summary": "Comprehensive vision examinations and cataract assessments conducted in partnership with qualified optometrists and ophthalmology volunteers."
   },
   {
     "id": "swachh-bharat-drive-2026",
@@ -44,7 +88,7 @@
       "en": "Swachh Gaon Health & Cleanliness Drive",
       "hi": "स्वच्छ ग्राम स्वास्थ्य एवं स्वच्छता अभियान"
     },
-    "date": "",
+    "date": "2026-11-20",
     "displayDate": {
       "en": "[Upcoming Schedule — Date to be announced]",
       "hi": "[आगामी कार्यक्रम — तिथि शीघ्र घोषित की जाएगी]"
@@ -75,7 +119,8 @@
       "hi": "स्थानीय नागरिकों व स्वयंसेवकों के लिए खुला आमंत्रण।"
     },
     "image": "/images/event-placeholder.jpg",
-    "link": ""
+    "link": "",
+    "summary": "A multi-village cleanliness and drainage maintenance campaign engaging youth volunteers, school students, and village elders."
   },
   {
     "id": "winter-blanket-distribution-past",
@@ -114,7 +159,8 @@
       "hi": "लक्षित गांवों में वितरण कार्य पूर्ण हुआ।"
     },
     "image": "/images/event-placeholder.jpg",
-    "link": ""
+    "link": "",
+    "summary": "Door-to-door distribution of heavy winter blankets and dry rations for destitute elderly persons unable to travel to distribution centers."
   },
   {
     "id": "womens-skill-orientation-past",
@@ -153,7 +199,8 @@
       "hi": "प्रमाणपत्र वितरण के साथ सफलतापूर्वक संपन्न।"
     },
     "image": "/images/event-placeholder.jpg",
-    "link": ""
+    "link": "",
+    "summary": "Introductory training on cooperative savings, tailoring fundamentals, and small-batch production for women seeking home-based enterprise."
   },
   {
     "id": "scholarship-distribution-past",
@@ -192,6 +239,7 @@
       "hi": "कार्यक्रम सफलतापूर्वक संपन्न हुआ।"
     },
     "image": "/images/event-placeholder.jpg",
-    "link": ""
+    "link": "",
+    "summary": "An assembly recognizing hardworking village students facing economic hardship, providing notebooks, stationery kits, and education grants."
   }
 ]
