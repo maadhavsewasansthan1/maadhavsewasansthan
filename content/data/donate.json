@@ -3,31 +3,17 @@
     "en": "Support the Mission",
     "hi": "सेवा में सहयोग"
   },
-  "headline": {
-    "en": "Support Our Grassroots Community Work",
-    "hi": "माधव सेवा संस्थान को सहयोग दें"
-  },
-  "headlineHindi": "माधव सेवा संस्थान को सहयोग दें",
-  "subheadline": {
-    "en": "Your voluntary contribution enables our field volunteers to expand rural tutoring circles, conduct free medical screenings, and aid vulnerable families across Raebareli.",
-    "hi": "आपका स्वैच्छिक सहयोग रायबरेली के ग्रामीण क्षेत्रों में निःशुल्क स्वास्थ्य शिविरों, छात्र अध्ययन केंद्रों और असहाय परिवारों की सहायता को गति प्रदान करता है।"
-  },
   "neutralStatement": {
     "en": "Community contributions directly support local educational assistance, health screening camps, and community welfare initiatives across Raebareli district.",
     "hi": "समुदाय द्वारा प्राप्त सहयोग सीधे रायबरेली जनपद में स्थानीय शैक्षणिक सहायता, स्वास्थ्य शिविरों और जनकल्याण कार्यक्रमों में उपयोग किया जाता है।"
   },
-  "disclaimer": {
-    "en": "All contributions directly support on-ground humanitarian, education, and healthcare initiatives across Raebareli. Formal receipts and documentation are provided for every contribution.",
-    "hi": "सभी सहयोग सीधे रायबरेली में जमीनी स्तर पर शिक्षा, स्वास्थ्य और समाज कल्याण कार्यक्रमों में प्रयुक्त किए जाते हैं। प्रत्येक सहयोग की आधिकारिक रसीद प्रदान की जाती है।"
-  },
-  "showBankDetails": true,
-  "qrCodePath": "/images/qr-placeholder.png",
   "qrAlt": "Official UPI QR Code for Maadhav Sewa Sansthan",
+  "showBankDetails": true,
   "upiId": "madhavsewasansthan@sbi",
   "bankAccount": {
     "accountName": "Maadhav Sewa Sansthan",
     "accountNumber": "42109876543",
-    "ifsc": "SBIN0000165",
+    "ifsc": "SBIN0000166",
     "bankName": "State Bank of India",
     "branch": "Raebareli Main Branch, Uttar Pradesh"
   },
@@ -35,6 +21,20 @@
     "en": "For verified contribution details, receipt requests, or to coordinate in-kind support (books, warm blankets, medical kits), please contact our coordination team directly.",
     "hi": "सत्यापित सहयोग विवरण, रसीद संबंधी जानकारी अथवा सामग्री सहयोग (पुस्तकालय सामग्री, गर्म वस्त्र, चिकित्सा किट) के लिए कृपया हमारे समन्वय दल से सीधे संपर्क करें।"
   },
+  "qrCodePath": "/images/qr-placeholder.png",
+  "subheadline": {
+    "en": "Your voluntary contribution enables our field volunteers to expand rural tutoring circles, conduct free medical screenings, and aid vulnerable families across Raebareli.",
+    "hi": "आपका स्वैच्छिक सहयोग रायबरेली के ग्रामीण क्षेत्रों में निःशुल्क स्वास्थ्य शिविरों, छात्र अध्ययन केंद्रों और असहाय परिवारों की सहायता को गति प्रदान करता है।"
+  },
+  "headline": {
+    "en": "Support Our Grassroots Community Work",
+    "hi": "माधव सेवा संस्थान को सहयोग दें"
+  },
+  "disclaimer": {
+    "en": "All contributions directly support on-ground humanitarian, education, and healthcare initiatives across Raebareli. Formal receipts and documentation are provided for every contribution.",
+    "hi": "सभी सहयोग सीधे रायबरेली में जमीनी स्तर पर शिक्षा, स्वास्थ्य और समाज कल्याण कार्यक्रमों में प्रयुक्त किए जाते हैं। प्रत्येक सहयोग की आधिकारिक रसीद प्रदान की जाती है।"
+  },
+  "headlineHindi": "माधव सेवा संस्थान को सहयोग दें",
   "supportChannels": [
     {
       "title": {
