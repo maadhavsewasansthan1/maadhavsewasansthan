@@ -53,19 +53,29 @@ The CMS can be installed directly to your phone's home screen like an app:
 4. Tap **Authorize** when GitHub asks for permission.
 5. The pop-up closes. The Content Manager dashboard opens.
 
-   > 📸 _[Screenshot placeholder: Dashboard showing six collection chips at the top — Events, Activities, Gallery, Founder, Focus Areas, Site Settings]_
+   > 📸 _[Screenshot placeholder: Dashboard showing all collection chips at the top — Events, Activities, Gallery, Founder, Focus Areas, Site Settings, Home Page & Hero, Donation & Bank Details, Contact, About, Our Work]_
 
 > **Can't log in?** Ask the website administrator to add your GitHub account as a collaborator on the repository.
 
 ---
 
-## 2. The dashboard
+## 2. The Collections Available
 
-On your phone you will see:
+Every part of the website is now editable from the CMS:
 
-- **A row of chips at the top** — tap one to open that section.
-- **A list of existing entries** — each one is a card showing the title, status, and date.
-- **A sticky bar at the bottom** — this holds the Save and Publish buttons while you edit.
+| Collection | What you can edit here |
+|---|---|
+| **Events & Programmes** | Add upcoming/past events, date, category, location, cover image, link |
+| **Activities & Stories** | Grassroots stories, full writeup, category, photos list, location |
+| **Gallery Archive** | Photos and YouTube/Facebook video links, captions, category |
+| **Founder Profile** | Founder name, role, quote, bio paragraphs, portrait photo |
+| **Focus Areas** | 6 primary service pillars (Education, Health, Livelihood, etc.), titles & descriptions |
+| **Site Settings & Details** | NGO name, tagline, email, phone, physical address, impact statistics |
+| **Home Page & Hero** | Hero image, headlines (English & Hindi), CTA buttons, ticker strip, about preview |
+| **Donation, Bank & UPI** | Bank account details (A/C, IFSC, Bank name, Branch), UPI ID, UPI QR code image upload, policy disclaimer |
+| **Contact & Office Info** | Office hours, official email, phone, address, FAQs |
+| **About Page & Story** | Mission & Vision statements, narrative paragraphs, values |
+| **Our Work Page Intro** | Intro text and headline for the Our Work section |
 
 ---
 
