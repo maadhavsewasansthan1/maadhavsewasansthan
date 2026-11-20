@@ -138,6 +138,82 @@ export default function DonatePage() {
               </div>
             </div>
 
+            {/* Bank Account Details Card (Editable via CMS) */}
+            {donationContent.bankAccount && (donationContent.showBankDetails || donationContent.bankAccount.accountNumber) && (
+              <div className="p-6 sm:p-8 rounded-2xl bg-[#FFFDF8] dark:bg-[#1E2640] border border-[#E2D2B3] dark:border-[rgba(226,210,179,0.12)] space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-[#1F2A5C]/10 dark:bg-[#A9B6F0]/15 flex items-center justify-center text-[#1F2A5C] dark:text-[#A9B6F0] shrink-0">
+                    <Building2 className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#E39A1E] dark:text-[#F2B84B] block">
+                      {locale === "hi" ? "सीधे बैंक खाते में सहयोग" : "Direct Bank Transfer"}
+                    </span>
+                    <h3 className="font-serif text-lg sm:text-xl font-semibold text-[#241B14] dark:text-[#F6EEDD]">
+                      {locale === "hi" ? "बैंक खाता विवरण (NEFT / RTGS / IMPS)" : "Official Bank Account Details"}
+                    </h3>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-sm">
+                  {donationContent.bankAccount.accountName && (
+                    <div className="p-3 rounded-lg bg-[#F2E4C9]/25 dark:bg-[#121629] border border-[#E2D2B3]/50 dark:border-[rgba(226,210,179,0.08)]">
+                      <span className="text-xs text-[#5E4E3F] dark:text-[#B8AE9C] block">
+                        {locale === "hi" ? "खाता धारक का नाम" : "Account Holder"}
+                      </span>
+                      <span className="font-semibold text-[#241B14] dark:text-[#F6EEDD]">
+                        {donationContent.bankAccount.accountName}
+                      </span>
+                    </div>
+                  )}
+
+                  {donationContent.bankAccount.accountNumber && (
+                    <div className="p-3 rounded-lg bg-[#F2E4C9]/25 dark:bg-[#121629] border border-[#E2D2B3]/50 dark:border-[rgba(226,210,179,0.08)]">
+                      <span className="text-xs text-[#5E4E3F] dark:text-[#B8AE9C] block">
+                        {locale === "hi" ? "खाता संख्या" : "Account Number"}
+                      </span>
+                      <span className="font-mono font-bold text-base text-[#1F2A5C] dark:text-[#A9B6F0]">
+                        {donationContent.bankAccount.accountNumber}
+                      </span>
+                    </div>
+                  )}
+
+                  {donationContent.bankAccount.ifsc && (
+                    <div className="p-3 rounded-lg bg-[#F2E4C9]/25 dark:bg-[#121629] border border-[#E2D2B3]/50 dark:border-[rgba(226,210,179,0.08)]">
+                      <span className="text-xs text-[#5E4E3F] dark:text-[#B8AE9C] block">
+                        {locale === "hi" ? "आईएफएससी कोड" : "IFSC Code"}
+                      </span>
+                      <span className="font-mono font-bold text-[#241B14] dark:text-[#F6EEDD]">
+                        {donationContent.bankAccount.ifsc}
+                      </span>
+                    </div>
+                  )}
+
+                  {donationContent.bankAccount.bankName && (
+                    <div className="p-3 rounded-lg bg-[#F2E4C9]/25 dark:bg-[#121629] border border-[#E2D2B3]/50 dark:border-[rgba(226,210,179,0.08)]">
+                      <span className="text-xs text-[#5E4E3F] dark:text-[#B8AE9C] block">
+                        {locale === "hi" ? "बैंक का नाम" : "Bank Name"}
+                      </span>
+                      <span className="font-semibold text-[#241B14] dark:text-[#F6EEDD]">
+                        {donationContent.bankAccount.bankName}
+                      </span>
+                    </div>
+                  )}
+
+                  {donationContent.bankAccount.branch && (
+                    <div className="sm:col-span-2 p-3 rounded-lg bg-[#F2E4C9]/25 dark:bg-[#121629] border border-[#E2D2B3]/50 dark:border-[rgba(226,210,179,0.08)]">
+                      <span className="text-xs text-[#5E4E3F] dark:text-[#B8AE9C] block">
+                        {locale === "hi" ? "शाखा" : "Branch"}
+                      </span>
+                      <span className="text-[#241B14] dark:text-[#F6EEDD]">
+                        {donationContent.bankAccount.branch}
+                      </span>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
             {/* Channels of Assistance */}
             <div className="space-y-4">
               <h3 className="font-serif text-lg font-semibold text-[#241B14] dark:text-[#F6EEDD]">
@@ -183,21 +259,30 @@ export default function DonatePage() {
             </div>
           </div>
 
-          {/* Right Column: QR Code Placeholder Card (5 cols) */}
+          {/* Right Column: QR Code Card (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
             <div className="p-6 sm:p-8 rounded-2xl bg-[#FFFDF8] dark:bg-[#1E2640] border border-[#E2D2B3] dark:border-[rgba(226,210,179,0.12)] space-y-5">
-              <div className="text-center space-y-1">
+              <div className="text-center space-y-2">
                 <Badge variant="marigold" className="mx-auto">
-                  {locale === "hi" ? "प्रतीकात्मक यूपीआई क्यूआर" : "Provisional QR Placeholder"}
+                  {locale === "hi" ? "आधिकारिक यूपीआई क्यूआर" : "Official UPI QR Code"}
                 </Badge>
                 <h3 className="font-serif text-xl font-semibold text-[#241B14] dark:text-[#F6EEDD] pt-1">
-                  {locale === "hi" ? "आधिकारिक क्यूआर कोड" : "Official Scan & Pay"}
+                  {locale === "hi" ? "स्कैन करके सहयोग करें" : "Scan & Pay via UPI"}
                 </h3>
-                <p className="text-xs text-[#5E4E3F] dark:text-[#B8AE9C]">
-                  {locale === "hi"
-                    ? "सत्यापित क्यूआर कोड शीघ्र ही सक्रिय किया जाएगा"
-                    : "Verified UPI QR integration active upon official clearance"}
-                </p>
+                {donationContent.upiId ? (
+                  <div className="inline-block py-1 px-3 rounded-lg bg-[#F2E4C9]/40 dark:bg-[#121629] border border-[#E2D2B3]/60 dark:border-[rgba(226,210,179,0.1)]">
+                    <span className="text-xs text-[#5E4E3F] dark:text-[#B8AE9C] block text-[11px]">UPI ID</span>
+                    <span className="font-mono font-bold text-sm text-[#1F2A5C] dark:text-[#A9B6F0]">
+                      {donationContent.upiId}
+                    </span>
+                  </div>
+                ) : (
+                  <p className="text-xs text-[#5E4E3F] dark:text-[#B8AE9C]">
+                    {locale === "hi"
+                      ? "सत्यापित क्यूआर कोड द्वारा त्वरित सहयोग"
+                      : "Instant contribution via any UPI application"}
+                  </p>
+                )}
               </div>
 
               {/* QR Code Placeholder Component */}

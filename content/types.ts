@@ -156,6 +156,14 @@ export interface GalleryItem {
   alt: string;
 }
 
+export interface BankAccountDetails {
+  accountName?: string;
+  accountNumber?: string;
+  ifsc?: string;
+  bankName?: string;
+  branch?: string;
+}
+
 export interface DonationContent {
   badge: StringOrLocalized;
   headline: StringOrLocalized;
@@ -163,8 +171,11 @@ export interface DonationContent {
   subheadline: StringOrLocalized;
   neutralStatement: StringOrLocalized;
   disclaimer: StringOrLocalized;
+  showBankDetails?: boolean;
   qrCodePath: string;
   qrAlt: string;
+  upiId?: string;
+  bankAccount?: BankAccountDetails;
   contactNote: StringOrLocalized;
   supportChannels: {
     title: StringOrLocalized;

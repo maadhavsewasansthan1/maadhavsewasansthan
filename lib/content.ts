@@ -422,6 +422,7 @@ export const heroContent = {
   trustNotes: homeData.hero.trustNotes,
   floatingTags: homeData.hero.floatingTags,
   heroImage: homeData.hero.heroImage,
+  tickerItems: (homeData.hero as Record<string, unknown>).tickerItems as Array<{ en: string; hi: string }> | undefined,
 };
 
 export const aboutSection = {

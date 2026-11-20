@@ -6,7 +6,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { QrCodePlaceholder } from "@/components/ui/QrCodePlaceholder";
-import { donationSection, siteConfig } from "@/lib/content";
+import { donationSection, donationContent, siteConfig } from "@/lib/content";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import LotusMark from "@/components/ui/motifs/LotusMark";
 
@@ -89,8 +89,8 @@ export function DonationCtaSection() {
             {/* Right Column: QR Code Placeholder */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <QrCodePlaceholder
-                imagePath="/images/qr-placeholder.png"
-                altText="Maadhav Sewa Sansthan UPI QR Code"
+                imagePath={donationContent.qrCodePath || "/images/qr-placeholder.png"}
+                altText={donationContent.qrAlt || "Maadhav Sewa Sansthan UPI QR Code"}
                 caption="Scan via any UPI app (BHIM, PhonePe, Google Pay, Paytm)"
                 className="w-full max-w-sm"
               />

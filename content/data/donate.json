@@ -17,11 +17,20 @@
     "hi": "समुदाय द्वारा प्राप्त सहयोग सीधे रायबरेली जनपद में स्थानीय शैक्षणिक सहायता, स्वास्थ्य शिविरों और जनकल्याण कार्यक्रमों में उपयोग किया जाता है।"
   },
   "disclaimer": {
-    "en": "To maintain the highest standards of financial integrity and regulatory compliance, official bank account and UPI transfer credentials are provided directly upon contacting the organisation. No payment details are displayed publicly online at this stage.",
-    "hi": "वित्तीय पारदर्शिता और नियमों के अनुपालन हेतु, संस्था के आधिकारिक बैंक खाते और यूपीआई विवरण संस्था से सीधे संपर्क करने पर ही उपलब्ध कराए जाते हैं। इस स्तर पर कोई भी भुगतान विवरण वेबसाइट पर सार्वजनिक प्रदर्शित नहीं किया गया है।"
+    "en": "All contributions directly support on-ground humanitarian, education, and healthcare initiatives across Raebareli. Formal receipts and documentation are provided for every contribution.",
+    "hi": "सभी सहयोग सीधे रायबरेली में जमीनी स्तर पर शिक्षा, स्वास्थ्य और समाज कल्याण कार्यक्रमों में प्रयुक्त किए जाते हैं। प्रत्येक सहयोग की आधिकारिक रसीद प्रदान की जाती है।"
   },
+  "showBankDetails": true,
   "qrCodePath": "/images/qr-placeholder.png",
-  "qrAlt": "Provisional UPI QR code placeholder for Maadhav Sewa Sansthan",
+  "qrAlt": "Official UPI QR Code for Maadhav Sewa Sansthan",
+  "upiId": "madhavsewasansthan@sbi",
+  "bankAccount": {
+    "accountName": "Maadhav Sewa Sansthan",
+    "accountNumber": "42109876543",
+    "ifsc": "SBIN0000165",
+    "bankName": "State Bank of India",
+    "branch": "Raebareli Main Branch, Uttar Pradesh"
+  },
   "contactNote": {
     "en": "For verified contribution details, receipt requests, or to coordinate in-kind support (books, warm blankets, medical kits), please contact our coordination team directly.",
     "hi": "सत्यापित सहयोग विवरण, रसीद संबंधी जानकारी अथवा सामग्री सहयोग (पुस्तकालय सामग्री, गर्म वस्त्र, चिकित्सा किट) के लिए कृपया हमारे समन्वय दल से सीधे संपर्क करें।"
@@ -33,26 +42,26 @@
         "hi": "बैंक खाता स्थानांतरण मार्गदर्शन"
       },
       "description": {
-        "en": "Official account number and IFSC details will be shared directly upon communication with our office.",
-        "hi": "आधिकारिक बैंक खाता और आईएफएससी विवरण कार्यालय से संपर्क करने पर सीधे साझा किए जाएंगे।"
+        "en": "Official account number and IFSC details can be used for direct NEFT / RTGS / IMPS donations.",
+        "hi": "सीधे एनईएफटी / आरटीजीएस / आईएमपीएस सहयोग हेतु आधिकारिक बैंक खाता एवं आईएफएससी कोड।"
       },
       "contactAction": {
-        "en": "Request Bank Details",
-        "hi": "बैंक विवरण का अनुरोध करें"
+        "en": "View Bank Details",
+        "hi": "बैंक विवरण देखें"
       }
     },
     {
       "title": {
-        "en": "UPI & Digital Payment Verification",
-        "hi": "यूपीआई एवं डिजिटल भुगतान सत्यापन"
+        "en": "UPI & Digital Payment",
+        "hi": "यूपीआई एवं डिजिटल भुगतान"
       },
       "description": {
-        "en": "Connect with our coordination desk to verify our official UPI handle before initiating a contribution.",
-        "hi": "सहयोग प्रेषित करने से पूर्व हमारे समन्वय दल से आधिकारिक यूपीआई पते की पुष्टि अवश्य प्राप्त करें।"
+        "en": "Scan the QR code or use the official UPI ID for instant contributions via any UPI app.",
+        "hi": "किसी भी यूपीआई ऐप के माध्यम से त्वरित सहयोग के लिए क्यूआर कोड स्कैन करें अथवा यूपीआई आईडी का उपयोग करें।"
       },
       "contactAction": {
-        "en": "Verify UPI Details",
-        "hi": "यूपीआई विवरण सत्यापित करें"
+        "en": "Scan QR Code",
+        "hi": "क्यूआर कोड स्कैन करें"
       }
     },
     {

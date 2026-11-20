@@ -418,3 +418,345 @@ collections:
                 fields:
                   - { label: "English", name: "en", widget: "string" }
                   - { label: "Hindi (कृपया जाँचें)", name: "hi", widget: "string", hint: "Please review Hindi before publishing" }
+
+  # ───────────────────────────────────────────────
+  # HOME PAGE & HERO (file collection)
+  # ───────────────────────────────────────────────
+  - name: "home"
+    label: "Home Page & Hero"
+    files:
+      - name: "home"
+        label: "Home Page & Hero"
+        file: "content/data/home.json"
+        format: "json"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - label: "Badge"
+                name: "badge"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Hindi", name: "hi", widget: "string" }
+              - label: "Headline"
+                name: "headline"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Hindi", name: "hi", widget: "string" }
+              - { label: "Headline Subtitle (Hindi)", name: "headlineHindi", widget: "string" }
+              - label: "Subheadline"
+                name: "subheadline"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "text" }
+                  - { label: "Hindi", name: "hi", widget: "text" }
+              - label: "Hero Image"
+                name: "heroImage"
+                widget: "object"
+                fields:
+                  - { label: "Image", name: "src", widget: "image", hint: "Landscape, at least 1600 px wide, under 800 KB." }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+              - label: "Primary Button (CTA)"
+                name: "primaryCta"
+                widget: "object"
+                fields:
+                  - label: "Label"
+                    name: "label"
+                    widget: "object"
+                    fields:
+                      - { label: "English", name: "en", widget: "string" }
+                      - { label: "Hindi", name: "hi", widget: "string" }
+                  - { label: "Link URL", name: "href", widget: "string" }
+              - label: "Secondary Button (CTA)"
+                name: "secondaryCta"
+                widget: "object"
+                fields:
+                  - label: "Label"
+                    name: "label"
+                    widget: "object"
+                    fields:
+                      - { label: "English", name: "en", widget: "string" }
+                      - { label: "Hindi", name: "hi", widget: "string" }
+                  - { label: "Link URL", name: "href", widget: "string" }
+              - label: "Ticker Strip Items"
+                name: "tickerItems"
+                widget: "list"
+                fields:
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Hindi", name: "hi", widget: "string" }
+              - label: "Trust Markers"
+                name: "trustNotes"
+                widget: "list"
+                fields:
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Hindi", name: "hi", widget: "string" }
+              - label: "Floating Tags"
+                name: "floatingTags"
+                widget: "object"
+                fields:
+                  - label: "District Focus Title"
+                    name: "districtFocus"
+                    widget: "object"
+                    fields:
+                      - { label: "English", name: "en", widget: "string" }
+                      - { label: "Hindi", name: "hi", widget: "string" }
+                  - label: "District Description"
+                    name: "districtDesc"
+                    widget: "object"
+                    fields:
+                      - { label: "English", name: "en", widget: "string" }
+                      - { label: "Hindi", name: "hi", widget: "string" }
+
+          - label: "About Section Preview (Home Page)"
+            name: "aboutPreview"
+            widget: "object"
+            fields:
+              - label: "Badge"
+                name: "badge"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Hindi", name: "hi", widget: "string" }
+              - label: "Headline"
+                name: "headline"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Hindi", name: "hi", widget: "string" }
+              - label: "Body Paragraphs"
+                name: "body"
+                widget: "list"
+                fields:
+                  - { label: "English", name: "en", widget: "text" }
+                  - { label: "Hindi", name: "hi", widget: "text" }
+              - label: "Card Label"
+                name: "cardLabel"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Hindi", name: "hi", widget: "string" }
+              - label: "Card Quote"
+                name: "cardQuote"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Hindi", name: "hi", widget: "string" }
+              - label: "Card Note"
+                name: "cardNote"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Hindi", name: "hi", widget: "string" }
+
+  # ───────────────────────────────────────────────
+  # DONATIONS & BANK DETAILS (file collection)
+  # ───────────────────────────────────────────────
+  - name: "donate"
+    label: "Donation, Bank & UPI"
+    files:
+      - name: "donate"
+        label: "Donation, Bank & UPI"
+        file: "content/data/donate.json"
+        format: "json"
+        fields:
+          - label: "Badge"
+            name: "badge"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "string" }
+              - { label: "Hindi", name: "hi", widget: "string" }
+          - label: "Headline"
+            name: "headline"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "string" }
+              - { label: "Hindi", name: "hi", widget: "string" }
+          - { label: "Headline (Hindi Banner)", name: "headlineHindi", widget: "string" }
+          - label: "Subheadline"
+            name: "subheadline"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "text" }
+              - { label: "Hindi", name: "hi", widget: "text" }
+          - label: "Neutral Statement"
+            name: "neutralStatement"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "text" }
+              - { label: "Hindi", name: "hi", widget: "text" }
+          - label: "Policy & Transparency Disclaimer"
+            name: "disclaimer"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "text" }
+              - { label: "Hindi", name: "hi", widget: "text" }
+          - { label: "Show Bank Details Card Publicly", name: "showBankDetails", widget: "boolean", default: true }
+          - label: "Bank Account Details"
+            name: "bankAccount"
+            widget: "object"
+            fields:
+              - { label: "Account Name", name: "accountName", widget: "string" }
+              - { label: "Account Number", name: "accountNumber", widget: "string" }
+              - { label: "IFSC Code", name: "ifsc", widget: "string" }
+              - { label: "Bank Name", name: "bankName", widget: "string" }
+              - { label: "Branch", name: "branch", widget: "string" }
+          - { label: "UPI ID (e.g. madhavsewasansthan@sbi)", name: "upiId", widget: "string", required: false }
+          - { label: "UPI QR Code Image", name: "qrCodePath", widget: "image", required: false, hint: "Upload official UPI QR code (Square PNG/JPG)" }
+          - { label: "QR Code Alt Text", name: "qrAlt", widget: "string", default: "Official UPI QR Code" }
+          - label: "Contact Note"
+            name: "contactNote"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "text" }
+              - { label: "Hindi", name: "hi", widget: "text" }
+
+  # ───────────────────────────────────────────────
+  # CONTACT DETAILS (file collection)
+  # ───────────────────────────────────────────────
+  - name: "contact"
+    label: "Contact & Office Info"
+    files:
+      - name: "contact"
+        label: "Contact & Office Info"
+        file: "content/data/contact.json"
+        format: "json"
+        fields:
+          - label: "Badge"
+            name: "badge"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "string" }
+              - { label: "Hindi", name: "hi", widget: "string" }
+          - label: "Headline"
+            name: "headline"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "string" }
+              - { label: "Hindi", name: "hi", widget: "string" }
+          - { label: "Headline (Hindi Banner)", name: "headlineHindi", widget: "string" }
+          - label: "Description"
+            name: "description"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "text" }
+              - { label: "Hindi", name: "hi", widget: "text" }
+          - { label: "Official Email", name: "email", widget: "string" }
+          - label: "Phone Number"
+            name: "phone"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "string" }
+              - { label: "Hindi", name: "hi", widget: "string" }
+          - label: "Physical Address"
+            name: "address"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "string" }
+              - { label: "Hindi", name: "hi", widget: "string" }
+          - label: "Office Hours"
+            name: "officeHours"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "string" }
+              - { label: "Hindi", name: "hi", widget: "string" }
+          - { label: "Facebook Page URL", name: "facebookUrl", widget: "string" }
+          - label: "Frequently Asked Questions (FAQ)"
+            name: "faq"
+            widget: "list"
+            fields:
+              - label: "Question"
+                name: "question"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Hindi", name: "hi", widget: "string" }
+              - label: "Answer"
+                name: "answer"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "text" }
+                  - { label: "Hindi", name: "hi", widget: "text" }
+
+  # ───────────────────────────────────────────────
+  # ABOUT PAGE (file collection)
+  # ───────────────────────────────────────────────
+  - name: "about"
+    label: "About Page & Story"
+    files:
+      - name: "about"
+        label: "About Page & Story"
+        file: "content/data/about.json"
+        format: "json"
+        fields:
+          - label: "Badge"
+            name: "badge"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "string" }
+              - { label: "Hindi", name: "hi", widget: "string" }
+          - label: "Headline"
+            name: "headline"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "string" }
+              - { label: "Hindi", name: "hi", widget: "string" }
+          - { label: "Headline (Hindi Banner)", name: "headlineHindi", widget: "string" }
+          - label: "Subheadline"
+            name: "subheadline"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "text" }
+              - { label: "Hindi", name: "hi", widget: "text" }
+          - label: "Mission Statement"
+            name: "mission"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "text" }
+              - { label: "Hindi", name: "hi", widget: "text" }
+          - label: "Vision Statement"
+            name: "vision"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "text" }
+              - { label: "Hindi", name: "hi", widget: "text" }
+          - label: "Narrative Paragraphs"
+            name: "paragraphs"
+            widget: "list"
+            fields:
+              - { label: "English", name: "en", widget: "text" }
+              - { label: "Hindi", name: "hi", widget: "text" }
+
+  # ───────────────────────────────────────────────
+  # OUR WORK PAGE (file collection)
+  # ───────────────────────────────────────────────
+  - name: "our_work"
+    label: "Our Work Page Intro"
+    files:
+      - name: "our_work"
+        label: "Our Work Page Intro"
+        file: "content/data/our_work.json"
+        format: "json"
+        fields:
+          - label: "Badge"
+            name: "badge"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "string" }
+              - { label: "Hindi", name: "hi", widget: "string" }
+          - label: "Headline"
+            name: "headline"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "string" }
+              - { label: "Hindi", name: "hi", widget: "string" }
+          - { label: "Headline (Hindi Banner)", name: "headlineHindi", widget: "string" }
+          - label: "Introduction"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "text" }
+              - { label: "Hindi", name: "hi", widget: "text" }
+

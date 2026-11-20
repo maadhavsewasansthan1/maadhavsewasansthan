@@ -24,6 +24,25 @@
     "link": ""
   },
   {
+    "id": "2026-11-20-hh",
+    "status": "upcoming",
+    "title": {
+      "en": "hh",
+      "hi": "hh"
+    },
+    "summary": {
+      "en": "hh",
+      "hi": "hh"
+    },
+    "category": "Health",
+    "description": {
+      "en": "jhj",
+      "hi": "jhj"
+    },
+    "image": "/uploads/logo.png",
+    "date": "2026-11-26"
+  },
+  {
     "id": "2026-11-20-helo",
     "status": "upcoming",
     "title": {

@@ -58,7 +58,25 @@
     "heroImage": {
       "src": "https://images.unsplash.com/photo-1593113598332-cd288d649433?w=1600&q=80",
       "alt": "Community volunteers working together in a village in India"
-    }
+    },
+    "tickerItems": [
+      {
+        "en": "Women's Empowerment",
+        "hi": "महिला सशक्तीकरण"
+      },
+      {
+        "en": "Care for Elders",
+        "hi": "वृद्धजन सेवा"
+      },
+      {
+        "en": "Animal Welfare",
+        "hi": "पशु कल्याण"
+      },
+      {
+        "en": "Support for Families",
+        "hi": "ज़रूरतमंद परिवारों की सहायता"
+      }
+    ]
   },
   "aboutPreview": {
     "badge": {

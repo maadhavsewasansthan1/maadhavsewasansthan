@@ -37,7 +37,7 @@ function ScrollProgressBar() {
 function HeroTicker() {
   const reduced = useReducedMotion();
 
-  const tickerItems = [
+  const tickerItems = (heroContent as { tickerItems?: Array<{ en: string; hi: string }> }).tickerItems || [
     { en: "Women's Empowerment", hi: "महिला सशक्तीकरण" },
     { en: "Care for Elders", hi: "वृद्धजन सेवा" },
     { en: "Animal Welfare", hi: "पशु कल्याण" },
