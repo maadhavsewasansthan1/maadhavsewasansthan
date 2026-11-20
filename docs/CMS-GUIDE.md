@@ -7,12 +7,35 @@
 ## Quick links
 | Task | Go to |
 |---|---|
+| Install as App (PWA) | [Section 0](#0-install-as-an-app-pwa-on-your-phone) |
 | Add a new event | [Section 3](#3-add-a-new-event) |
 | Add a photo or video | [Section 5](#5-upload-a-photo) |
 | Translate to Hindi | [Section 6](#6-translate-to-hindi) |
 | Publish | [Section 7](#7-publish) |
 | Fix a mistake | [Section 8](#8-edit-an-existing-entry) |
 | Contact support | [Section 10](#10-get-help) |
+
+---
+
+## 0. Install as an App (PWA) on your phone
+
+The CMS can be installed directly to your phone's home screen like an app:
+
+### On Android (Chrome / Brave):
+1. Open `https://<your-website-domain>/admin/index.html` in Chrome.
+2. Tap the **three dots menu (⋮)** in the top right corner.
+3. Tap **"Install app"** or **"Add to Home screen"**.
+4. Tap **Install** to confirm.
+5. The **MSS CMS** icon will appear on your home screen. Tap it to launch full-screen!
+
+### On iPhone (Safari):
+1. Open `https://<your-website-domain>/admin/index.html` in Safari.
+2. Tap the **Share button** (square with an arrow pointing up).
+3. Scroll down and tap **"Add to Home Screen"**.
+4. Tap **Add** in the top-right corner.
+5. The **MSS CMS** app icon is now on your home screen.
+
+---
 
 ---
 

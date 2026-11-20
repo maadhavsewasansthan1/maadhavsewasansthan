@@ -2,10 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="robots" content="noindex" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="MSS CMS" />
+    <meta name="theme-color" content="#1F2A5C" />
     <title>Content Manager — Maadhav Sewa Sansthan</title>
     <link rel="icon" type="image/png" href="/images/logo.png" />
+    <link rel="apple-touch-icon" href="/images/logo.png" />
+    <link rel="manifest" href="/admin/manifest.json" />
     <!-- Explicit CMS config URL -->
     <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
     <!-- Mobile-friendly admin stylesheet -->
@@ -118,24 +125,10 @@
 
       /* ── 4. Empty state and auto-fill defaults for new entries ── */
       function checkPageDecorations() {
-        // Empty state check for empty lists
-        var emptyContainers = document.querySelectorAll('[class*="e1d0i3na0"], [class*="NoEntriesMessage"]');
-        emptyContainers.forEach(function (el) {
-          if (!el.getAttribute("data-mss-customized")) {
-            el.innerHTML = '<div style="text-align:center;padding:32px 16px;color:#5E4E3F;">' +
-              '<p style="font-size:16px;font-weight:600;margin-bottom:8px;">No entries yet.</p>' +
-              '<p style="font-size:14px;color:#8C7B68;">Tap <strong>New</strong> above to add one.</p>' +
-              '</div>';
-            el.setAttribute("data-mss-customized", "true");
-          }
-        });
-
-        // Pre-fill date with today's date if empty on new entry
         var dateInputs = document.querySelectorAll('input[name="date"], input[id*="date"]');
         var today = new Date().toISOString().split("T")[0];
         dateInputs.forEach(function (input) {
           if (!input.value && !input.getAttribute("data-mss-prefilled")) {
-            // Only autofill if in new entry view
             var isNew = window.location.hash.includes("/new");
             if (isNew) {
               input.value = today;
@@ -148,6 +141,20 @@
       }
 
       setInterval(checkPageDecorations, 1000);
+
+      /* ── 5. Register Service Worker (PWA) ── */
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register("/admin/sw.js", { scope: "/admin/" })
+            .then(function (reg) {
+              console.log("[MSS CMS] Service Worker registered:", reg.scope);
+            })
+            .catch(function (err) {
+              console.warn("[MSS CMS] Service Worker registration failed:", err);
+            });
+        });
+      }
 
     })();
     </script>

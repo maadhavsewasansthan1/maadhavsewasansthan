@@ -1,19 +1,39 @@
 /* =====================================================
-   Maadhav Sewa Sansthan — Decap CMS Stylesheet
-   public/admin/custom.css
+   Maadhav Sewa Sansthan — Decap CMS Mobile-First Stylesheet
+   public/admin/custom.css  (PWA edition)
    ===================================================== */
 
 :root {
   --mss-indigo:   #1F2A5C;
+  --mss-indigo2:  #263570;
   --mss-marigold: #E39A1E;
-  --mss-bg:       #FBF5EA;
-  --mss-surface:  #FFFDF8;
-  --mss-ink:      #241B14;
+  --mss-marigold2:#C8880A;
+  --mss-bg:       #F4F6FB;
+  --mss-surface:  #FFFFFF;
+  --mss-ink:      #1A1A2E;
   --mss-ink-soft: #5E4E3F;
-  --mss-border:   #E2D2B3;
+  --mss-border:   #D1D9EE;
+  --mss-success:  #1F5F63;
+  --bottom-bar-h: 64px;
 }
 
-/* Base input sizes to prevent mobile zoom */
+/* ── Reset & base ─────────────────────────────────── */
+html, body, #nc-root {
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body {
+  background: var(--mss-bg) !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Prevent iOS input zoom: ALL inputs must be ≥ 16px */
+input, textarea, select, button {
+  font-size: 16px !important;
+}
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -24,28 +44,27 @@ input[type="datetime-local"],
 textarea,
 select {
   font-size: 16px !important;
+  -webkit-text-size-adjust: 100%;
 }
 
-html, body, #nc-root {
-  max-width: 100vw !important;
-  overflow-x: hidden !important;
-}
-
+/* Focus rings — never hide them */
 *:focus-visible {
   outline: 3px solid var(--mss-marigold) !important;
   outline-offset: 2px !important;
 }
 
-/* Field labels */
+/* ── Field labels ─────────────────────────────────── */
 [class*="e1xtv0oy0"],
 [class*="FieldLabel"] {
-  font-size: 15px !important;
+  font-size: 14px !important;
   font-weight: 700 !important;
   color: var(--mss-indigo) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
   margin-bottom: 6px !important;
 }
 
-/* Control hints */
+/* ── Control hints ────────────────────────────────── */
 [class*="ec1nk3l0"],
 [class*="ControlHint"] {
   font-size: 13px !important;
@@ -54,93 +73,154 @@ html, body, #nc-root {
   line-height: 1.4 !important;
 }
 
-/* Full width inputs in edit pane */
+/* ── Inputs & textareas — full width, 48px min ────── */
 [class*="e11hw0lx4"] input,
 [class*="e1nx103k1"] input,
 [class*="e11hw0lx4"] textarea,
-[class*="e1nx103k1"] textarea {
+[class*="e1nx103k1"] textarea,
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+textarea {
   width: 100% !important;
   min-height: 48px !important;
   padding: 10px 14px !important;
   border: 1.5px solid var(--mss-border) !important;
-  border-radius: 8px !important;
+  border-radius: 10px !important;
   font-size: 16px !important;
   line-height: 1.5 !important;
   box-sizing: border-box !important;
+  background: var(--mss-surface) !important;
+  color: var(--mss-ink) !important;
+  transition: border-color 0.15s ease !important;
 }
 
-/* Full-width select fields */
+input:focus, textarea:focus {
+  border-color: var(--mss-indigo) !important;
+  box-shadow: 0 0 0 3px rgba(31, 42, 92, 0.12) !important;
+}
+
+/* ── Select / React-select ────────────────────────── */
 select,
 [class*="e11hw0lx4"] select,
-[class*="e1nx103k1"] select,
-[class*="react-select__control"],
-[class*="Select__control"] {
+[class*="e1nx103k1"] select {
   width: 100% !important;
   min-width: 0 !important;
   max-width: 100% !important;
   min-height: 48px !important;
   font-size: 16px !important;
   border: 1.5px solid var(--mss-border) !important;
-  border-radius: 8px !important;
-  padding: 8px 12px !important;
-  background: #fff !important;
+  border-radius: 10px !important;
+  padding: 10px 14px !important;
+  background: var(--mss-surface) !important;
   color: var(--mss-ink) !important;
+  box-sizing: border-box !important;
+  appearance: auto !important;
+  -webkit-appearance: auto !important;
+}
+
+[class*="react-select__control"],
+[class*="Select__control"] {
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border: 1.5px solid var(--mss-border) !important;
+  border-radius: 10px !important;
+  width: 100% !important;
+  min-width: 0 !important;
   box-sizing: border-box !important;
 }
 
-/* Toast */
+/* ── Toast notifications ──────────────────────────── */
 .Toastify__toast {
   font-size: 15px !important;
   min-height: 48px !important;
   border-radius: 10px !important;
 }
 
-/* Publish confirmation banner */
+/* ── Publish confirmation banner ──────────────────── */
 #mss-publish-confirm {
   display: none;
   position: fixed;
-  left: 16px;
-  right: 16px;
-  bottom: 80px;
-  background: #1F5F63;
+  left: 12px;
+  right: 12px;
+  bottom: calc(var(--bottom-bar-h) + 12px + env(safe-area-inset-bottom, 0px));
+  background: var(--mss-success);
   color: #fff;
   padding: 14px 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 15px;
   font-weight: 600;
   z-index: 9999;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   text-align: center;
+  animation: mss-slide-up 0.3s ease;
 }
 
-@media (max-width: 639px) {
-  #mss-publish-confirm {
-    bottom: calc(72px + env(safe-area-inset-bottom, 0px));
-  }
+@keyframes mss-slide-up {
+  from { transform: translateY(16px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
 }
 
-/* Image upload button */
+/* ── Image upload buttons ─────────────────────────── */
 [class*="e1hax4ql1"],
 [class*="FileWidgetButton"] {
   min-height: 52px !important;
   font-size: 16px !important;
-  border-radius: 10px !important;
+  border-radius: 12px !important;
   padding: 12px 20px !important;
   font-weight: 600 !important;
   cursor: pointer !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin-bottom: 8px !important;
+}
+
+/* Accept camera capture on file inputs inside the image widget */
+[class*="e1hax4ql1"] input[type="file"],
+[class*="FileWidget"] input[type="file"] {
+  /* allow camera roll on iOS */
+  accept: "image/*" !important;
 }
 
 /* =====================================================
-   MOBILE-ONLY STYLING (screens < 640px)
+   MOBILE-FIRST LAYOUT  (screens < 640px)
    ===================================================== */
 @media (max-width: 639px) {
-  /*
-     DO NOT make SidebarContainer fixed at top:0!
-     The native AppHeader (header[class*="e1rbzf6g"]) is already the sticky top nav
-     containing Contents and Media links. Making SidebarContainer fixed created
-     a duplicate overlapping bar with a yellow border.
-     Instead, keep sidebar in normal flow or as clean inline tabs:
-  */
+
+  /* ── App Shell padding-top: safe area only ──────── */
+  /* The native AppHeader is already sticky at top     */
+  /* Do NOT add another fixed element at top           */
+  [class*="e1rbzf6g"],
+  [class*="AppHeader"] {
+    padding-top: env(safe-area-inset-top, 0px) !important;
+    background: var(--mss-indigo) !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 400 !important;
+  }
+
+  /* AppHeader links & nav */
+  [class*="e1rbzf6g"] a,
+  [class*="AppHeader"] a {
+    color: rgba(255,255,255,0.85) !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    min-height: 48px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 0 16px !important;
+  }
+
+  [class*="e1rbzf6g"] a[class*="active"],
+  [class*="AppHeader"] a[class*="active"] {
+    color: var(--mss-marigold) !important;
+    border-bottom: 3px solid var(--mss-marigold) !important;
+  }
+
+  /* ── Sidebar → horizontal chip strip ───────────── */
+  /* Must NOT be fixed/sticky at top (creates duplicate bar) */
   [class*="e1t18l343"],
   [class*="SidebarContainer"] {
     position: static !important;
@@ -148,35 +228,46 @@ select,
     height: auto !important;
     display: flex !important;
     flex-direction: row !important;
+    flex-wrap: nowrap !important;
     overflow-x: auto !important;
-    padding: 8px !important;
+    padding: 10px 12px !important;
     gap: 8px !important;
     background: var(--mss-surface) !important;
     border-bottom: 1px solid var(--mss-border) !important;
     scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+  [class*="e1t18l343"]::-webkit-scrollbar,
+  [class*="SidebarContainer"]::-webkit-scrollbar {
+    display: none !important;
   }
 
   [class*="e1t18l343"] a,
   [class*="SidebarContainer"] a {
-    display: inline-block !important;
+    display: inline-flex !important;
+    align-items: center !important;
     white-space: nowrap !important;
-    padding: 6px 14px !important;
-    border-radius: 16px !important;
-    background: #EDE4D3 !important;
+    padding: 8px 16px !important;
+    min-height: 40px !important;
+    border-radius: 20px !important;
+    background: var(--mss-bg) !important;
     color: var(--mss-indigo) !important;
-    font-size: 13px !important;
+    font-size: 14px !important;
     font-weight: 600 !important;
     text-decoration: none !important;
     flex-shrink: 0 !important;
+    border: 1.5px solid var(--mss-border) !important;
+    transition: all 0.15s ease !important;
   }
 
-  [class*="SidebarContainer"] a.sidebar-active,
-  [class*="SidebarContainer"] [class*="sidebar-active"] {
+  [class*="SidebarContainer"] a[class*="sidebar-active"],
+  [class*="SidebarContainer"] [class*="active"] {
     background: var(--mss-indigo) !important;
     color: #fff !important;
+    border-color: var(--mss-indigo) !important;
   }
 
-  /* Sticky Bottom Action Bar during editing (Publish / Save) */
+  /* ── Sticky Bottom Action Bar (Publish / Save) ───── */
   [class*="e1d2l9mo22"],
   [class*="ToolbarContainer"] {
     position: fixed !important;
@@ -185,6 +276,7 @@ select,
     left: 0 !important;
     right: 0 !important;
     z-index: 500 !important;
+    min-height: var(--bottom-bar-h) !important;
     padding: 8px 12px !important;
     padding-bottom: max(8px, env(safe-area-inset-bottom, 0px)) !important;
     background: var(--mss-indigo) !important;
@@ -193,52 +285,79 @@ select,
     flex-direction: row !important;
     align-items: center !important;
     justify-content: space-between !important;
-    box-shadow: 0 -4px 16px rgba(0,0,0,0.2) !important;
+    gap: 8px !important;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.25) !important;
   }
 
   [class*="e1d2l9mo22"] button,
   [class*="ToolbarContainer"] button {
-    min-height: 42px !important;
+    min-height: 44px !important;
     padding: 0 16px !important;
-    border-radius: 8px !important;
+    border-radius: 10px !important;
     font-size: 14px !important;
     font-weight: 700 !important;
+    color: rgba(255,255,255,0.9) !important;
+    white-space: nowrap !important;
   }
 
-  /* Publish button */
+  /* Publish button — marigold CTA */
   [class*="e1d2l9mo5"],
   [class*="PublishButton"] {
     background: var(--mss-marigold) !important;
     color: var(--mss-indigo) !important;
     flex: 1 !important;
+    min-height: 44px !important;
+    border-radius: 10px !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
   }
 
-  /* Space at bottom of editor so sticky publish bar never covers inputs */
+  /* "UNSAVED CHANGES" label — move to right of toolbar, never covers left */
+  [class*="e1d2l9mo22"] [class*="Unsaved"],
+  [class*="ToolbarContainer"] [class*="Unsaved"],
+  [class*="e1d2l9mo22"] span[class*="e"],
+  [class*="ToolbarContainer"] span {
+    font-size: 11px !important;
+    color: rgba(255,255,255,0.7) !important;
+    white-space: nowrap !important;
+  }
+
+  /* ── Editor Control Pane ─────────────────────────── */
   [class*="e1nx103k1"],
   [class*="ControlPaneContainer"],
   [class*="EditorControlPane"] {
     width: 100% !important;
     max-width: 100% !important;
-    padding-bottom: 90px !important;
+    padding-bottom: calc(var(--bottom-bar-h) + 16px + env(safe-area-inset-bottom, 0px)) !important;
     box-sizing: border-box !important;
+    overflow-x: hidden !important;
   }
 
-  /* Hide preview split pane on mobile */
+  /* ── Hide split preview pane on mobile ───────────── */
   [class*="e1nx103k2"],
   [class*="PreviewPaneContainer"] {
     display: none !important;
   }
 
-  /* Collection list cards */
+  /* ── Hide editor header toggle icons on mobile ───── */
+  [class*="e1nx103k3"] {
+    display: none !important;
+  }
+
+  /* ── Collection list cards ───────────────────────── */
   [class*="effeus48"],
   [class*="ListCard"] {
     display: flex !important;
     flex-direction: column !important;
     background: var(--mss-surface) !important;
     border: 1px solid var(--mss-border) !important;
-    border-radius: 10px !important;
-    padding: 12px 14px !important;
-    margin-bottom: 8px !important;
+    border-radius: 12px !important;
+    padding: 14px 16px !important;
+    margin-bottom: 10px !important;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06) !important;
+    min-height: 64px !important;
+    justify-content: center !important;
+    cursor: pointer !important;
   }
 
   [class*="effeus43"],
@@ -246,5 +365,145 @@ select,
     font-size: 15px !important;
     font-weight: 700 !important;
     color: var(--mss-indigo) !important;
+    margin-bottom: 2px !important;
+  }
+
+  /* Collection list meta (status, date) */
+  [class*="effeus48"] [class*="ListCardBody"],
+  [class*="ListCard"] [class*="ListCardBody"] {
+    font-size: 13px !important;
+    color: var(--mss-ink-soft) !important;
+  }
+
+  /* ── New Entry button ─────────────────────────────── */
+  [class*="e17f1geh"],
+  [class*="NewEntryButton"] {
+    min-height: 48px !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    border-radius: 10px !important;
+    padding: 0 20px !important;
+    background: var(--mss-marigold) !important;
+    color: var(--mss-indigo) !important;
+    border: none !important;
+    cursor: pointer !important;
+  }
+
+  /* ── Search bar — hide on small screens ──────────── */
+  [class*="e6w847r7"],
+  [class*="SearchContainer"] {
+    display: none !important;
+  }
+
+  /* ── i18n locale switcher ─────────────────────────── */
+  /* Show EN/HI as large segmented buttons at top of form */
+  [class*="LocaleToggle"],
+  [class*="i18n-toggle"],
+  [class*="locale-toggle"] {
+    display: flex !important;
+    gap: 0 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    border: 1.5px solid var(--mss-border) !important;
+    margin-bottom: 16px !important;
+  }
+
+  [class*="LocaleToggle"] button,
+  [class*="i18n-toggle"] button,
+  [class*="locale-toggle"] button {
+    flex: 1 !important;
+    min-height: 48px !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    background: var(--mss-bg) !important;
+    color: var(--mss-indigo) !important;
+    border: none !important;
+    border-radius: 0 !important;
+    cursor: pointer !important;
+  }
+
+  [class*="LocaleToggle"] button[class*="active"],
+  [class*="LocaleToggle"] button[aria-selected="true"] {
+    background: var(--mss-indigo) !important;
+    color: #fff !important;
+  }
+
+  /* ── Hide table layout (use card layout only) ─────── */
+  table[class*="ListTable"],
+  [class*="ListTable"] {
+    display: none !important;
+  }
+
+  /* ── Page header / collection heading ────────────── */
+  [class*="ei8nkzc2"],
+  [class*="CollectionTopHeading"],
+  h1[class*="e"] {
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    color: var(--mss-indigo) !important;
+    padding: 12px 16px 8px !important;
+    margin: 0 !important;
+  }
+
+  /* ── Rich text editor toolbar ─────────────────────── */
+  [class*="toolbar"],
+  [class*="Toolbar"] {
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  [class*="toolbar"] button,
+  [class*="Toolbar"] button {
+    min-width: 36px !important;
+    min-height: 36px !important;
+  }
+
+  /* ── Markdown editor ──────────────────────────────── */
+  [class*="editor-toolbar"] {
+    flex-wrap: wrap !important;
+  }
+
+  /* ── Image widget ─────────────────────────────────── */
+  [class*="image-widget"],
+  [class*="ImageWidget"] {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  [class*="image-widget"] img,
+  [class*="ImageWidget"] img {
+    max-width: 100% !important;
+    border-radius: 10px !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* ── Back button ──────────────────────────────────── */
+  [class*="e1d2l9mo0"],
+  [class*="BackButton"] {
+    min-height: 44px !important;
+    font-size: 14px !important;
+    padding: 0 12px !important;
+    color: rgba(255,255,255,0.9) !important;
+  }
+
+}
+
+/* =====================================================
+   DESKTOP TWEAKS  (screens ≥ 640px)
+   ===================================================== */
+@media (min-width: 640px) {
+  /* Sidebar stays vertical on desktop */
+  [class*="e1t18l343"],
+  [class*="SidebarContainer"] {
+    min-width: 200px !important;
+  }
+
+  /* Publish bar stays in natural flow on desktop */
+  [class*="e1d2l9mo22"],
+  [class*="ToolbarContainer"] {
+    position: sticky !important;
+    top: 0 !important;
+    bottom: auto !important;
+    z-index: 200 !important;
   }
 }
