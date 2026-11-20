@@ -1,31 +1,12 @@
 {
   "hero": {
+    "heroImage": {
+      "src": "/uploads/screenshot-2026-11-20-174611.png",
+      "alt": "Community volunteers working together in a village in India"
+    },
     "badge": {
       "en": "Est. Raebareli, Uttar Pradesh",
       "hi": "स्थापना: रायबरेली, उत्तर प्रदेश"
-    },
-    "headline": {
-      "en": "Compassion\nin Action",
-      "hi": "करुणा से सेवा,\nसमाज का निर्माण"
-    },
-    "headlineHindi": "करुणा से सेवा, समाज का निर्माण",
-    "subheadline": {
-      "en": "We work alongside rural communities across Raebareli to create meaningful, lasting change — one life, one family, one village at a time.",
-      "hi": "हम रायबरेली के ग्रामीण समुदायों के साथ मिलकर स्थायी व सार्थक बदलाव लाने के लिए समर्पित हैं — एक जीवन, एक परिवार, एक गांव के साथ।"
-    },
-    "primaryCta": {
-      "label": {
-        "en": "Discover Our Work",
-        "hi": "हमारे कार्य देखें"
-      },
-      "href": "/our-work"
-    },
-    "secondaryCta": {
-      "label": {
-        "en": "Support the Mission",
-        "hi": "सहयोग करें"
-      },
-      "href": "/donate"
     },
     "trustNotes": [
       {
@@ -37,27 +18,20 @@
         "hi": "पारदर्शी एवं समाज-समर्पित"
       }
     ],
-    "floatingTags": {
-      "districtFocus": {
-        "en": "District Focus",
-        "hi": "जनपद संकेंद्रण"
+    "primaryCta": {
+      "label": {
+        "en": "Discover Our Work",
+        "hi": "हमारे कार्य देखें"
       },
-      "districtDesc": {
-        "en": "Empowering rural & underserved communities in Raebareli",
-        "hi": "रायबरेली के ग्रामीण व वंचित वर्गों का सशक्तिकरण"
-      },
-      "dedicatedService": {
-        "en": "Dedicated Service",
-        "hi": "समर्पित सेवा"
-      },
-      "serviceOrigin": {
-        "en": "Rooted in Uttar Pradesh",
-        "hi": "उत्तर प्रदेश की माटी से जुड़ाव"
-      }
+      "href": "/our-work"
     },
-    "heroImage": {
-      "src": "https://images.unsplash.com/photo-1593113598332-cd288d649433?w=1600&q=80",
-      "alt": "Community volunteers working together in a village in India"
+    "subheadline": {
+      "en": "We work alongside rural communities across Raebareli to create meaningful, lasting change — one life, one family, one village at a time.",
+      "hi": "हम रायबरेली के ग्रामीण समुदायों के साथ मिलकर स्थायी व सार्थक बदलाव लाने के लिए समर्पित हैं — एक जीवन, एक परिवार, एक गांव के साथ।"
+    },
+    "headline": {
+      "en": "Compassion\nin Action",
+      "hi": "करुणा से सेवा,\nसमाज का निर्माण"
     },
     "tickerItems": [
       {
@@ -76,27 +50,35 @@
         "en": "Support for Families",
         "hi": "ज़रूरतमंद परिवारों की सहायता"
       }
-    ]
+    ],
+    "secondaryCta": {
+      "label": {
+        "en": "Support the Mission",
+        "hi": "सहयोग करें"
+      },
+      "href": "/donate"
+    },
+    "headlineHindi": "करुणा से सेवा, समाज का निर्माण",
+    "floatingTags": {
+      "districtFocus": {
+        "en": "District Focus",
+        "hi": "जनपद संकेंद्रण"
+      },
+      "districtDesc": {
+        "en": "Empowering rural & underserved communities in Raebareli",
+        "hi": "रायबरेली के ग्रामीण व वंचित वर्गों का सशक्तिकरण"
+      },
+      "dedicatedService": {
+        "en": "Dedicated Service",
+        "hi": "समर्पित सेवा"
+      },
+      "serviceOrigin": {
+        "en": "Rooted in Uttar Pradesh",
+        "hi": "उत्तर प्रदेश की माटी से जुड़ाव"
+      }
+    }
   },
   "aboutPreview": {
-    "badge": {
-      "en": "About Maadhav Sewa Sansthan",
-      "hi": "माधव सेवा संस्थान का परिचय"
-    },
-    "headline": {
-      "en": "Rooted in Community,\nDriven by Service",
-      "hi": "समाज में जड़ें,\nसेवा का संकल्प"
-    },
-    "body": [
-      {
-        "en": "Maadhav Sewa Sansthan (माधव सेवा संस्थान) is a non-profit organization established in Raebareli, Uttar Pradesh. Guided by the timeless ethos of 'Sewa Parmo Dharma' (सेवा परमो धर्म:), we work directly with rural families, village elders, women, and youth to address everyday challenges with empathy and dignity.",
-        "hi": "माधव सेवा संस्थान (Maadhav Sewa Sansthan) रायबरेली, उत्तर प्रदेश में स्थापित एक गैर-लाभकारी संगठन है। 'सेवा परमो धर्म:' के शाश्वत आदर्श से प्रेरित होकर, हम ग्रामीण परिवारों, वरिष्ठ जनों, मातृशक्ति और युवाओं के साथ मिलकर संवेदनशीलता व स्वाभिमान के साथ कार्य करते हैं।"
-      },
-      {
-        "en": "Our focus spans foundational literacy, preventive community health, vocational self-reliance, and environmental greening. We believe lasting social change is built from the inside out — by enabling communities to identify their priorities and supporting them with dedicated resources.",
-        "hi": "हमारा कार्य प्राथमिक शिक्षा, निवारक स्वास्थ्य, व्यावसायिक स्वावलंबन और पर्यावरण संरक्षण तक विस्तृत है। हमारा विश्वास है कि स्थायी सामाजिक परिवर्तन समाज के भीतर से ही जन्म लेता है — जब समुदाय अपनी प्राथमिकताओं को पहचानकर एकजुट होता है।"
-      }
-    ],
     "values": [
       {
         "title": {
@@ -129,6 +111,24 @@
         }
       }
     ],
+    "body": [
+      {
+        "en": "Maadhav Sewa Sansthan (माधव सेवा संस्थान) is a non-profit organization established in Raebareli, Uttar Pradesh. Guided by the timeless ethos of 'Sewa Parmo Dharma' (सेवा परमो धर्म:), we work directly with rural families, village elders, women, and youth to address everyday challenges with empathy and dignity.",
+        "hi": "माधव सेवा संस्थान (Maadhav Sewa Sansthan) रायबरेली, उत्तर प्रदेश में स्थापित एक गैर-लाभकारी संगठन है। 'सेवा परमो धर्म:' के शाश्वत आदर्श से प्रेरित होकर, हम ग्रामीण परिवारों, वरिष्ठ जनों, मातृशक्ति और युवाओं के साथ मिलकर संवेदनशीलता व स्वाभिमान के साथ कार्य करते हैं।"
+      },
+      {
+        "en": "Our focus spans foundational literacy, preventive community health, vocational self-reliance, and environmental greening. We believe lasting social change is built from the inside out — by enabling communities to identify their priorities and supporting them with dedicated resources.",
+        "hi": "हमारा कार्य प्राथमिक शिक्षा, निवारक स्वास्थ्य, व्यावसायिक स्वावलंबन और पर्यावरण संरक्षण तक विस्तृत है। हमारा विश्वास है कि स्थायी सामाजिक परिवर्तन समाज के भीतर से ही जन्म लेता है — जब समुदाय अपनी प्राथमिकताओं को पहचानकर एकजुट होता है।"
+      }
+    ],
+    "cardNote": {
+      "en": "* Official records and milestones under periodic review.",
+      "hi": "* आधिकारिक विवरण और उपलब्धियां समीक्षाधीन हैं।"
+    },
+    "badge": {
+      "en": "About Maadhav Sewa Sansthan",
+      "hi": "माधव सेवा संस्थान का परिचय"
+    },
     "cardLabel": {
       "en": "Community Driven",
       "hi": "समाज-समर्पित"
@@ -137,9 +137,9 @@
       "en": "Guided by the spirit of selfless service (सेवा परमो धर्म:)",
       "hi": "निस्वार्थ सेवा के शाश्वत भाव से प्रेरित (सेवा परमो धर्म:)"
     },
-    "cardNote": {
-      "en": "* Official records and milestones under periodic review.",
-      "hi": "* आधिकारिक विवरण और उपलब्धियां समीक्षाधीन हैं।"
+    "headline": {
+      "en": "Rooted in Community,\nDriven by Service",
+      "hi": "समाज में जड़ें,\nसेवा का संकल्प"
     },
     "metricsTitle": {
       "en": "Focus & Field Reach",
