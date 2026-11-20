@@ -13,28 +13,37 @@
     <link rel="icon" type="image/png" href="/images/logo.png" />
     <link rel="apple-touch-icon" href="/images/logo.png" />
     <link rel="manifest" href="/admin/manifest.json" />
-    <!-- Explicit CMS config URL -->
     <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
-    <!-- Mobile-friendly admin stylesheet -->
     <link rel="stylesheet" href="/admin/custom.css" />
+
+    <!-- Critical mobile overrides injected early so they win over Emotion -->
+    <style id="mss-critical">
+      /* Force the app body wrapper to be a column on mobile */
+      @media (max-width: 639px) {
+        /* Target every direct flex/grid child of #nc-root that is likely AppBody */
+        #nc-root > div > div,
+        #nc-root > div {
+          max-width: 100vw !important;
+          overflow-x: hidden !important;
+        }
+      }
+    </style>
   </head>
   <body>
 
-    <!-- Publish confirmation banner (shown after successful save) -->
+    <!-- Publish confirmation banner -->
     <div id="mss-publish-confirm">
       ✅ Published! It will appear on the website in 1–2 minutes.
     </div>
 
-    <!-- Enable Decap manual init to inject dynamic base_url -->
-    <script>
-      window.CMS_MANUAL_INIT = true;
-    </script>
+    <script>window.CMS_MANUAL_INIT = true;</script>
 
-    <!-- Decap CMS (pinned stable release) -->
+    <!-- Decap CMS -->
     <script src="https://unpkg.com/decap-cms@3.1.2/dist/decap-cms.js"></script>
 
     <script>
     (function () {
+
       /* ── 1. Init with dynamic base_url ── */
       var initCMS = window.init || (window.CMS && window.CMS.init);
       if (typeof initCMS === "function") {
@@ -48,111 +57,169 @@
         });
       }
 
-      /* ── 2. Event & Activity card preview template ── */
+      /* ── 2. Preview styles & templates ── */
       var CMS = window.CMS;
-      if (CMS && CMS.registerPreviewStyle) {
-        CMS.registerPreviewStyle("/admin/custom.css");
-      }
+      if (CMS && CMS.registerPreviewStyle) CMS.registerPreviewStyle("/admin/custom.css");
 
-      var cardPreviewTemplate = function (props) {
-        var entry   = props.entry;
-        var getVal  = function (k) { return entry.getIn(["data", k]) || ""; };
-        var title   = getVal("title") || "(No title yet)";
-        var summary = getVal("summary") || "";
-        var date    = getVal("date") || "";
-        var status  = getVal("status") || "upcoming";
-        var cat     = getVal("category") || "";
-        var img     = getVal("image") || "";
-        var statusLabel = status === "past" ? "Past Event" : "Upcoming";
-        var statusColor = status === "past" ? "#5E4E3F" : "#1F5F63";
-
+      var cardPreview = function (props) {
+        var e = props.entry;
+        var g = function (k) { return e.getIn(["data", k]) || ""; };
+        var title   = g("title") || "(No title yet)";
+        var summary = g("summary") || "";
+        var date    = g("date") || "";
+        var status  = g("status") || "upcoming";
+        var cat     = g("category") || "";
+        var img     = g("image") || "";
+        var sLabel  = status === "past" ? "Past Event" : "Upcoming";
+        var sColor  = status === "past" ? "#5E4E3F" : "#1F5F63";
         var html = [
-          '<div style="font-family:sans-serif;max-width:360px;border:1.5px solid #E2D2B3;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);background:#FFFDF8;">',
-          img ? '<img src="' + img + '" style="width:100%;height:180px;object-fit:cover" />' : '<div style="width:100%;height:120px;background:#EFE3CC;display:flex;align-items:center;justify-content:center;color:#5E4E3F;font-size:13px">No image yet</div>',
+          '<div style="font-family:sans-serif;max-width:360px;border:1.5px solid #E2D2B3;border-radius:12px;overflow:hidden;background:#FFFDF8;">',
+          img ? '<img src="'+img+'" style="width:100%;height:180px;object-fit:cover"/>' : '<div style="height:100px;background:#EFE3CC;display:flex;align-items:center;justify-content:center;color:#5E4E3F;font-size:13px">No image</div>',
           '<div style="padding:14px">',
-          '<div style="display:flex;gap:8px;margin-bottom:8px">',
-          '<span style="background:' + statusColor + ';color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:12px">' + statusLabel + '</span>',
-          cat ? '<span style="background:#F2E4C9;color:#1F2A5C;font-size:11px;padding:3px 10px;border-radius:12px">' + cat + '</span>' : '',
-          '</div>',
-          '<h3 style="margin:0 0 6px;font-size:17px;color:#1F2A5C;font-weight:700;line-height:1.3">' + title + '</h3>',
-          summary ? '<p style="margin:0 0 8px;font-size:14px;color:#5E4E3F;line-height:1.5">' + summary + '</p>' : '',
-          date ? '<p style="margin:0;font-size:12px;color:#9B8C7A">📅 ' + date + '</p>' : '',
-          '</div>',
-          '</div>'
+          '<span style="background:'+sColor+';color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:12px">'+sLabel+'</span>',
+          cat ? ' <span style="background:#F2E4C9;color:#1F2A5C;font-size:11px;padding:3px 10px;border-radius:12px">'+cat+'</span>' : '',
+          '<h3 style="margin:8px 0 4px;font-size:17px;color:#1F2A5C;font-weight:700">'+title+'</h3>',
+          summary ? '<p style="margin:0 0 6px;font-size:14px;color:#5E4E3F">'+summary+'</p>' : '',
+          date ? '<p style="margin:0;font-size:12px;color:#9B8C7A">📅 '+date+'</p>' : '',
+          '</div></div>'
         ].join("");
-
         var d = document.createElement("div");
         d.innerHTML = html;
         return d.firstChild;
       };
-
       if (CMS && CMS.registerPreviewTemplate) {
-        CMS.registerPreviewTemplate("events",     cardPreviewTemplate);
-        CMS.registerPreviewTemplate("activities", cardPreviewTemplate);
+        CMS.registerPreviewTemplate("events", cardPreview);
+        CMS.registerPreviewTemplate("activities", cardPreview);
       }
 
       /* ── 3. Publish confirmation banner ── */
       function showPublishConfirm() {
-        var banner = document.getElementById("mss-publish-confirm");
-        if (!banner) return;
-        banner.style.display = "block";
-        setTimeout(function () { banner.style.display = "none"; }, 5000);
+        var b = document.getElementById("mss-publish-confirm");
+        if (!b) return;
+        b.style.display = "block";
+        setTimeout(function () { b.style.display = "none"; }, 5000);
       }
-
       window.addEventListener("message", function (e) {
-        if (e.data && typeof e.data === "object") {
-          var t = e.data.type || "";
-          if (t === "ENTRY_PUBLISH" || t === "DRAFT_PUBLISHED") {
-            showPublishConfirm();
-          }
-        }
+        if (e.data && (e.data.type === "ENTRY_PUBLISH" || e.data.type === "DRAFT_PUBLISHED")) showPublishConfirm();
       });
-
-      var observer = new MutationObserver(function (mutations) {
-        mutations.forEach(function (m) {
-          m.addedNodes.forEach(function (node) {
-            if (node.nodeType !== 1) return;
-            var text = (node.textContent || "").toLowerCase();
-            if (text.includes("published") || text.includes("entry saved")) {
-              showPublishConfirm();
+      var pubObs = new MutationObserver(function (muts) {
+        muts.forEach(function (m) {
+          m.addedNodes.forEach(function (n) {
+            if (n.nodeType === 1) {
+              var t = (n.textContent || "").toLowerCase();
+              if (t.includes("published") || t.includes("entry saved")) showPublishConfirm();
             }
           });
         });
       });
       document.addEventListener("DOMContentLoaded", function () {
-        observer.observe(document.body, { childList: true, subtree: true });
+        pubObs.observe(document.body, { childList: true, subtree: true });
       });
 
-      /* ── 4. Empty state and auto-fill defaults for new entries ── */
-      function checkPageDecorations() {
-        var dateInputs = document.querySelectorAll('input[name="date"], input[id*="date"]');
+      /* ── 4. Auto-fill date on new entries ── */
+      function prefillDate() {
+        if (!window.location.hash.includes("/new")) return;
         var today = new Date().toISOString().split("T")[0];
-        dateInputs.forEach(function (input) {
-          if (!input.value && !input.getAttribute("data-mss-prefilled")) {
-            var isNew = window.location.hash.includes("/new");
-            if (isNew) {
-              input.value = today;
-              input.dispatchEvent(new Event("input", { bubbles: true }));
-              input.dispatchEvent(new Event("change", { bubbles: true }));
-              input.setAttribute("data-mss-prefilled", "true");
-            }
+        document.querySelectorAll('input[name="date"], input[id*="date"]').forEach(function (inp) {
+          if (!inp.value && !inp.dataset.mssPrefilled) {
+            inp.value = today;
+            inp.dispatchEvent(new Event("input", { bubbles: true }));
+            inp.dispatchEvent(new Event("change", { bubbles: true }));
+            inp.dataset.mssPrefilled = "1";
           }
         });
       }
 
-      setInterval(checkPageDecorations, 1000);
+      /* ── 5. MOBILE LAYOUT FIX ──────────────────────────────────────────
+         Decap CMS renders:
+           <header>  ← Contents / Media nav (AppHeader)
+           <div>     ← AppBody: a flex ROW with sidebar + content side by side
+             <div>   ← SidebarContainer (left)
+             <div>   ← CollectionView / EditorView (right)
 
-      /* ── 5. Register Service Worker (PWA) ── */
+         On mobile we need AppBody to be flex-column so both children
+         stack vertically. We find it by walking the DOM and tagging it.
+      ── */
+      var MOBILE = window.matchMedia("(max-width: 639px)");
+
+      function applyMobileLayout() {
+        if (!MOBILE.matches) return;
+
+        var root = document.getElementById("nc-root");
+        if (!root) return;
+
+        /* Find the AppHeader (the <header> element) */
+        var header = root.querySelector("header");
+
+        /* The AppBody is the sibling div right after the header */
+        var appBody = null;
+        if (header && header.nextElementSibling) {
+          appBody = header.nextElementSibling;
+        } else {
+          /* Fallback: first div inside root that contains a flex row */
+          appBody = root.querySelector("div");
+        }
+
+        if (!appBody || appBody.dataset.mssRole === "app-shell") return; /* already tagged */
+
+        /* Tag the app body */
+        appBody.dataset.mssRole = "app-shell";
+
+        /* Apply column layout inline — overrides any Emotion style */
+        appBody.style.setProperty("display", "flex", "important");
+        appBody.style.setProperty("flex-direction", "column", "important");
+        appBody.style.setProperty("width", "100%", "important");
+        appBody.style.setProperty("overflow-x", "hidden", "important");
+        appBody.style.setProperty("min-height", "0", "important");
+
+        /* Tag sidebar (first direct div child) and content (second) */
+        var children = Array.from(appBody.children);
+        if (children[0] && children[0].dataset.mssRole !== "sidebar") {
+          children[0].dataset.mssRole = "sidebar";
+          children[0].style.setProperty("width", "100%", "important");
+          children[0].style.setProperty("min-width", "0", "important");
+          children[0].style.setProperty("max-width", "100%", "important");
+          children[0].style.setProperty("flex-shrink", "0", "important");
+        }
+        if (children[1] && children[1].dataset.mssRole !== "content") {
+          children[1].dataset.mssRole = "content";
+          children[1].style.setProperty("width", "100%", "important");
+          children[1].style.setProperty("min-width", "0", "important");
+          children[1].style.setProperty("max-width", "100%", "important");
+          children[1].style.setProperty("flex", "1", "important");
+          children[1].style.setProperty("overflow-x", "hidden", "important");
+        }
+      }
+
+      /* Run on DOM changes (Decap renders async) */
+      var layoutObs = new MutationObserver(function () {
+        applyMobileLayout();
+        prefillDate();
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        layoutObs.observe(document.body, { childList: true, subtree: true });
+        applyMobileLayout();
+      });
+      /* Also run on hash change (navigation between views) */
+      window.addEventListener("hashchange", function () {
+        setTimeout(applyMobileLayout, 200);
+        setTimeout(prefillDate, 500);
+      });
+      /* Fallback poll for the first 10 seconds after load */
+      var pollCount = 0;
+      var poll = setInterval(function () {
+        applyMobileLayout();
+        prefillDate();
+        if (++pollCount > 20) clearInterval(poll);
+      }, 500);
+
+      /* ── 6. Register Service Worker (PWA) ── */
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", function () {
           navigator.serviceWorker
             .register("/admin/sw.js", { scope: "/admin/" })
-            .then(function (reg) {
-              console.log("[MSS CMS] Service Worker registered:", reg.scope);
-            })
-            .catch(function (err) {
-              console.warn("[MSS CMS] Service Worker registration failed:", err);
-            });
+            .then(function (r) { console.log("[MSS CMS] SW registered:", r.scope); })
+            .catch(function (e) { console.warn("[MSS CMS] SW failed:", e); });
         });
       }
 

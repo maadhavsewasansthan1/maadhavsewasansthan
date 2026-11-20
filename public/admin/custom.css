@@ -1,13 +1,11 @@
 /* =====================================================
    Maadhav Sewa Sansthan — Decap CMS Mobile-First Stylesheet
-   public/admin/custom.css  (PWA edition)
+   public/admin/custom.css  (PWA edition v3)
    ===================================================== */
 
 :root {
   --mss-indigo:   #1F2A5C;
-  --mss-indigo2:  #263570;
   --mss-marigold: #E39A1E;
-  --mss-marigold2:#C8880A;
   --mss-bg:       #F4F6FB;
   --mss-surface:  #FFFFFF;
   --mss-ink:      #1A1A2E;
@@ -17,7 +15,7 @@
   --bottom-bar-h: 64px;
 }
 
-/* ── Reset & base ─────────────────────────────────── */
+/* ── Reset ────────────────────────────────────────── */
 html, body, #nc-root {
   max-width: 100vw !important;
   overflow-x: hidden !important;
@@ -30,7 +28,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Prevent iOS input zoom: ALL inputs must be ≥ 16px */
+/* Prevent iOS input zoom — ALL text inputs must be ≥ 16px */
 input, textarea, select, button {
   font-size: 16px !important;
 }
@@ -47,15 +45,15 @@ select {
   -webkit-text-size-adjust: 100%;
 }
 
-/* Focus rings — never hide them */
+/* Keep focus rings */
 *:focus-visible {
   outline: 3px solid var(--mss-marigold) !important;
   outline-offset: 2px !important;
 }
 
 /* ── Field labels ─────────────────────────────────── */
-[class*="e1xtv0oy0"],
-[class*="FieldLabel"] {
+[class*="FieldLabel"],
+[class*="e1xtv0oy0"] {
   font-size: 14px !important;
   font-weight: 700 !important;
   color: var(--mss-indigo) !important;
@@ -65,19 +63,15 @@ select {
 }
 
 /* ── Control hints ────────────────────────────────── */
-[class*="ec1nk3l0"],
-[class*="ControlHint"] {
+[class*="ControlHint"],
+[class*="ec1nk3l0"] {
   font-size: 13px !important;
   color: var(--mss-ink-soft) !important;
   margin-top: 4px !important;
   line-height: 1.4 !important;
 }
 
-/* ── Inputs & textareas — full width, 48px min ────── */
-[class*="e11hw0lx4"] input,
-[class*="e1nx103k1"] input,
-[class*="e11hw0lx4"] textarea,
-[class*="e1nx103k1"] textarea,
+/* ── Inputs & textareas ───────────────────────────── */
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -89,50 +83,33 @@ textarea {
   padding: 10px 14px !important;
   border: 1.5px solid var(--mss-border) !important;
   border-radius: 10px !important;
-  font-size: 16px !important;
   line-height: 1.5 !important;
   box-sizing: border-box !important;
   background: var(--mss-surface) !important;
   color: var(--mss-ink) !important;
-  transition: border-color 0.15s ease !important;
 }
 
-input:focus, textarea:focus {
-  border-color: var(--mss-indigo) !important;
-  box-shadow: 0 0 0 3px rgba(31, 42, 92, 0.12) !important;
-}
-
-/* ── Select / React-select ────────────────────────── */
-select,
-[class*="e11hw0lx4"] select,
-[class*="e1nx103k1"] select {
+/* ── Selects ──────────────────────────────────────── */
+select {
   width: 100% !important;
-  min-width: 0 !important;
-  max-width: 100% !important;
   min-height: 48px !important;
-  font-size: 16px !important;
+  padding: 10px 14px !important;
   border: 1.5px solid var(--mss-border) !important;
   border-radius: 10px !important;
-  padding: 10px 14px !important;
   background: var(--mss-surface) !important;
   color: var(--mss-ink) !important;
   box-sizing: border-box !important;
-  appearance: auto !important;
-  -webkit-appearance: auto !important;
 }
 
 [class*="react-select__control"],
 [class*="Select__control"] {
   min-height: 48px !important;
-  font-size: 16px !important;
   border: 1.5px solid var(--mss-border) !important;
   border-radius: 10px !important;
   width: 100% !important;
-  min-width: 0 !important;
-  box-sizing: border-box !important;
 }
 
-/* ── Toast notifications ──────────────────────────── */
+/* ── Toast ────────────────────────────────────────── */
 .Toastify__toast {
   font-size: 15px !important;
   min-height: 48px !important;
@@ -155,17 +132,11 @@ select,
   z-index: 9999;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   text-align: center;
-  animation: mss-slide-up 0.3s ease;
-}
-
-@keyframes mss-slide-up {
-  from { transform: translateY(16px); opacity: 0; }
-  to   { transform: translateY(0);    opacity: 1; }
 }
 
 /* ── Image upload buttons ─────────────────────────── */
-[class*="e1hax4ql1"],
-[class*="FileWidgetButton"] {
+[class*="FileWidgetButton"],
+[class*="e1hax4ql1"] {
   min-height: 52px !important;
   font-size: 16px !important;
   border-radius: 12px !important;
@@ -177,33 +148,58 @@ select,
   margin-bottom: 8px !important;
 }
 
-/* Accept camera capture on file inputs inside the image widget */
-[class*="e1hax4ql1"] input[type="file"],
-[class*="FileWidget"] input[type="file"] {
-  /* allow camera roll on iOS */
-  accept: "image/*" !important;
+/* =====================================================
+   MOBILE LAYOUT — applied via JS-injected data attrs
+   because Emotion class names change.
+   We inject data-mss-role="..." on key containers.
+   ===================================================== */
+
+/* JS sets data-mss-role="app-shell" on the flex row container */
+[data-mss-role="app-shell"] {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  overflow: visible !important;
 }
 
-/* =====================================================
-   MOBILE-FIRST LAYOUT  (screens < 640px)
-   ===================================================== */
+/* JS sets data-mss-role="sidebar" on the left nav container */
+[data-mss-role="sidebar"] {
+  position: static !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+  flex-shrink: 0 !important;
+}
+
+/* JS sets data-mss-role="content" on the right main panel */
+[data-mss-role="content"] {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  flex: 1 !important;
+  overflow-x: hidden !important;
+}
+
 @media (max-width: 639px) {
 
-  /* ── App Shell padding-top: safe area only ──────── */
-  /* The native AppHeader is already sticky at top     */
-  /* Do NOT add another fixed element at top           */
+  /* ── App header (top nav: Contents / Media) ─────── */
   [class*="e1rbzf6g"],
-  [class*="AppHeader"] {
-    padding-top: env(safe-area-inset-top, 0px) !important;
+  [class*="AppHeader"],
+  header[class] {
     background: var(--mss-indigo) !important;
+    padding-top: env(safe-area-inset-top, 0px) !important;
     position: sticky !important;
     top: 0 !important;
     z-index: 400 !important;
   }
 
-  /* AppHeader links & nav */
   [class*="e1rbzf6g"] a,
-  [class*="AppHeader"] a {
+  [class*="AppHeader"] a,
+  header[class] a {
     color: rgba(255,255,255,0.85) !important;
     font-size: 15px !important;
     font-weight: 600 !important;
@@ -213,35 +209,46 @@ select,
     padding: 0 16px !important;
   }
 
-  [class*="e1rbzf6g"] a[class*="active"],
-  [class*="AppHeader"] a[class*="active"] {
-    color: var(--mss-marigold) !important;
-    border-bottom: 3px solid var(--mss-marigold) !important;
-  }
-
-  /* ── Sidebar → horizontal chip strip ───────────── */
-  /* Must NOT be fixed/sticky at top (creates duplicate bar) */
+  /* ── Sidebar → horizontal scrollable chip strip ─── */
+  [data-mss-role="sidebar"],
   [class*="e1t18l343"],
   [class*="SidebarContainer"] {
-    position: static !important;
-    width: 100% !important;
-    height: auto !important;
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
     overflow-x: auto !important;
+    overflow-y: hidden !important;
     padding: 10px 12px !important;
     gap: 8px !important;
     background: var(--mss-surface) !important;
     border-bottom: 1px solid var(--mss-border) !important;
     scrollbar-width: none !important;
     -ms-overflow-style: none !important;
+    /* Crucially: NOT position:fixed/sticky */
+    position: static !important;
+    min-height: 0 !important;
+    height: auto !important;
   }
+
+  [data-mss-role="sidebar"]::-webkit-scrollbar,
   [class*="e1t18l343"]::-webkit-scrollbar,
   [class*="SidebarContainer"]::-webkit-scrollbar {
     display: none !important;
   }
 
+  /* Collection heading "Collections" label — hide it on mobile */
+  [data-mss-role="sidebar"] h2,
+  [data-mss-role="sidebar"] h3,
+  [data-mss-role="sidebar"] [class*="Heading"],
+  [data-mss-role="sidebar"] [class*="heading"],
+  [class*="SidebarContainer"] h2,
+  [class*="SidebarContainer"] h3,
+  [class*="SidebarContainer"] [class*="Heading"] {
+    display: none !important;
+  }
+
+  /* Chip links in sidebar */
+  [data-mss-role="sidebar"] a,
   [class*="e1t18l343"] a,
   [class*="SidebarContainer"] a {
     display: inline-flex !important;
@@ -257,17 +264,16 @@ select,
     text-decoration: none !important;
     flex-shrink: 0 !important;
     border: 1.5px solid var(--mss-border) !important;
-    transition: all 0.15s ease !important;
   }
 
-  [class*="SidebarContainer"] a[class*="sidebar-active"],
-  [class*="SidebarContainer"] [class*="active"] {
+  [data-mss-role="sidebar"] a[class*="active"],
+  [class*="SidebarContainer"] a[class*="active"] {
     background: var(--mss-indigo) !important;
     color: #fff !important;
     border-color: var(--mss-indigo) !important;
   }
 
-  /* ── Sticky Bottom Action Bar (Publish / Save) ───── */
+  /* ── Sticky Bottom Action Bar (Publish / Save) ─── */
   [class*="e1d2l9mo22"],
   [class*="ToolbarContainer"] {
     position: fixed !important;
@@ -300,7 +306,7 @@ select,
     white-space: nowrap !important;
   }
 
-  /* Publish button — marigold CTA */
+  /* Publish CTA */
   [class*="e1d2l9mo5"],
   [class*="PublishButton"] {
     background: var(--mss-marigold) !important;
@@ -312,17 +318,7 @@ select,
     font-weight: 700 !important;
   }
 
-  /* "UNSAVED CHANGES" label — move to right of toolbar, never covers left */
-  [class*="e1d2l9mo22"] [class*="Unsaved"],
-  [class*="ToolbarContainer"] [class*="Unsaved"],
-  [class*="e1d2l9mo22"] span[class*="e"],
-  [class*="ToolbarContainer"] span {
-    font-size: 11px !important;
-    color: rgba(255,255,255,0.7) !important;
-    white-space: nowrap !important;
-  }
-
-  /* ── Editor Control Pane ─────────────────────────── */
+  /* ── Editor Control Pane (the form) ─────────────── */
   [class*="e1nx103k1"],
   [class*="ControlPaneContainer"],
   [class*="EditorControlPane"] {
@@ -333,14 +329,9 @@ select,
     overflow-x: hidden !important;
   }
 
-  /* ── Hide split preview pane on mobile ───────────── */
+  /* ── Hide split preview pane ─────────────────────── */
   [class*="e1nx103k2"],
   [class*="PreviewPaneContainer"] {
-    display: none !important;
-  }
-
-  /* ── Hide editor header toggle icons on mobile ───── */
-  [class*="e1nx103k3"] {
     display: none !important;
   }
 
@@ -354,7 +345,6 @@ select,
     border-radius: 12px !important;
     padding: 14px 16px !important;
     margin-bottom: 10px !important;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06) !important;
     min-height: 64px !important;
     justify-content: center !important;
     cursor: pointer !important;
@@ -365,14 +355,6 @@ select,
     font-size: 15px !important;
     font-weight: 700 !important;
     color: var(--mss-indigo) !important;
-    margin-bottom: 2px !important;
-  }
-
-  /* Collection list meta (status, date) */
-  [class*="effeus48"] [class*="ListCardBody"],
-  [class*="ListCard"] [class*="ListCardBody"] {
-    font-size: 13px !important;
-    color: var(--mss-ink-soft) !important;
   }
 
   /* ── New Entry button ─────────────────────────────── */
@@ -389,55 +371,15 @@ select,
     cursor: pointer !important;
   }
 
-  /* ── Search bar — hide on small screens ──────────── */
+  /* ── Hide search bar on mobile ───────────────────── */
   [class*="e6w847r7"],
   [class*="SearchContainer"] {
     display: none !important;
   }
 
-  /* ── i18n locale switcher ─────────────────────────── */
-  /* Show EN/HI as large segmented buttons at top of form */
-  [class*="LocaleToggle"],
-  [class*="i18n-toggle"],
-  [class*="locale-toggle"] {
-    display: flex !important;
-    gap: 0 !important;
-    border-radius: 10px !important;
-    overflow: hidden !important;
-    border: 1.5px solid var(--mss-border) !important;
-    margin-bottom: 16px !important;
-  }
-
-  [class*="LocaleToggle"] button,
-  [class*="i18n-toggle"] button,
-  [class*="locale-toggle"] button {
-    flex: 1 !important;
-    min-height: 48px !important;
-    font-size: 15px !important;
-    font-weight: 700 !important;
-    background: var(--mss-bg) !important;
-    color: var(--mss-indigo) !important;
-    border: none !important;
-    border-radius: 0 !important;
-    cursor: pointer !important;
-  }
-
-  [class*="LocaleToggle"] button[class*="active"],
-  [class*="LocaleToggle"] button[aria-selected="true"] {
-    background: var(--mss-indigo) !important;
-    color: #fff !important;
-  }
-
-  /* ── Hide table layout (use card layout only) ─────── */
-  table[class*="ListTable"],
-  [class*="ListTable"] {
-    display: none !important;
-  }
-
-  /* ── Page header / collection heading ────────────── */
+  /* ── Page heading ────────────────────────────────── */
   [class*="ei8nkzc2"],
-  [class*="CollectionTopHeading"],
-  h1[class*="e"] {
+  [class*="CollectionTopHeading"] {
     font-size: 20px !important;
     font-weight: 800 !important;
     color: var(--mss-indigo) !important;
@@ -445,7 +387,16 @@ select,
     margin: 0 !important;
   }
 
-  /* ── Rich text editor toolbar ─────────────────────── */
+  /* ── Back button ──────────────────────────────────── */
+  [class*="e1d2l9mo0"],
+  [class*="BackButton"] {
+    min-height: 44px !important;
+    font-size: 14px !important;
+    padding: 0 12px !important;
+    color: rgba(255,255,255,0.9) !important;
+  }
+
+  /* ── Rich text editor ────────────────────────────── */
   [class*="toolbar"],
   [class*="Toolbar"] {
     flex-wrap: wrap !important;
@@ -458,47 +409,15 @@ select,
     min-height: 36px !important;
   }
 
-  /* ── Markdown editor ──────────────────────────────── */
-  [class*="editor-toolbar"] {
-    flex-wrap: wrap !important;
-  }
-
-  /* ── Image widget ─────────────────────────────────── */
-  [class*="image-widget"],
-  [class*="ImageWidget"] {
-    width: 100% !important;
-    text-align: center !important;
-  }
-
-  [class*="image-widget"] img,
-  [class*="ImageWidget"] img {
-    max-width: 100% !important;
-    border-radius: 10px !important;
-    margin-bottom: 8px !important;
-  }
-
-  /* ── Back button ──────────────────────────────────── */
-  [class*="e1d2l9mo0"],
-  [class*="BackButton"] {
-    min-height: 44px !important;
-    font-size: 14px !important;
-    padding: 0 12px !important;
-    color: rgba(255,255,255,0.9) !important;
-  }
-
 }
 
-/* =====================================================
-   DESKTOP TWEAKS  (screens ≥ 640px)
-   ===================================================== */
+/* ── Desktop: sidebar stays vertical ─────────────── */
 @media (min-width: 640px) {
-  /* Sidebar stays vertical on desktop */
   [class*="e1t18l343"],
   [class*="SidebarContainer"] {
     min-width: 200px !important;
   }
 
-  /* Publish bar stays in natural flow on desktop */
   [class*="e1d2l9mo22"],
   [class*="ToolbarContainer"] {
     position: sticky !important;
